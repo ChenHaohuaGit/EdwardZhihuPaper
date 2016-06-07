@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_9790ce633b3b6f0ebcc127abbd7eafc90c6eabd2/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_4b38581ccba5bfd77e5a581b390cf55f1cda83dd/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_b26ab3d6e34e3ee6a7957bb33095f15ffc6ee2b4/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.2/f8d87f15b94b8d74e7ccf61d7eedb558811cdb30/converter-gson-2.0.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f8d87f15b94b8d74e7ccf61d7eedb558811cdb30">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.0.2_d583f3360f010e395ce18dd463c08ae8a0409412/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.2/2bf96b7aa8b611c177d329452af1dc933e14501c/commons-cli-1.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-cli-1.2_bf0baaaed6ea2756a4ff77e6c77e888619f77e57/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.4.0_7d9a9d34cfebf39da72f73e6a42ac0c637a1cdcb/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsr305-2.0.1_293436c509e575615d44347aa9e45264d89f46d4/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.4.0_82650920e5b8257fd8ace53a25348a9553a1be7c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.6.1_a8a52f82eccfd53e770c17807db81717246214d7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-7.0.1_ba28261968ff794c20c4cc3040311f70751c8cae/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/com.facebook.stetho/stetho-okhttp3/1.3.1/c596b3b33b5a92107bb70544bb5ee35f597bc6d8/stetho-okhttp3-1.3.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c596b3b33b5a92107bb70544bb5ee35f597bc6d8">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/stetho-okhttp3-1.3.1_53c31041ec43c14ea346818b31b9953e6c321513/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_036fc3fa649c2df492cdabd6803addcad6f87f15/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/com.facebook.stetho/stetho/1.3.1/2c4076b466a0eb4d6ddf5721edd35cd1adc1f317/stetho-1.3.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2c4076b466a0eb4d6ddf5721edd35cd1adc1f317">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/stetho-1.3.1_e6c91bf2f7d5a2021c4cac9ae63d5699ef910a0b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/43eeae0b9fb087bb3194ba59ab63a38a32fbf3e/retrofit-2.0.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="043eeae0b9fb087bb3194ba59ab63a38a32fbf3e">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.0.2_7a4a73c7fe059897b7472ddad6e8f1470641660f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_f1dda1b2109cd3576ffa4bfbce1a611b9759791b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_da1cf9241124ef7e1c29359cba54529fd1e98e7e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.github.orhanobut/logger/1.12/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ecb9f39f775f414b18c7c61b4f71345f2ae8f738">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.orhanobut-logger-1.12_460f25113cd0abf074e5a4bac01381dc70e9ee56/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.jakewharton.rxbinding/rxbinding/0.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ffc09f4e5bdebe068e5101f587dadc42b60fbfe4">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton.rxbinding-rxbinding-0.4.0_17a6b41046af39614c978e2cddaa92efce95435c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.trello/rxlifecycle/0.6.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3a98a50c56978d02c0651d12f5a26c3e7c31c397">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.trello-rxlifecycle-0.6.1_8bbe75f8727aeec4ebb51c9ae165b201ceca744f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/percent/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="91c2541305eec5a688f3a60529d974e48f77d760">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-percent-23.4.0_fa71bacdc85efdad907220ba9857047cc2f0a036/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8ac5605f193c6bd0736bbb7593e40aafe1c3e7a7">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_eb4e630fbbec0de6bd6f28814cc6349d9603af0f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.0.2/a60c039ba54c73d1133b72178e1b04133c73d13d/adapter-rxjava-2.0.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a60c039ba54c73d1133b72178e1b04133c73d13d">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/adapter-rxjava-2.0.2_95c508eb0f606a65eb863b72f17b7b175c04c21f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-23.4.0_575a5a60031a41ef8bfbf6e1c5e06c1d2cbebc7f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.8.0_b770589164a29eef3e842d4ed1fe87334c5eceeb/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.4/3cc424c6eda381bf4aee40dc3ccdecc27b2106aa/rxjava-1.1.4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3cc424c6eda381bf4aee40dc3ccdecc27b2106aa">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.1.4_7931505fb7ffab436a77809ef137bb72a838b55c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/palette-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="51518e8e8f97c314a243d9def0ded91d385b6a1e">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-palette-v7-23.4.0_c345a432734da9a9acf0f5f6af0c869b9108c099/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_75a5517561a513ddf932e86f6e4f1038955196d4/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="dbc77c28071f0b0cf1163b0a32f94579b61de0f3">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_88fb5cb61786dd3aa04f9c244d974d2164caa5fc/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.trello/rxlifecycle-components/0.6.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5c90d2e1f0959b6e1f312b9f53049a342f0e82df">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.trello-rxlifecycle-components-0.6.1_c2833c878f2cf6e508920df386f96decc1fdf241/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.3.0_9ea5da3ffc978d0066d7beb0e11a6474edaea06e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d4c4b83de2f6412072d2a29b1b7a5b03edaad5ff">
+        <dex dex="/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.reactivex-rxandroid-1.1.0_4fb26a8045bb050288b31077da1eb36bc3febbb7/classes.dex" />
+    </item>
+
+</items>
