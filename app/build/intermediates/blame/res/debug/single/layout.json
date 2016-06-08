@@ -32,12 +32,12 @@
         "source": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_bottom_sheet_dialog.xml"
     },
     {
-        "merged": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
-        "source": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_alert_dialog_material.xml"
-    },
-    {
         "merged": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
         "source": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_alert_dialog_material.xml"
     },
     {
         "merged": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/res/merged/debug/layout/news_item_layout.xml",
