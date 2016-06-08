@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/res/merged/debug/values-v21/values-v21.xml",
+        "outputFile": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/values-v21/values-v21.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 351
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/src/main/res/values-v21/styles.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/src/main/res/values-v21/styles.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -32,7 +32,7 @@
                     "endOffset": 442
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -51,7 +51,7 @@
                     "endOffset": 545
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -70,7 +70,7 @@
                     "endOffset": 648
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -89,7 +89,7 @@
                     "endOffset": 753
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -108,7 +108,7 @@
                     "endOffset": 860
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -127,7 +127,7 @@
                     "endOffset": 969
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -146,7 +146,7 @@
                     "endOffset": 1078
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -165,7 +165,7 @@
                     "endOffset": 1187
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -184,7 +184,7 @@
                     "endOffset": 1296
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -203,7 +203,7 @@
                     "endOffset": 1405
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -222,7 +222,7 @@
                     "endOffset": 1512
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -241,7 +241,7 @@
                     "endOffset": 1615
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -260,7 +260,7 @@
                     "endOffset": 1734
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -280,7 +280,7 @@
                     "endOffset": 1889
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -301,7 +301,7 @@
                     "endOffset": 2044
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -321,7 +321,7 @@
                     "endOffset": 2149
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -340,7 +340,7 @@
                     "endOffset": 2270
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -359,7 +359,7 @@
                     "endOffset": 2371
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -379,7 +379,7 @@
                     "endOffset": 2518
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -400,7 +400,7 @@
                     "endOffset": 2659
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -420,7 +420,7 @@
                     "endOffset": 2762
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -439,7 +439,7 @@
                     "endOffset": 2881
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -458,7 +458,7 @@
                     "endOffset": 2988
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -477,7 +477,7 @@
                     "endOffset": 3091
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -497,7 +497,7 @@
                     "endOffset": 3246
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -518,7 +518,7 @@
                     "endOffset": 3417
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
@@ -539,7 +539,7 @@
                     "endOffset": 3566
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 34,
                         "startColumn": 4,
@@ -560,7 +560,7 @@
                     "endOffset": 3731
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 36,
                         "startColumn": 4,
@@ -581,7 +581,7 @@
                     "endOffset": 3888
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 38,
                         "startColumn": 4,
@@ -602,7 +602,7 @@
                     "endOffset": 4039
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 40,
                         "startColumn": 4,
@@ -622,7 +622,7 @@
                     "endOffset": 4158
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 42,
                         "startColumn": 4,
@@ -642,7 +642,7 @@
                     "endOffset": 4307
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 43,
                         "startColumn": 4,
@@ -663,7 +663,7 @@
                     "endOffset": 4456
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 45,
                         "startColumn": 4,
@@ -683,7 +683,7 @@
                     "endOffset": 4568
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 47,
                         "startColumn": 4,
@@ -702,7 +702,7 @@
                     "endOffset": 4715
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 48,
                         "startColumn": 4,
@@ -722,7 +722,7 @@
                     "endOffset": 4868
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 49,
                         "startColumn": 4,
@@ -743,7 +743,7 @@
                     "endOffset": 5015
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 51,
                         "startColumn": 4,
@@ -763,7 +763,7 @@
                     "endOffset": 5090
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 53,
                         "startColumn": 4,
@@ -782,7 +782,7 @@
                     "endOffset": 5179
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 54,
                         "startColumn": 4,
@@ -801,7 +801,7 @@
                     "endOffset": 5266
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 55,
                         "startColumn": 4,
@@ -820,7 +820,7 @@
                     "endOffset": 5367
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 56,
                         "startColumn": 4,
@@ -840,7 +840,7 @@
                     "endOffset": 8435
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 57,
                         "startColumn": 4,
@@ -861,7 +861,7 @@
                     "endOffset": 8621
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 101,
                         "startColumn": 4,
@@ -882,7 +882,7 @@
                     "endOffset": 11701
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 104,
                         "startColumn": 4,
@@ -903,7 +903,7 @@
                     "endOffset": 11899
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 148,
                         "startColumn": 4,
@@ -924,7 +924,7 @@
                     "endOffset": 12022
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 151,
                         "startColumn": 4,
@@ -945,7 +945,7 @@
                     "endOffset": 12145
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 153,
                         "startColumn": 4,
@@ -966,7 +966,7 @@
                     "endOffset": 12258
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 155,
                         "startColumn": 4,
@@ -987,7 +987,7 @@
                     "endOffset": 12441
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 157,
                         "startColumn": 4,
@@ -1008,7 +1008,7 @@
                     "endOffset": 12572
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 160,
                         "startColumn": 4,
@@ -1029,7 +1029,7 @@
                     "endOffset": 12773
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 162,
                         "startColumn": 4,
@@ -1049,7 +1049,7 @@
                     "endOffset": 12862
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 165,
                         "startColumn": 4,
@@ -1068,7 +1068,7 @@
                     "endOffset": 12973
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 166,
                         "startColumn": 4,
@@ -1087,7 +1087,7 @@
                     "endOffset": 13100
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 167,
                         "startColumn": 4,
@@ -1106,7 +1106,7 @@
                     "endOffset": 13201
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 168,
                         "startColumn": 4,
@@ -1125,7 +1125,7 @@
                     "endOffset": 13296
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 169,
                         "startColumn": 4,
@@ -1144,7 +1144,7 @@
                     "endOffset": 13419
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 170,
                         "startColumn": 4,
@@ -1163,7 +1163,7 @@
                     "endOffset": 13548
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 171,
                         "startColumn": 4,
@@ -1182,7 +1182,7 @@
                     "endOffset": 13665
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 172,
                         "startColumn": 4,
@@ -1202,7 +1202,7 @@
                     "endOffset": 13842
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 173,
                         "startColumn": 4,
@@ -1222,7 +1222,7 @@
                     "endOffset": 13941
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 176,
                         "startColumn": 4,
@@ -1242,7 +1242,7 @@
                     "endOffset": 14076
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 177,
                         "startColumn": 4,
@@ -1263,7 +1263,7 @@
                     "endOffset": 14219
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 179,
                         "startColumn": 4,
@@ -1284,7 +1284,7 @@
                     "endOffset": 14354
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 181,
                         "startColumn": 4,
@@ -1305,7 +1305,7 @@
                     "endOffset": 14473
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 183,
                         "startColumn": 4,
@@ -1326,7 +1326,7 @@
                     "endOffset": 14674
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 185,
                         "startColumn": 4,
@@ -1347,7 +1347,7 @@
                     "endOffset": 14793
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 189,
                         "startColumn": 4,
@@ -1367,7 +1367,7 @@
                     "endOffset": 14886
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 191,
                         "startColumn": 4,
@@ -1386,7 +1386,7 @@
                     "endOffset": 14997
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 192,
                         "startColumn": 4,
@@ -1405,7 +1405,7 @@
                     "endOffset": 15053
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 193,
                         "startColumn": 4,
@@ -1425,7 +1425,7 @@
                     "endOffset": 15160
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 194,
                         "startColumn": 4,
@@ -1446,7 +1446,7 @@
                     "endOffset": 15355
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 196,
                         "startColumn": 4,
@@ -1467,7 +1467,7 @@
                     "endOffset": 15466
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 200,
                         "startColumn": 4,
@@ -1488,7 +1488,7 @@
                     "endOffset": 15599
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 202,
                         "startColumn": 4,
@@ -1508,7 +1508,7 @@
                     "endOffset": 15694
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 204,
                         "startColumn": 4,
@@ -1527,7 +1527,7 @@
                     "endOffset": 15785
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 205,
                         "startColumn": 4,
@@ -1546,7 +1546,7 @@
                     "endOffset": 15876
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 206,
                         "startColumn": 4,
@@ -1565,7 +1565,7 @@
                     "endOffset": 15993
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 207,
                         "startColumn": 4,
@@ -1585,7 +1585,7 @@
                     "endOffset": 16132
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 208,
                         "startColumn": 4,
@@ -1606,7 +1606,7 @@
                     "endOffset": 16645
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 210,
                         "startColumn": 4,
@@ -1627,7 +1627,7 @@
                     "endOffset": 17170
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 220,
                         "startColumn": 4,
@@ -1648,7 +1648,7 @@
                     "endOffset": 17850
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 230,
                         "startColumn": 4,
@@ -1668,7 +1668,7 @@
                     "endOffset": 17907
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 240,
                         "startColumn": 4,
@@ -1687,7 +1687,7 @@
                     "endOffset": 17965
                 },
                 "from": {
-                    "file": "/Users/edward/Desktop/workspace/zhihu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 241,
                         "startColumn": 4,

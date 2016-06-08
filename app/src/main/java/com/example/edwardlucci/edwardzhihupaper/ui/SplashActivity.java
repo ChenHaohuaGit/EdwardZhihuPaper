@@ -19,8 +19,6 @@ import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
-import com.orhanobut.logger.Logger;
-import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -77,6 +75,12 @@ public class SplashActivity extends BaseActivity {
 
         loadLatestData();
 
+        setupDrawer();
+
+    }
+
+    private void setupDrawer() {
+        getFragmentManager().beginTransaction().replace(R.id.drawer_container,new ThemesCategoryFragment()).commit();
     }
 
     private void setupToolbar() {

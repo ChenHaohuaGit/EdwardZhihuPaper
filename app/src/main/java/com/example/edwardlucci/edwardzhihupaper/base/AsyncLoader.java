@@ -1,7 +1,7 @@
 package com.example.edwardlucci.edwardzhihupaper.base;
 
+import android.content.AsyncTaskLoader;
 import android.content.Context;
-import android.support.v4.content.AsyncTaskLoader;
 
 public abstract class AsyncLoader<D> extends AsyncTaskLoader<D> {
 

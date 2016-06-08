@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Themes {
+public class Themes extends Object{
 
     @SerializedName("limit")
     @Expose
