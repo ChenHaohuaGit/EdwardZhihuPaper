@@ -118,5 +118,9 @@
     {
         "merged": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/drawable/transparent.png",
         "source": "/Users/edwardlucci/EdwardZhihuPaper/app/src/main/res/drawable/transparent.png"
+    },
+    {
+        "merged": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/drawable/gradient_black.xml",
+        "source": "/Users/edwardlucci/EdwardZhihuPaper/app/src/main/res/drawable/gradient_black.xml"
     }
 ]

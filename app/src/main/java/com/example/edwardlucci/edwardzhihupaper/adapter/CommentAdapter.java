@@ -15,7 +15,6 @@ import android.widget.TextView;
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
 import com.example.edwardlucci.edwardzhihupaper.transformation.CircleTransform;
-import com.example.edwardlucci.edwardzhihupaper.util.RxBus;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
@@ -49,7 +48,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CommentV
     public void onBindViewHolder(CommentViewHolder holder, final int position) {
         holder.commentTextview.setText(comments.get(position).getContent());
 
-        holder.container.setOnClickListener(v -> {showFullComment(position);});
+        holder.container.setOnClickListener(v -> showFullComment(position));
 
         if (comments.get(position).getAvatar()!=null || !comments.get(position).getAvatar().isEmpty()){
             Picasso.with(mContext)

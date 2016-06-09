@@ -8,16 +8,19 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
+import com.example.edwardlucci.edwardzhihupaper.bean.ChangeContentEvent;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
+import com.example.edwardlucci.edwardzhihupaper.util.RxBus;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 
 import java.text.SimpleDateFormat;
@@ -28,6 +31,7 @@ import java.util.TimeZone;
 import butterknife.Bind;
 import rx.Observable;
 import rx.Subscriber;
+import rx.functions.Action1;
 
 /**
  * Created by edwardlucci on 16/4/23.
@@ -77,6 +81,16 @@ public class SplashActivity extends BaseActivity {
 
         setupDrawer();
 
+        RxBus.getInstance()
+                .toObservable(ChangeContentEvent.class)
+                .compose(bindToLifecycle())
+                .subscribe(new Action1<ChangeContentEvent>() {
+                    @Override
+                    public void call(ChangeContentEvent changeContentEvent) {
+                        Toast.makeText(getActivity(),String.valueOf(changeContentEvent.getOther().getId()),Toast.LENGTH_SHORT).show();
+                    }
+                });
+
     }
 
     private void setupDrawer() {
@@ -86,7 +100,7 @@ public class SplashActivity extends BaseActivity {
     private void setupToolbar() {
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.mipmap.ic_launcher);
+
     }
 
     private void moveMCalendarToToday() {

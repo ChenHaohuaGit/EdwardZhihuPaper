@@ -3,15 +3,18 @@ package com.example.edwardlucci.edwardzhihupaper.ui;
 import android.app.LoaderManager;
 import android.content.Loader;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
+import com.example.edwardlucci.edwardzhihupaper.adapter.OnitemClickListener;
+import com.example.edwardlucci.edwardzhihupaper.adapter.ThemesRecyclerViewAdapter;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseFragment;
 import com.example.edwardlucci.edwardzhihupaper.bean.Other;
 import com.example.edwardlucci.edwardzhihupaper.bean.Themes;
 import com.example.edwardlucci.edwardzhihupaper.network.ThemesLoader;
-import com.orhanobut.logger.Logger;
+
+import java.util.ArrayList;
 
 import butterknife.Bind;
 
@@ -23,9 +26,13 @@ public class ThemesCategoryFragment extends BaseFragment implements LoaderManage
     @Bind(R.id.recyclerView)
     RecyclerView recyclerView;
 
+    ThemesRecyclerViewAdapter themesRecyclerViewAdapter;
+
     @Override
     protected void init() {
         getActivity().getLoaderManager().initLoader(0,null,this);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
     @Override
@@ -40,9 +47,8 @@ public class ThemesCategoryFragment extends BaseFragment implements LoaderManage
 
     @Override
     public void onLoadFinished(Loader<Themes> loader, Themes data) {
-        for (Other other : data.getOthers()) {
-            Logger.i(other.getName());
-        }
+        themesRecyclerViewAdapter = new ThemesRecyclerViewAdapter(getActivity(), (ArrayList<Other>) data.getOthers());
+        recyclerView.setAdapter(themesRecyclerViewAdapter);
     }
 
     @Override

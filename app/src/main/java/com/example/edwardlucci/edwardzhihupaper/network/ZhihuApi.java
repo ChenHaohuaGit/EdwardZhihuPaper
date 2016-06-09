@@ -4,6 +4,7 @@ import com.example.edwardlucci.edwardzhihupaper.bean.LatestStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.CommentResponse;
 import com.example.edwardlucci.edwardzhihupaper.bean.SplashResponse;
 import com.example.edwardlucci.edwardzhihupaper.bean.StoryDetail;
+import com.example.edwardlucci.edwardzhihupaper.bean.Theme;
 import com.example.edwardlucci.edwardzhihupaper.bean.Themes;
 
 import retrofit2.http.GET;
@@ -34,4 +35,7 @@ public interface ZhihuApi {
 
     @GET("news/before/{date}")
     Observable<LatestStories> getPastStories(@Path("date")String date);
+
+    @GET("theme/{id}")
+    Observable<Theme> getThemeStories(@Path("id")int id);
 }

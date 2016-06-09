@@ -52,6 +52,10 @@
         "source": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
+        "merged": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/themes_item_layout.xml",
+        "source": "/Users/edwardlucci/EdwardZhihuPaper/app/src/main/res/layout/themes_item_layout.xml"
+    },
+    {
         "merged": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
         "source": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
@@ -108,12 +112,12 @@
         "source": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_select_dialog_material.xml"
     },
     {
-        "merged": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
-        "source": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_navigation_menu_item.xml"
-    },
-    {
         "merged": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
         "source": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_navigation_menu_item.xml"
     },
     {
         "merged": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",

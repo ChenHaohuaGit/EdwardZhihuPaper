@@ -4826,11 +4826,11 @@
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/src/main/res/values/styles.xml",
                     "position": {
-                        "startLine": 15,
+                        "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 525,
+                        "startOffset": 718,
                         "endColumn": 90,
-                        "endOffset": 611
+                        "endOffset": 804
                     }
                 }
             },
@@ -4846,12 +4846,12 @@
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/src/main/res/values/styles.xml",
                     "position": {
-                        "startLine": 10,
+                        "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 374,
-                        "endLine": 13,
+                        "startOffset": 567,
+                        "endLine": 20,
                         "endColumn": 12,
-                        "endOffset": 519
+                        "endOffset": 712
                     }
                 }
             },
@@ -4866,11 +4866,11 @@
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/src/main/res/values/styles.xml",
                     "position": {
-                        "startLine": 17,
+                        "startLine": 24,
                         "startColumn": 4,
-                        "startOffset": 617,
+                        "startOffset": 810,
                         "endColumn": 80,
-                        "endOffset": 693
+                        "endOffset": 886
                     }
                 }
             },
@@ -7686,9 +7686,30 @@
                     "startLine": 1386,
                     "startColumn": 4,
                     "startOffset": 110529,
-                    "endLine": 1423,
+                    "endLine": 1389,
                     "endColumn": 12,
-                    "endOffset": 113386
+                    "endOffset": 110714
+                },
+                "from": {
+                    "file": "/Users/edwardlucci/EdwardZhihuPaper/app/src/main/res/values/styles.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 374,
+                        "endLine": 13,
+                        "endColumn": 12,
+                        "endOffset": 559
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1390,
+                    "startColumn": 4,
+                    "startOffset": 110719,
+                    "endLine": 1427,
+                    "endColumn": 12,
+                    "endOffset": 113576
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7704,12 +7725,12 @@
             },
             {
                 "to": {
-                    "startLine": 1424,
+                    "startLine": 1428,
                     "startColumn": 4,
-                    "startOffset": 113391,
-                    "endLine": 1462,
+                    "startOffset": 113581,
+                    "endLine": 1466,
                     "endColumn": 12,
-                    "endOffset": 116388
+                    "endOffset": 116578
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7725,11 +7746,11 @@
             },
             {
                 "to": {
-                    "startLine": 1463,
+                    "startLine": 1467,
                     "startColumn": 4,
-                    "startOffset": 116393,
+                    "startOffset": 116583,
                     "endColumn": 61,
-                    "endOffset": 116450
+                    "endOffset": 116640
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7744,12 +7765,12 @@
             },
             {
                 "to": {
-                    "startLine": 1464,
+                    "startLine": 1468,
                     "startColumn": 4,
-                    "startOffset": 116455,
-                    "endLine": 1473,
+                    "startOffset": 116645,
+                    "endLine": 1477,
                     "endColumn": 12,
-                    "endOffset": 117080
+                    "endOffset": 117270
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7765,12 +7786,12 @@
             },
             {
                 "to": {
-                    "startLine": 1474,
+                    "startLine": 1478,
                     "startColumn": 4,
-                    "startOffset": 117085,
-                    "endLine": 1482,
+                    "startOffset": 117275,
+                    "endLine": 1486,
                     "endColumn": 12,
-                    "endOffset": 117694
+                    "endOffset": 117884
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7786,11 +7807,11 @@
             },
             {
                 "to": {
-                    "startLine": 1483,
+                    "startLine": 1487,
                     "startColumn": 4,
-                    "startOffset": 117699,
+                    "startOffset": 117889,
                     "endColumn": 85,
-                    "endOffset": 117780
+                    "endOffset": 117970
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7805,12 +7826,12 @@
             },
             {
                 "to": {
-                    "startLine": 1484,
+                    "startLine": 1488,
                     "startColumn": 4,
-                    "startOffset": 117785,
-                    "endLine": 1485,
+                    "startOffset": 117975,
+                    "endLine": 1489,
                     "endColumn": 12,
-                    "endOffset": 117893
+                    "endOffset": 118083
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7826,12 +7847,12 @@
             },
             {
                 "to": {
-                    "startLine": 1486,
+                    "startLine": 1490,
                     "startColumn": 4,
-                    "startOffset": 117898,
-                    "endLine": 1489,
+                    "startOffset": 118088,
+                    "endLine": 1493,
                     "endColumn": 12,
-                    "endOffset": 118122
+                    "endOffset": 118312
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7847,12 +7868,12 @@
             },
             {
                 "to": {
-                    "startLine": 1490,
+                    "startLine": 1494,
                     "startColumn": 4,
-                    "startOffset": 118127,
-                    "endLine": 1492,
+                    "startOffset": 118317,
+                    "endLine": 1496,
                     "endColumn": 12,
-                    "endOffset": 118282
+                    "endOffset": 118472
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7868,12 +7889,12 @@
             },
             {
                 "to": {
-                    "startLine": 1493,
+                    "startLine": 1497,
                     "startColumn": 4,
-                    "startOffset": 118287,
-                    "endLine": 1495,
+                    "startOffset": 118477,
+                    "endLine": 1499,
                     "endColumn": 12,
-                    "endOffset": 118434
+                    "endOffset": 118624
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7889,12 +7910,12 @@
             },
             {
                 "to": {
-                    "startLine": 1496,
+                    "startLine": 1500,
                     "startColumn": 4,
-                    "startOffset": 118439,
-                    "endLine": 1498,
+                    "startOffset": 118629,
+                    "endLine": 1502,
                     "endColumn": 12,
-                    "endOffset": 118605
+                    "endOffset": 118795
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7910,12 +7931,12 @@
             },
             {
                 "to": {
-                    "startLine": 1499,
+                    "startLine": 1503,
                     "startColumn": 4,
-                    "startOffset": 118610,
-                    "endLine": 1501,
+                    "startOffset": 118800,
+                    "endLine": 1505,
                     "endColumn": 12,
-                    "endOffset": 118772
+                    "endOffset": 118962
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7931,12 +7952,12 @@
             },
             {
                 "to": {
-                    "startLine": 1502,
+                    "startLine": 1506,
                     "startColumn": 4,
-                    "startOffset": 118777,
-                    "endLine": 1505,
+                    "startOffset": 118967,
+                    "endLine": 1509,
                     "endColumn": 12,
-                    "endOffset": 119015
+                    "endOffset": 119205
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7952,12 +7973,12 @@
             },
             {
                 "to": {
-                    "startLine": 1506,
+                    "startLine": 1510,
                     "startColumn": 4,
-                    "startOffset": 119020,
-                    "endLine": 1508,
+                    "startOffset": 119210,
+                    "endLine": 1512,
                     "endColumn": 12,
-                    "endOffset": 119185
+                    "endOffset": 119375
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7973,12 +7994,12 @@
             },
             {
                 "to": {
-                    "startLine": 1509,
+                    "startLine": 1513,
                     "startColumn": 4,
-                    "startOffset": 119190,
-                    "endLine": 1511,
+                    "startOffset": 119380,
+                    "endLine": 1515,
                     "endColumn": 12,
-                    "endOffset": 119358
+                    "endOffset": 119548
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -7994,12 +8015,12 @@
             },
             {
                 "to": {
-                    "startLine": 1512,
+                    "startLine": 1516,
                     "startColumn": 4,
-                    "startOffset": 119363,
-                    "endLine": 1514,
+                    "startOffset": 119553,
+                    "endLine": 1518,
                     "endColumn": 12,
-                    "endOffset": 119529
+                    "endOffset": 119719
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8015,12 +8036,12 @@
             },
             {
                 "to": {
-                    "startLine": 1515,
+                    "startLine": 1519,
                     "startColumn": 4,
-                    "startOffset": 119534,
-                    "endLine": 1518,
+                    "startOffset": 119724,
+                    "endLine": 1522,
                     "endColumn": 12,
-                    "endOffset": 119803
+                    "endOffset": 119993
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8036,12 +8057,12 @@
             },
             {
                 "to": {
-                    "startLine": 1519,
+                    "startLine": 1523,
                     "startColumn": 4,
-                    "startOffset": 119808,
-                    "endLine": 1521,
+                    "startOffset": 119998,
+                    "endLine": 1525,
                     "endColumn": 12,
-                    "endOffset": 120002
+                    "endOffset": 120192
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8057,12 +8078,12 @@
             },
             {
                 "to": {
-                    "startLine": 1522,
+                    "startLine": 1526,
                     "startColumn": 4,
-                    "startOffset": 120007,
-                    "endLine": 1525,
+                    "startOffset": 120197,
+                    "endLine": 1529,
                     "endColumn": 12,
-                    "endOffset": 120207
+                    "endOffset": 120397
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8078,12 +8099,12 @@
             },
             {
                 "to": {
-                    "startLine": 1526,
+                    "startLine": 1530,
                     "startColumn": 4,
-                    "startOffset": 120212,
-                    "endLine": 1529,
+                    "startOffset": 120402,
+                    "endLine": 1533,
                     "endColumn": 12,
-                    "endOffset": 120537
+                    "endOffset": 120727
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8099,11 +8120,11 @@
             },
             {
                 "to": {
-                    "startLine": 1530,
+                    "startLine": 1534,
                     "startColumn": 4,
-                    "startOffset": 120542,
+                    "startOffset": 120732,
                     "endColumn": 83,
-                    "endOffset": 120621
+                    "endOffset": 120811
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8118,11 +8139,11 @@
             },
             {
                 "to": {
-                    "startLine": 1531,
+                    "startLine": 1535,
                     "startColumn": 4,
-                    "startOffset": 120626,
+                    "startOffset": 120816,
                     "endColumn": 95,
-                    "endOffset": 120717
+                    "endOffset": 120907
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8137,11 +8158,11 @@
             },
             {
                 "to": {
-                    "startLine": 1532,
+                    "startLine": 1536,
                     "startColumn": 4,
-                    "startOffset": 120722,
+                    "startOffset": 120912,
                     "endColumn": 95,
-                    "endOffset": 120813
+                    "endOffset": 121003
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8156,11 +8177,11 @@
             },
             {
                 "to": {
-                    "startLine": 1533,
+                    "startLine": 1537,
                     "startColumn": 4,
-                    "startOffset": 120818,
+                    "startOffset": 121008,
                     "endColumn": 97,
-                    "endOffset": 120911
+                    "endOffset": 121101
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8175,11 +8196,11 @@
             },
             {
                 "to": {
-                    "startLine": 1534,
+                    "startLine": 1538,
                     "startColumn": 4,
-                    "startOffset": 120916,
+                    "startOffset": 121106,
                     "endColumn": 99,
-                    "endOffset": 121011
+                    "endOffset": 121201
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8194,11 +8215,11 @@
             },
             {
                 "to": {
-                    "startLine": 1535,
+                    "startLine": 1539,
                     "startColumn": 4,
-                    "startOffset": 121016,
+                    "startOffset": 121206,
                     "endColumn": 101,
-                    "endOffset": 121113
+                    "endOffset": 121303
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8213,11 +8234,11 @@
             },
             {
                 "to": {
-                    "startLine": 1536,
+                    "startLine": 1540,
                     "startColumn": 4,
-                    "startOffset": 121118,
+                    "startOffset": 121308,
                     "endColumn": 101,
-                    "endOffset": 121215
+                    "endOffset": 121405
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8232,11 +8253,11 @@
             },
             {
                 "to": {
-                    "startLine": 1537,
+                    "startLine": 1541,
                     "startColumn": 4,
-                    "startOffset": 121220,
+                    "startOffset": 121410,
                     "endColumn": 101,
-                    "endOffset": 121317
+                    "endOffset": 121507
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8251,11 +8272,11 @@
             },
             {
                 "to": {
-                    "startLine": 1538,
+                    "startLine": 1542,
                     "startColumn": 4,
-                    "startOffset": 121322,
+                    "startOffset": 121512,
                     "endColumn": 101,
-                    "endOffset": 121419
+                    "endOffset": 121609
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8270,11 +8291,11 @@
             },
             {
                 "to": {
-                    "startLine": 1539,
+                    "startLine": 1543,
                     "startColumn": 4,
-                    "startOffset": 121424,
+                    "startOffset": 121614,
                     "endColumn": 101,
-                    "endOffset": 121521
+                    "endOffset": 121711
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8289,11 +8310,11 @@
             },
             {
                 "to": {
-                    "startLine": 1540,
+                    "startLine": 1544,
                     "startColumn": 4,
-                    "startOffset": 121526,
+                    "startOffset": 121716,
                     "endColumn": 99,
-                    "endOffset": 121621
+                    "endOffset": 121811
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8308,11 +8329,11 @@
             },
             {
                 "to": {
-                    "startLine": 1541,
+                    "startLine": 1545,
                     "startColumn": 4,
-                    "startOffset": 121626,
+                    "startOffset": 121816,
                     "endColumn": 95,
-                    "endOffset": 121717
+                    "endOffset": 121907
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8327,11 +8348,11 @@
             },
             {
                 "to": {
-                    "startLine": 1542,
+                    "startLine": 1546,
                     "startColumn": 4,
-                    "startOffset": 121722,
+                    "startOffset": 121912,
                     "endColumn": 111,
-                    "endOffset": 121829
+                    "endOffset": 122019
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8346,11 +8367,11 @@
             },
             {
                 "to": {
-                    "startLine": 1543,
+                    "startLine": 1547,
                     "startColumn": 4,
-                    "startOffset": 121834,
+                    "startOffset": 122024,
                     "endColumn": 128,
-                    "endOffset": 121958
+                    "endOffset": 122148
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8365,11 +8386,11 @@
             },
             {
                 "to": {
-                    "startLine": 1544,
+                    "startLine": 1548,
                     "startColumn": 4,
-                    "startOffset": 121963,
+                    "startOffset": 122153,
                     "endColumn": 122,
-                    "endOffset": 122081
+                    "endOffset": 122271
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8384,12 +8405,12 @@
             },
             {
                 "to": {
-                    "startLine": 1545,
+                    "startLine": 1549,
                     "startColumn": 4,
-                    "startOffset": 122086,
-                    "endLine": 1546,
+                    "startOffset": 122276,
+                    "endLine": 1550,
                     "endColumn": 12,
-                    "endOffset": 122235
+                    "endOffset": 122425
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8405,12 +8426,12 @@
             },
             {
                 "to": {
-                    "startLine": 1547,
+                    "startLine": 1551,
                     "startColumn": 4,
-                    "startOffset": 122240,
-                    "endLine": 1548,
+                    "startOffset": 122430,
+                    "endLine": 1552,
                     "endColumn": 12,
-                    "endOffset": 122389
+                    "endOffset": 122579
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8426,11 +8447,11 @@
             },
             {
                 "to": {
-                    "startLine": 1549,
+                    "startLine": 1553,
                     "startColumn": 4,
-                    "startOffset": 122394,
+                    "startOffset": 122584,
                     "endColumn": 97,
-                    "endOffset": 122487
+                    "endOffset": 122677
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8445,11 +8466,11 @@
             },
             {
                 "to": {
-                    "startLine": 1550,
+                    "startLine": 1554,
                     "startColumn": 4,
-                    "startOffset": 122492,
+                    "startOffset": 122682,
                     "endColumn": 113,
-                    "endOffset": 122601
+                    "endOffset": 122791
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8464,11 +8485,11 @@
             },
             {
                 "to": {
-                    "startLine": 1551,
+                    "startLine": 1555,
                     "startColumn": 4,
-                    "startOffset": 122606,
+                    "startOffset": 122796,
                     "endColumn": 93,
-                    "endOffset": 122695
+                    "endOffset": 122885
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8483,12 +8504,12 @@
             },
             {
                 "to": {
-                    "startLine": 1552,
+                    "startLine": 1556,
                     "startColumn": 4,
-                    "startOffset": 122700,
-                    "endLine": 1553,
+                    "startOffset": 122890,
+                    "endLine": 1557,
                     "endColumn": 12,
-                    "endOffset": 122835
+                    "endOffset": 123025
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8504,12 +8525,12 @@
             },
             {
                 "to": {
-                    "startLine": 1554,
+                    "startLine": 1558,
                     "startColumn": 4,
-                    "startOffset": 122840,
-                    "endLine": 1555,
+                    "startOffset": 123030,
+                    "endLine": 1559,
                     "endColumn": 12,
-                    "endOffset": 122969
+                    "endOffset": 123159
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8525,11 +8546,11 @@
             },
             {
                 "to": {
-                    "startLine": 1556,
+                    "startLine": 1560,
                     "startColumn": 4,
-                    "startOffset": 122974,
+                    "startOffset": 123164,
                     "endColumn": 95,
-                    "endOffset": 123065
+                    "endOffset": 123255
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8544,11 +8565,11 @@
             },
             {
                 "to": {
-                    "startLine": 1557,
+                    "startLine": 1561,
                     "startColumn": 4,
-                    "startOffset": 123070,
+                    "startOffset": 123260,
                     "endColumn": 111,
-                    "endOffset": 123177
+                    "endOffset": 123367
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8563,11 +8584,11 @@
             },
             {
                 "to": {
-                    "startLine": 1558,
+                    "startLine": 1562,
                     "startColumn": 4,
-                    "startOffset": 123182,
+                    "startOffset": 123372,
                     "endColumn": 99,
-                    "endOffset": 123277
+                    "endOffset": 123467
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8582,11 +8603,11 @@
             },
             {
                 "to": {
-                    "startLine": 1559,
+                    "startLine": 1563,
                     "startColumn": 4,
-                    "startOffset": 123282,
+                    "startOffset": 123472,
                     "endColumn": 115,
-                    "endOffset": 123393
+                    "endOffset": 123583
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8601,11 +8622,11 @@
             },
             {
                 "to": {
-                    "startLine": 1560,
+                    "startLine": 1564,
                     "startColumn": 4,
-                    "startOffset": 123398,
+                    "startOffset": 123588,
                     "endColumn": 95,
-                    "endOffset": 123489
+                    "endOffset": 123679
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8620,11 +8641,11 @@
             },
             {
                 "to": {
-                    "startLine": 1561,
+                    "startLine": 1565,
                     "startColumn": 4,
-                    "startOffset": 123494,
+                    "startOffset": 123684,
                     "endColumn": 111,
-                    "endOffset": 123601
+                    "endOffset": 123791
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8639,12 +8660,12 @@
             },
             {
                 "to": {
-                    "startLine": 1562,
+                    "startLine": 1566,
                     "startColumn": 4,
-                    "startOffset": 123606,
-                    "endLine": 1563,
+                    "startOffset": 123796,
+                    "endLine": 1567,
                     "endColumn": 12,
-                    "endOffset": 123741
+                    "endOffset": 123931
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8660,11 +8681,11 @@
             },
             {
                 "to": {
-                    "startLine": 1564,
+                    "startLine": 1568,
                     "startColumn": 4,
-                    "startOffset": 123746,
+                    "startOffset": 123936,
                     "endColumn": 135,
-                    "endOffset": 123877
+                    "endOffset": 124067
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8679,12 +8700,12 @@
             },
             {
                 "to": {
-                    "startLine": 1565,
+                    "startLine": 1569,
                     "startColumn": 4,
-                    "startOffset": 123882,
-                    "endLine": 1566,
+                    "startOffset": 124072,
+                    "endLine": 1570,
                     "endColumn": 12,
-                    "endOffset": 124041
+                    "endOffset": 124231
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8700,11 +8721,11 @@
             },
             {
                 "to": {
-                    "startLine": 1567,
+                    "startLine": 1571,
                     "startColumn": 4,
-                    "startOffset": 124046,
+                    "startOffset": 124236,
                     "endColumn": 129,
-                    "endOffset": 124171
+                    "endOffset": 124361
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8719,12 +8740,12 @@
             },
             {
                 "to": {
-                    "startLine": 1568,
+                    "startLine": 1572,
                     "startColumn": 4,
-                    "startOffset": 124176,
-                    "endLine": 1569,
+                    "startOffset": 124366,
+                    "endLine": 1573,
                     "endColumn": 12,
-                    "endOffset": 124329
+                    "endOffset": 124519
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8740,12 +8761,12 @@
             },
             {
                 "to": {
-                    "startLine": 1570,
+                    "startLine": 1574,
                     "startColumn": 4,
-                    "startOffset": 124334,
-                    "endLine": 1571,
+                    "startOffset": 124524,
+                    "endLine": 1575,
                     "endColumn": 12,
-                    "endOffset": 124479
+                    "endOffset": 124669
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8761,11 +8782,11 @@
             },
             {
                 "to": {
-                    "startLine": 1572,
+                    "startLine": 1576,
                     "startColumn": 4,
-                    "startOffset": 124484,
+                    "startOffset": 124674,
                     "endColumn": 140,
-                    "endOffset": 124620
+                    "endOffset": 124810
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8780,12 +8801,12 @@
             },
             {
                 "to": {
-                    "startLine": 1573,
+                    "startLine": 1577,
                     "startColumn": 4,
-                    "startOffset": 124625,
-                    "endLine": 1574,
+                    "startOffset": 124815,
+                    "endLine": 1578,
                     "endColumn": 12,
-                    "endOffset": 124764
+                    "endOffset": 124954
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8801,11 +8822,11 @@
             },
             {
                 "to": {
-                    "startLine": 1575,
+                    "startLine": 1579,
                     "startColumn": 4,
-                    "startOffset": 124769,
+                    "startOffset": 124959,
                     "endColumn": 134,
-                    "endOffset": 124899
+                    "endOffset": 125089
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8820,11 +8841,11 @@
             },
             {
                 "to": {
-                    "startLine": 1576,
+                    "startLine": 1580,
                     "startColumn": 4,
-                    "startOffset": 124904,
+                    "startOffset": 125094,
                     "endColumn": 111,
-                    "endOffset": 125011
+                    "endOffset": 125201
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8839,11 +8860,11 @@
             },
             {
                 "to": {
-                    "startLine": 1577,
+                    "startLine": 1581,
                     "startColumn": 4,
-                    "startOffset": 125016,
+                    "startOffset": 125206,
                     "endColumn": 127,
-                    "endOffset": 125139
+                    "endOffset": 125329
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8858,12 +8879,12 @@
             },
             {
                 "to": {
-                    "startLine": 1578,
+                    "startLine": 1582,
                     "startColumn": 4,
-                    "startOffset": 125144,
-                    "endLine": 1579,
+                    "startOffset": 125334,
+                    "endLine": 1583,
                     "endColumn": 12,
-                    "endOffset": 125275
+                    "endOffset": 125465
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8879,12 +8900,12 @@
             },
             {
                 "to": {
-                    "startLine": 1580,
+                    "startLine": 1584,
                     "startColumn": 4,
-                    "startOffset": 125280,
-                    "endLine": 1581,
+                    "startOffset": 125470,
+                    "endLine": 1585,
                     "endColumn": 12,
-                    "endOffset": 125417
+                    "endOffset": 125607
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8900,12 +8921,12 @@
             },
             {
                 "to": {
-                    "startLine": 1582,
+                    "startLine": 1586,
                     "startColumn": 4,
-                    "startOffset": 125422,
-                    "endLine": 1583,
+                    "startOffset": 125612,
+                    "endLine": 1587,
                     "endColumn": 12,
-                    "endOffset": 125559
+                    "endOffset": 125749
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8921,11 +8942,11 @@
             },
             {
                 "to": {
-                    "startLine": 1584,
+                    "startLine": 1588,
                     "startColumn": 4,
-                    "startOffset": 125564,
+                    "startOffset": 125754,
                     "endColumn": 111,
-                    "endOffset": 125671
+                    "endOffset": 125861
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8940,11 +8961,11 @@
             },
             {
                 "to": {
-                    "startLine": 1585,
+                    "startLine": 1589,
                     "startColumn": 4,
-                    "startOffset": 125676,
+                    "startOffset": 125866,
                     "endColumn": 139,
-                    "endOffset": 125811
+                    "endOffset": 126001
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -8959,12 +8980,12 @@
             },
             {
                 "to": {
-                    "startLine": 1586,
+                    "startLine": 1590,
                     "startColumn": 4,
-                    "startOffset": 125816,
-                    "endLine": 1588,
+                    "startOffset": 126006,
+                    "endLine": 1592,
                     "endColumn": 12,
-                    "endOffset": 126012
+                    "endOffset": 126202
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -8980,11 +9001,11 @@
             },
             {
                 "to": {
-                    "startLine": 1589,
+                    "startLine": 1593,
                     "startColumn": 4,
-                    "startOffset": 126017,
+                    "startOffset": 126207,
                     "endColumn": 91,
-                    "endOffset": 126104
+                    "endOffset": 126294
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -8999,12 +9020,12 @@
             },
             {
                 "to": {
-                    "startLine": 1590,
+                    "startLine": 1594,
                     "startColumn": 4,
-                    "startOffset": 126109,
-                    "endLine": 1592,
+                    "startOffset": 126299,
+                    "endLine": 1596,
                     "endColumn": 12,
-                    "endOffset": 126284
+                    "endOffset": 126474
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -9020,12 +9041,12 @@
             },
             {
                 "to": {
-                    "startLine": 1593,
+                    "startLine": 1597,
                     "startColumn": 4,
-                    "startOffset": 126289,
-                    "endLine": 1595,
+                    "startOffset": 126479,
+                    "endLine": 1599,
                     "endColumn": 12,
-                    "endOffset": 126453
+                    "endOffset": 126643
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -9041,12 +9062,12 @@
             },
             {
                 "to": {
-                    "startLine": 1596,
+                    "startLine": 1600,
                     "startColumn": 4,
-                    "startOffset": 126458,
-                    "endLine": 1598,
+                    "startOffset": 126648,
+                    "endLine": 1602,
                     "endColumn": 12,
-                    "endOffset": 126628
+                    "endOffset": 126818
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -9062,12 +9083,12 @@
             },
             {
                 "to": {
-                    "startLine": 1599,
+                    "startLine": 1603,
                     "startColumn": 4,
-                    "startOffset": 126633,
-                    "endLine": 1602,
+                    "startOffset": 126823,
+                    "endLine": 1606,
                     "endColumn": 12,
-                    "endOffset": 126881
+                    "endOffset": 127071
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -9083,12 +9104,12 @@
             },
             {
                 "to": {
-                    "startLine": 1603,
+                    "startLine": 1607,
                     "startColumn": 4,
-                    "startOffset": 126886,
-                    "endLine": 1607,
+                    "startOffset": 127076,
+                    "endLine": 1611,
                     "endColumn": 12,
-                    "endOffset": 127172
+                    "endOffset": 127362
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -9104,11 +9125,11 @@
             },
             {
                 "to": {
-                    "startLine": 1608,
+                    "startLine": 1612,
                     "startColumn": 4,
-                    "startOffset": 127177,
+                    "startOffset": 127367,
                     "endColumn": 67,
-                    "endOffset": 127240
+                    "endOffset": 127430
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9123,11 +9144,11 @@
             },
             {
                 "to": {
-                    "startLine": 1609,
+                    "startLine": 1613,
                     "startColumn": 4,
-                    "startOffset": 127245,
+                    "startOffset": 127435,
                     "endColumn": 72,
-                    "endOffset": 127313
+                    "endOffset": 127503
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9142,11 +9163,11 @@
             },
             {
                 "to": {
-                    "startLine": 1610,
+                    "startLine": 1614,
                     "startColumn": 4,
-                    "startOffset": 127318,
+                    "startOffset": 127508,
                     "endColumn": 73,
-                    "endOffset": 127387
+                    "endOffset": 127577
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9161,11 +9182,11 @@
             },
             {
                 "to": {
-                    "startLine": 1611,
+                    "startLine": 1615,
                     "startColumn": 4,
-                    "startOffset": 127392,
+                    "startOffset": 127582,
                     "endColumn": 72,
-                    "endOffset": 127460
+                    "endOffset": 127650
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9180,11 +9201,11 @@
             },
             {
                 "to": {
-                    "startLine": 1612,
+                    "startLine": 1616,
                     "startColumn": 4,
-                    "startOffset": 127465,
+                    "startOffset": 127655,
                     "endColumn": 73,
-                    "endOffset": 127534
+                    "endOffset": 127724
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9199,12 +9220,12 @@
             },
             {
                 "to": {
-                    "startLine": 1613,
+                    "startLine": 1617,
                     "startColumn": 4,
-                    "startOffset": 127539,
-                    "endLine": 1614,
+                    "startOffset": 127729,
+                    "endLine": 1618,
                     "endColumn": 12,
-                    "endOffset": 127680
+                    "endOffset": 127870
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9220,12 +9241,12 @@
             },
             {
                 "to": {
-                    "startLine": 1615,
+                    "startLine": 1619,
                     "startColumn": 4,
-                    "startOffset": 127685,
-                    "endLine": 1616,
+                    "startOffset": 127875,
+                    "endLine": 1620,
                     "endColumn": 12,
-                    "endOffset": 127824
+                    "endOffset": 128014
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9241,12 +9262,12 @@
             },
             {
                 "to": {
-                    "startLine": 1617,
+                    "startLine": 1621,
                     "startColumn": 4,
-                    "startOffset": 127829,
-                    "endLine": 1618,
+                    "startOffset": 128019,
+                    "endLine": 1622,
                     "endColumn": 12,
-                    "endOffset": 127962
+                    "endOffset": 128152
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9262,11 +9283,11 @@
             },
             {
                 "to": {
-                    "startLine": 1619,
+                    "startLine": 1623,
                     "startColumn": 4,
-                    "startOffset": 127967,
+                    "startOffset": 128157,
                     "endColumn": 65,
-                    "endOffset": 128028
+                    "endOffset": 128218
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9281,11 +9302,11 @@
             },
             {
                 "to": {
-                    "startLine": 1620,
+                    "startLine": 1624,
                     "startColumn": 4,
-                    "startOffset": 128033,
+                    "startOffset": 128223,
                     "endColumn": 89,
-                    "endOffset": 128118
+                    "endOffset": 128308
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9300,11 +9321,11 @@
             },
             {
                 "to": {
-                    "startLine": 1621,
+                    "startLine": 1625,
                     "startColumn": 4,
-                    "startOffset": 128123,
+                    "startOffset": 128313,
                     "endColumn": 75,
-                    "endOffset": 128194
+                    "endOffset": 128384
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9319,11 +9340,11 @@
             },
             {
                 "to": {
-                    "startLine": 1622,
+                    "startLine": 1626,
                     "startColumn": 4,
-                    "startOffset": 128199,
+                    "startOffset": 128389,
                     "endColumn": 103,
-                    "endOffset": 128298
+                    "endOffset": 128488
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9338,11 +9359,11 @@
             },
             {
                 "to": {
-                    "startLine": 1623,
+                    "startLine": 1627,
                     "startColumn": 4,
-                    "startOffset": 128303,
+                    "startOffset": 128493,
                     "endColumn": 89,
-                    "endOffset": 128388
+                    "endOffset": 128578
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9357,11 +9378,11 @@
             },
             {
                 "to": {
-                    "startLine": 1624,
+                    "startLine": 1628,
                     "startColumn": 4,
-                    "startOffset": 128393,
+                    "startOffset": 128583,
                     "endColumn": 101,
-                    "endOffset": 128490
+                    "endOffset": 128680
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9376,11 +9397,11 @@
             },
             {
                 "to": {
-                    "startLine": 1625,
+                    "startLine": 1629,
                     "startColumn": 4,
-                    "startOffset": 128495,
+                    "startOffset": 128685,
                     "endColumn": 107,
-                    "endOffset": 128598
+                    "endOffset": 128788
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9395,11 +9416,11 @@
             },
             {
                 "to": {
-                    "startLine": 1626,
+                    "startLine": 1630,
                     "startColumn": 4,
-                    "startOffset": 128603,
+                    "startOffset": 128793,
                     "endColumn": 107,
-                    "endOffset": 128706
+                    "endOffset": 128896
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9414,11 +9435,11 @@
             },
             {
                 "to": {
-                    "startLine": 1627,
+                    "startLine": 1631,
                     "startColumn": 4,
-                    "startOffset": 128711,
+                    "startOffset": 128901,
                     "endColumn": 99,
-                    "endOffset": 128806
+                    "endOffset": 128996
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9433,11 +9454,11 @@
             },
             {
                 "to": {
-                    "startLine": 1628,
+                    "startLine": 1632,
                     "startColumn": 4,
-                    "startOffset": 128811,
+                    "startOffset": 129001,
                     "endColumn": 79,
-                    "endOffset": 128886
+                    "endOffset": 129076
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9452,11 +9473,11 @@
             },
             {
                 "to": {
-                    "startLine": 1629,
+                    "startLine": 1633,
                     "startColumn": 4,
-                    "startOffset": 128891,
+                    "startOffset": 129081,
                     "endColumn": 91,
-                    "endOffset": 128978
+                    "endOffset": 129168
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9471,11 +9492,11 @@
             },
             {
                 "to": {
-                    "startLine": 1630,
+                    "startLine": 1634,
                     "startColumn": 4,
-                    "startOffset": 128983,
+                    "startOffset": 129173,
                     "endColumn": 97,
-                    "endOffset": 129076
+                    "endOffset": 129266
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9490,12 +9511,12 @@
             },
             {
                 "to": {
-                    "startLine": 1631,
+                    "startLine": 1635,
                     "startColumn": 4,
-                    "startOffset": 129081,
-                    "endLine": 1632,
+                    "startOffset": 129271,
+                    "endLine": 1636,
                     "endColumn": 12,
-                    "endOffset": 129186
+                    "endOffset": 129376
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9511,11 +9532,11 @@
             },
             {
                 "to": {
-                    "startLine": 1633,
+                    "startLine": 1637,
                     "startColumn": 4,
-                    "startOffset": 129191,
+                    "startOffset": 129381,
                     "endColumn": 77,
-                    "endOffset": 129264
+                    "endOffset": 129454
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9530,11 +9551,11 @@
             },
             {
                 "to": {
-                    "startLine": 1634,
+                    "startLine": 1638,
                     "startColumn": 4,
-                    "startOffset": 129269,
+                    "startOffset": 129459,
                     "endColumn": 105,
-                    "endOffset": 129370
+                    "endOffset": 129560
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9549,11 +9570,11 @@
             },
             {
                 "to": {
-                    "startLine": 1635,
+                    "startLine": 1639,
                     "startColumn": 4,
-                    "startOffset": 129375,
+                    "startOffset": 129565,
                     "endColumn": 91,
-                    "endOffset": 129462
+                    "endOffset": 129652
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9568,11 +9589,11 @@
             },
             {
                 "to": {
-                    "startLine": 1636,
+                    "startLine": 1640,
                     "startColumn": 4,
-                    "startOffset": 129467,
+                    "startOffset": 129657,
                     "endColumn": 103,
-                    "endOffset": 129566
+                    "endOffset": 129756
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9587,11 +9608,11 @@
             },
             {
                 "to": {
-                    "startLine": 1637,
+                    "startLine": 1641,
                     "startColumn": 4,
-                    "startOffset": 129571,
+                    "startOffset": 129761,
                     "endColumn": 109,
-                    "endOffset": 129676
+                    "endOffset": 129866
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9606,12 +9627,12 @@
             },
             {
                 "to": {
-                    "startLine": 1638,
+                    "startLine": 1642,
                     "startColumn": 4,
-                    "startOffset": 129681,
-                    "endLine": 1639,
+                    "startOffset": 129871,
+                    "endLine": 1643,
                     "endColumn": 12,
-                    "endOffset": 129798
+                    "endOffset": 129988
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9627,12 +9648,12 @@
             },
             {
                 "to": {
-                    "startLine": 1640,
+                    "startLine": 1644,
                     "startColumn": 4,
-                    "startOffset": 129803,
-                    "endLine": 1643,
+                    "startOffset": 129993,
+                    "endLine": 1647,
                     "endColumn": 12,
-                    "endOffset": 129961
+                    "endOffset": 130151
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9648,12 +9669,12 @@
             },
             {
                 "to": {
-                    "startLine": 1644,
+                    "startLine": 1648,
                     "startColumn": 4,
-                    "startOffset": 129966,
-                    "endLine": 1647,
+                    "startOffset": 130156,
+                    "endLine": 1651,
                     "endColumn": 12,
-                    "endOffset": 130118
+                    "endOffset": 130308
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9669,12 +9690,12 @@
             },
             {
                 "to": {
-                    "startLine": 1648,
+                    "startLine": 1652,
                     "startColumn": 4,
-                    "startOffset": 130123,
-                    "endLine": 1650,
+                    "startOffset": 130313,
+                    "endLine": 1654,
                     "endColumn": 12,
-                    "endOffset": 130272
+                    "endOffset": 130462
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -9690,12 +9711,12 @@
             },
             {
                 "to": {
-                    "startLine": 1651,
+                    "startLine": 1655,
                     "startColumn": 4,
-                    "startOffset": 130277,
-                    "endLine": 1655,
+                    "startOffset": 130467,
+                    "endLine": 1659,
                     "endColumn": 12,
-                    "endOffset": 130630
+                    "endOffset": 130820
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -9711,12 +9732,12 @@
             },
             {
                 "to": {
-                    "startLine": 1656,
+                    "startLine": 1660,
                     "startColumn": 4,
-                    "startOffset": 130635,
-                    "endLine": 1658,
+                    "startOffset": 130825,
+                    "endLine": 1662,
                     "endColumn": 12,
-                    "endOffset": 130797
+                    "endOffset": 130987
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -9732,12 +9753,12 @@
             },
             {
                 "to": {
-                    "startLine": 1659,
+                    "startLine": 1663,
                     "startColumn": 4,
-                    "startOffset": 130802,
-                    "endLine": 1663,
+                    "startOffset": 130992,
+                    "endLine": 1667,
                     "endColumn": 12,
-                    "endOffset": 131167
+                    "endOffset": 131357
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -9753,12 +9774,12 @@
             },
             {
                 "to": {
-                    "startLine": 1664,
+                    "startLine": 1668,
                     "startColumn": 4,
-                    "startOffset": 131172,
-                    "endLine": 1667,
+                    "startOffset": 131362,
+                    "endLine": 1671,
                     "endColumn": 12,
-                    "endOffset": 131327
+                    "endOffset": 131517
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -9774,12 +9795,12 @@
             },
             {
                 "to": {
-                    "startLine": 1668,
+                    "startLine": 1672,
                     "startColumn": 4,
-                    "startOffset": 131332,
-                    "endLine": 1671,
+                    "startOffset": 131522,
+                    "endLine": 1675,
                     "endColumn": 12,
-                    "endOffset": 131481
+                    "endOffset": 131671
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -9795,11 +9816,11 @@
             },
             {
                 "to": {
-                    "startLine": 1672,
+                    "startLine": 1676,
                     "startColumn": 4,
-                    "startOffset": 131486,
+                    "startOffset": 131676,
                     "endColumn": 79,
-                    "endOffset": 131561
+                    "endOffset": 131751
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9814,11 +9835,11 @@
             },
             {
                 "to": {
-                    "startLine": 1673,
+                    "startLine": 1677,
                     "startColumn": 4,
-                    "startOffset": 131566,
+                    "startOffset": 131756,
                     "endColumn": 99,
-                    "endOffset": 131661
+                    "endOffset": 131851
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9833,11 +9854,11 @@
             },
             {
                 "to": {
-                    "startLine": 1674,
+                    "startLine": 1678,
                     "startColumn": 4,
-                    "startOffset": 131666,
+                    "startOffset": 131856,
                     "endColumn": 89,
-                    "endOffset": 131751
+                    "endOffset": 131941
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9852,11 +9873,11 @@
             },
             {
                 "to": {
-                    "startLine": 1675,
+                    "startLine": 1679,
                     "startColumn": 4,
-                    "startOffset": 131756,
+                    "startOffset": 131946,
                     "endColumn": 109,
-                    "endOffset": 131861
+                    "endOffset": 132051
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9871,11 +9892,11 @@
             },
             {
                 "to": {
-                    "startLine": 1676,
+                    "startLine": 1680,
                     "startColumn": 4,
-                    "startOffset": 131866,
+                    "startOffset": 132056,
                     "endColumn": 91,
-                    "endOffset": 131953
+                    "endOffset": 132143
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9890,12 +9911,12 @@
             },
             {
                 "to": {
-                    "startLine": 1677,
+                    "startLine": 1681,
                     "startColumn": 4,
-                    "startOffset": 131958,
-                    "endLine": 1678,
+                    "startOffset": 132148,
+                    "endLine": 1682,
                     "endColumn": 12,
-                    "endOffset": 132053
+                    "endOffset": 132243
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9911,12 +9932,12 @@
             },
             {
                 "to": {
-                    "startLine": 1679,
+                    "startLine": 1683,
                     "startColumn": 4,
-                    "startOffset": 132058,
-                    "endLine": 1680,
+                    "startOffset": 132248,
+                    "endLine": 1684,
                     "endColumn": 12,
-                    "endOffset": 132165
+                    "endOffset": 132355
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9932,12 +9953,12 @@
             },
             {
                 "to": {
-                    "startLine": 1681,
+                    "startLine": 1685,
                     "startColumn": 4,
-                    "startOffset": 132170,
-                    "endLine": 1682,
+                    "startOffset": 132360,
+                    "endLine": 1686,
                     "endColumn": 12,
-                    "endOffset": 132279
+                    "endOffset": 132469
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9953,12 +9974,12 @@
             },
             {
                 "to": {
-                    "startLine": 1683,
+                    "startLine": 1687,
                     "startColumn": 4,
-                    "startOffset": 132284,
-                    "endLine": 1684,
+                    "startOffset": 132474,
+                    "endLine": 1688,
                     "endColumn": 12,
-                    "endOffset": 132395
+                    "endOffset": 132585
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9974,12 +9995,12 @@
             },
             {
                 "to": {
-                    "startLine": 1685,
+                    "startLine": 1689,
                     "startColumn": 4,
-                    "startOffset": 132400,
-                    "endLine": 1686,
+                    "startOffset": 132590,
+                    "endLine": 1690,
                     "endColumn": 12,
-                    "endOffset": 132511
+                    "endOffset": 132701
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -9995,11 +10016,11 @@
             },
             {
                 "to": {
-                    "startLine": 1687,
+                    "startLine": 1691,
                     "startColumn": 4,
-                    "startOffset": 132516,
+                    "startOffset": 132706,
                     "endColumn": 93,
-                    "endOffset": 132605
+                    "endOffset": 132795
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10014,11 +10035,11 @@
             },
             {
                 "to": {
-                    "startLine": 1688,
+                    "startLine": 1692,
                     "startColumn": 4,
-                    "startOffset": 132610,
+                    "startOffset": 132800,
                     "endColumn": 113,
-                    "endOffset": 132719
+                    "endOffset": 132909
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10033,11 +10054,11 @@
             },
             {
                 "to": {
-                    "startLine": 1689,
+                    "startLine": 1693,
                     "startColumn": 4,
-                    "startOffset": 132724,
+                    "startOffset": 132914,
                     "endColumn": 111,
-                    "endOffset": 132831
+                    "endOffset": 133021
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10052,12 +10073,12 @@
             },
             {
                 "to": {
-                    "startLine": 1690,
+                    "startLine": 1694,
                     "startColumn": 4,
-                    "startOffset": 132836,
-                    "endLine": 1691,
+                    "startOffset": 133026,
+                    "endLine": 1695,
                     "endColumn": 12,
-                    "endOffset": 132933
+                    "endOffset": 133123
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10073,12 +10094,12 @@
             },
             {
                 "to": {
-                    "startLine": 1692,
+                    "startLine": 1696,
                     "startColumn": 4,
-                    "startOffset": 132938,
-                    "endLine": 1693,
+                    "startOffset": 133128,
+                    "endLine": 1697,
                     "endColumn": 12,
-                    "endOffset": 133053
+                    "endOffset": 133243
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10094,12 +10115,12 @@
             },
             {
                 "to": {
-                    "startLine": 1694,
+                    "startLine": 1698,
                     "startColumn": 4,
-                    "startOffset": 133058,
-                    "endLine": 1695,
+                    "startOffset": 133248,
+                    "endLine": 1699,
                     "endColumn": 12,
-                    "endOffset": 133175
+                    "endOffset": 133365
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10115,11 +10136,11 @@
             },
             {
                 "to": {
-                    "startLine": 1696,
+                    "startLine": 1700,
                     "startColumn": 4,
-                    "startOffset": 133180,
+                    "startOffset": 133370,
                     "endColumn": 81,
-                    "endOffset": 133257
+                    "endOffset": 133447
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10134,11 +10155,11 @@
             },
             {
                 "to": {
-                    "startLine": 1697,
+                    "startLine": 1701,
                     "startColumn": 4,
-                    "startOffset": 133262,
+                    "startOffset": 133452,
                     "endColumn": 103,
-                    "endOffset": 133361
+                    "endOffset": 133551
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10153,11 +10174,11 @@
             },
             {
                 "to": {
-                    "startLine": 1698,
+                    "startLine": 1702,
                     "startColumn": 4,
-                    "startOffset": 133366,
+                    "startOffset": 133556,
                     "endColumn": 119,
-                    "endOffset": 133481
+                    "endOffset": 133671
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10172,11 +10193,11 @@
             },
             {
                 "to": {
-                    "startLine": 1699,
+                    "startLine": 1703,
                     "startColumn": 4,
-                    "startOffset": 133486,
+                    "startOffset": 133676,
                     "endColumn": 125,
-                    "endOffset": 133607
+                    "endOffset": 133797
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10191,11 +10212,11 @@
             },
             {
                 "to": {
-                    "startLine": 1700,
+                    "startLine": 1704,
                     "startColumn": 4,
-                    "startOffset": 133612,
+                    "startOffset": 133802,
                     "endColumn": 97,
-                    "endOffset": 133705
+                    "endOffset": 133895
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10210,11 +10231,11 @@
             },
             {
                 "to": {
-                    "startLine": 1701,
+                    "startLine": 1705,
                     "startColumn": 4,
-                    "startOffset": 133710,
+                    "startOffset": 133900,
                     "endColumn": 93,
-                    "endOffset": 133799
+                    "endOffset": 133989
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10229,11 +10250,11 @@
             },
             {
                 "to": {
-                    "startLine": 1702,
+                    "startLine": 1706,
                     "startColumn": 4,
-                    "startOffset": 133804,
+                    "startOffset": 133994,
                     "endColumn": 87,
-                    "endOffset": 133887
+                    "endOffset": 134077
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10248,11 +10269,11 @@
             },
             {
                 "to": {
-                    "startLine": 1703,
+                    "startLine": 1707,
                     "startColumn": 4,
-                    "startOffset": 133892,
+                    "startOffset": 134082,
                     "endColumn": 111,
-                    "endOffset": 133999
+                    "endOffset": 134189
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10267,11 +10288,11 @@
             },
             {
                 "to": {
-                    "startLine": 1704,
+                    "startLine": 1708,
                     "startColumn": 4,
-                    "startOffset": 134004,
+                    "startOffset": 134194,
                     "endColumn": 115,
-                    "endOffset": 134115
+                    "endOffset": 134305
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10286,11 +10307,11 @@
             },
             {
                 "to": {
-                    "startLine": 1705,
+                    "startLine": 1709,
                     "startColumn": 4,
-                    "startOffset": 134120,
+                    "startOffset": 134310,
                     "endColumn": 121,
-                    "endOffset": 134237
+                    "endOffset": 134427
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10305,11 +10326,11 @@
             },
             {
                 "to": {
-                    "startLine": 1706,
+                    "startLine": 1710,
                     "startColumn": 4,
-                    "startOffset": 134242,
+                    "startOffset": 134432,
                     "endColumn": 111,
-                    "endOffset": 134349
+                    "endOffset": 134539
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10324,12 +10345,12 @@
             },
             {
                 "to": {
-                    "startLine": 1707,
+                    "startLine": 1711,
                     "startColumn": 4,
-                    "startOffset": 134354,
-                    "endLine": 1709,
+                    "startOffset": 134544,
+                    "endLine": 1713,
                     "endColumn": 12,
-                    "endOffset": 134524
+                    "endOffset": 134714
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10345,11 +10366,11 @@
             },
             {
                 "to": {
-                    "startLine": 1710,
+                    "startLine": 1714,
                     "startColumn": 4,
-                    "startOffset": 134529,
+                    "startOffset": 134719,
                     "endColumn": 115,
-                    "endOffset": 134640
+                    "endOffset": 134830
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10364,11 +10385,11 @@
             },
             {
                 "to": {
-                    "startLine": 1711,
+                    "startLine": 1715,
                     "startColumn": 4,
-                    "startOffset": 134645,
+                    "startOffset": 134835,
                     "endColumn": 85,
-                    "endOffset": 134726
+                    "endOffset": 134916
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10383,11 +10404,11 @@
             },
             {
                 "to": {
-                    "startLine": 1712,
+                    "startLine": 1716,
                     "startColumn": 4,
-                    "startOffset": 134731,
+                    "startOffset": 134921,
                     "endColumn": 91,
-                    "endOffset": 134818
+                    "endOffset": 135008
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10402,12 +10423,12 @@
             },
             {
                 "to": {
-                    "startLine": 1713,
+                    "startLine": 1717,
                     "startColumn": 4,
-                    "startOffset": 134823,
-                    "endLine": 1714,
+                    "startOffset": 135013,
+                    "endLine": 1718,
                     "endColumn": 12,
-                    "endOffset": 134930
+                    "endOffset": 135120
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10423,12 +10444,12 @@
             },
             {
                 "to": {
-                    "startLine": 1715,
+                    "startLine": 1719,
                     "startColumn": 4,
-                    "startOffset": 134935,
-                    "endLine": 1716,
+                    "startOffset": 135125,
+                    "endLine": 1720,
                     "endColumn": 12,
-                    "endOffset": 135054
+                    "endOffset": 135244
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10444,11 +10465,11 @@
             },
             {
                 "to": {
-                    "startLine": 1717,
+                    "startLine": 1721,
                     "startColumn": 4,
-                    "startOffset": 135059,
+                    "startOffset": 135249,
                     "endColumn": 66,
-                    "endOffset": 135121
+                    "endOffset": 135311
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10463,12 +10484,12 @@
             },
             {
                 "to": {
-                    "startLine": 1718,
+                    "startLine": 1722,
                     "startColumn": 4,
-                    "startOffset": 135126,
-                    "endLine": 1719,
+                    "startOffset": 135316,
+                    "endLine": 1723,
                     "endColumn": 12,
-                    "endOffset": 135247
+                    "endOffset": 135437
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10484,11 +10505,11 @@
             },
             {
                 "to": {
-                    "startLine": 1720,
+                    "startLine": 1724,
                     "startColumn": 4,
-                    "startOffset": 135252,
+                    "startOffset": 135442,
                     "endColumn": 67,
-                    "endOffset": 135315
+                    "endOffset": 135505
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10503,12 +10524,12 @@
             },
             {
                 "to": {
-                    "startLine": 1721,
+                    "startLine": 1725,
                     "startColumn": 4,
-                    "startOffset": 135320,
-                    "endLine": 1722,
+                    "startOffset": 135510,
+                    "endLine": 1726,
                     "endColumn": 12,
-                    "endOffset": 135443
+                    "endOffset": 135633
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10524,12 +10545,12 @@
             },
             {
                 "to": {
-                    "startLine": 1723,
+                    "startLine": 1727,
                     "startColumn": 4,
-                    "startOffset": 135448,
-                    "endLine": 1724,
+                    "startOffset": 135638,
+                    "endLine": 1728,
                     "endColumn": 12,
-                    "endOffset": 135587
+                    "endOffset": 135777
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10545,12 +10566,12 @@
             },
             {
                 "to": {
-                    "startLine": 1725,
+                    "startLine": 1729,
                     "startColumn": 4,
-                    "startOffset": 135592,
-                    "endLine": 1726,
+                    "startOffset": 135782,
+                    "endLine": 1730,
                     "endColumn": 12,
-                    "endOffset": 135715
+                    "endOffset": 135905
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10566,11 +10587,11 @@
             },
             {
                 "to": {
-                    "startLine": 1727,
+                    "startLine": 1731,
                     "startColumn": 4,
-                    "startOffset": 135720,
+                    "startOffset": 135910,
                     "endColumn": 68,
-                    "endOffset": 135784
+                    "endOffset": 135974
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10585,11 +10606,11 @@
             },
             {
                 "to": {
-                    "startLine": 1728,
+                    "startLine": 1732,
                     "startColumn": 4,
-                    "startOffset": 135789,
+                    "startOffset": 135979,
                     "endColumn": 94,
-                    "endOffset": 135879
+                    "endOffset": 136069
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10604,11 +10625,11 @@
             },
             {
                 "to": {
-                    "startLine": 1729,
+                    "startLine": 1733,
                     "startColumn": 4,
-                    "startOffset": 135884,
+                    "startOffset": 136074,
                     "endColumn": 114,
-                    "endOffset": 135994
+                    "endOffset": 136184
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10623,11 +10644,11 @@
             },
             {
                 "to": {
-                    "startLine": 1730,
+                    "startLine": 1734,
                     "startColumn": 4,
-                    "startOffset": 135999,
+                    "startOffset": 136189,
                     "endColumn": 112,
-                    "endOffset": 136107
+                    "endOffset": 136297
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10642,11 +10663,11 @@
             },
             {
                 "to": {
-                    "startLine": 1731,
+                    "startLine": 1735,
                     "startColumn": 4,
-                    "startOffset": 136112,
+                    "startOffset": 136302,
                     "endColumn": 98,
-                    "endOffset": 136206
+                    "endOffset": 136396
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10661,11 +10682,11 @@
             },
             {
                 "to": {
-                    "startLine": 1732,
+                    "startLine": 1736,
                     "startColumn": 4,
-                    "startOffset": 136211,
+                    "startOffset": 136401,
                     "endColumn": 108,
-                    "endOffset": 136315
+                    "endOffset": 136505
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10680,11 +10701,11 @@
             },
             {
                 "to": {
-                    "startLine": 1733,
+                    "startLine": 1737,
                     "startColumn": 4,
-                    "startOffset": 136320,
+                    "startOffset": 136510,
                     "endColumn": 110,
-                    "endOffset": 136426
+                    "endOffset": 136616
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10699,11 +10720,11 @@
             },
             {
                 "to": {
-                    "startLine": 1734,
+                    "startLine": 1738,
                     "startColumn": 4,
-                    "startOffset": 136431,
+                    "startOffset": 136621,
                     "endColumn": 110,
-                    "endOffset": 136537
+                    "endOffset": 136727
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10718,11 +10739,11 @@
             },
             {
                 "to": {
-                    "startLine": 1735,
+                    "startLine": 1739,
                     "startColumn": 4,
-                    "startOffset": 136542,
+                    "startOffset": 136732,
                     "endColumn": 100,
-                    "endOffset": 136638
+                    "endOffset": 136828
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10737,11 +10758,11 @@
             },
             {
                 "to": {
-                    "startLine": 1736,
+                    "startLine": 1740,
                     "startColumn": 4,
-                    "startOffset": 136643,
+                    "startOffset": 136833,
                     "endColumn": 104,
-                    "endOffset": 136743
+                    "endOffset": 136933
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10756,12 +10777,12 @@
             },
             {
                 "to": {
-                    "startLine": 1737,
+                    "startLine": 1741,
                     "startColumn": 4,
-                    "startOffset": 136748,
-                    "endLine": 1738,
+                    "startOffset": 136938,
+                    "endLine": 1742,
                     "endColumn": 12,
-                    "endOffset": 136855
+                    "endOffset": 137045
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10777,12 +10798,12 @@
             },
             {
                 "to": {
-                    "startLine": 1739,
+                    "startLine": 1743,
                     "startColumn": 4,
-                    "startOffset": 136860,
-                    "endLine": 1740,
+                    "startOffset": 137050,
+                    "endLine": 1744,
                     "endColumn": 12,
-                    "endOffset": 136985
+                    "endOffset": 137175
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10798,11 +10819,11 @@
             },
             {
                 "to": {
-                    "startLine": 1741,
+                    "startLine": 1745,
                     "startColumn": 4,
-                    "startOffset": 136990,
+                    "startOffset": 137180,
                     "endColumn": 90,
-                    "endOffset": 137076
+                    "endOffset": 137266
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10817,11 +10838,11 @@
             },
             {
                 "to": {
-                    "startLine": 1742,
+                    "startLine": 1746,
                     "startColumn": 4,
-                    "startOffset": 137081,
+                    "startOffset": 137271,
                     "endColumn": 122,
-                    "endOffset": 137199
+                    "endOffset": 137389
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10836,12 +10857,12 @@
             },
             {
                 "to": {
-                    "startLine": 1743,
+                    "startLine": 1747,
                     "startColumn": 4,
-                    "startOffset": 137204,
-                    "endLine": 1744,
+                    "startOffset": 137394,
+                    "endLine": 1748,
                     "endColumn": 12,
-                    "endOffset": 137311
+                    "endOffset": 137501
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10857,11 +10878,11 @@
             },
             {
                 "to": {
-                    "startLine": 1745,
+                    "startLine": 1749,
                     "startColumn": 4,
-                    "startOffset": 137316,
+                    "startOffset": 137506,
                     "endColumn": 85,
-                    "endOffset": 137397
+                    "endOffset": 137587
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10876,11 +10897,11 @@
             },
             {
                 "to": {
-                    "startLine": 1746,
+                    "startLine": 1750,
                     "startColumn": 4,
-                    "startOffset": 137402,
+                    "startOffset": 137592,
                     "endColumn": 103,
-                    "endOffset": 137501
+                    "endOffset": 137691
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10895,12 +10916,12 @@
             },
             {
                 "to": {
-                    "startLine": 1747,
+                    "startLine": 1751,
                     "startColumn": 4,
-                    "startOffset": 137506,
-                    "endLine": 1748,
+                    "startOffset": 137696,
+                    "endLine": 1752,
                     "endColumn": 12,
-                    "endOffset": 137609
+                    "endOffset": 137799
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10916,12 +10937,12 @@
             },
             {
                 "to": {
-                    "startLine": 1749,
+                    "startLine": 1753,
                     "startColumn": 4,
-                    "startOffset": 137614,
-                    "endLine": 1750,
+                    "startOffset": 137804,
+                    "endLine": 1754,
                     "endColumn": 12,
-                    "endOffset": 137709
+                    "endOffset": 137899
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10937,12 +10958,12 @@
             },
             {
                 "to": {
-                    "startLine": 1751,
+                    "startLine": 1755,
                     "startColumn": 4,
-                    "startOffset": 137714,
-                    "endLine": 1752,
+                    "startOffset": 137904,
+                    "endLine": 1756,
                     "endColumn": 12,
-                    "endOffset": 137827
+                    "endOffset": 138017
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10958,12 +10979,12 @@
             },
             {
                 "to": {
-                    "startLine": 1753,
+                    "startLine": 1757,
                     "startColumn": 4,
-                    "startOffset": 137832,
-                    "endLine": 1754,
+                    "startOffset": 138022,
+                    "endLine": 1758,
                     "endColumn": 12,
-                    "endOffset": 137931
+                    "endOffset": 138121
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -10979,12 +11000,12 @@
             },
             {
                 "to": {
-                    "startLine": 1755,
+                    "startLine": 1759,
                     "startColumn": 4,
-                    "startOffset": 137936,
-                    "endLine": 1756,
+                    "startOffset": 138126,
+                    "endLine": 1760,
                     "endColumn": 12,
-                    "endOffset": 138035
+                    "endOffset": 138225
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11000,12 +11021,12 @@
             },
             {
                 "to": {
-                    "startLine": 1757,
+                    "startLine": 1761,
                     "startColumn": 4,
-                    "startOffset": 138040,
-                    "endLine": 1758,
+                    "startOffset": 138230,
+                    "endLine": 1762,
                     "endColumn": 12,
-                    "endOffset": 138161
+                    "endOffset": 138351
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11021,11 +11042,11 @@
             },
             {
                 "to": {
-                    "startLine": 1759,
+                    "startLine": 1763,
                     "startColumn": 4,
-                    "startOffset": 138166,
+                    "startOffset": 138356,
                     "endColumn": 87,
-                    "endOffset": 138249
+                    "endOffset": 138439
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11040,11 +11061,11 @@
             },
             {
                 "to": {
-                    "startLine": 1760,
+                    "startLine": 1764,
                     "startColumn": 4,
-                    "startOffset": 138254,
+                    "startOffset": 138444,
                     "endColumn": 107,
-                    "endOffset": 138357
+                    "endOffset": 138547
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11059,11 +11080,11 @@
             },
             {
                 "to": {
-                    "startLine": 1761,
+                    "startLine": 1765,
                     "startColumn": 4,
-                    "startOffset": 138362,
+                    "startOffset": 138552,
                     "endColumn": 99,
-                    "endOffset": 138457
+                    "endOffset": 138647
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11078,11 +11099,11 @@
             },
             {
                 "to": {
-                    "startLine": 1762,
+                    "startLine": 1766,
                     "startColumn": 4,
-                    "startOffset": 138462,
+                    "startOffset": 138652,
                     "endColumn": 89,
-                    "endOffset": 138547
+                    "endOffset": 138737
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11097,11 +11118,11 @@
             },
             {
                 "to": {
-                    "startLine": 1763,
+                    "startLine": 1767,
                     "startColumn": 4,
-                    "startOffset": 138552,
+                    "startOffset": 138742,
                     "endColumn": 109,
-                    "endOffset": 138657
+                    "endOffset": 138847
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11116,11 +11137,11 @@
             },
             {
                 "to": {
-                    "startLine": 1764,
+                    "startLine": 1768,
                     "startColumn": 4,
-                    "startOffset": 138662,
+                    "startOffset": 138852,
                     "endColumn": 83,
-                    "endOffset": 138741
+                    "endOffset": 138931
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11135,11 +11156,11 @@
             },
             {
                 "to": {
-                    "startLine": 1765,
+                    "startLine": 1769,
                     "startColumn": 4,
-                    "startOffset": 138746,
+                    "startOffset": 138936,
                     "endColumn": 83,
-                    "endOffset": 138825
+                    "endOffset": 139015
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11154,11 +11175,11 @@
             },
             {
                 "to": {
-                    "startLine": 1766,
+                    "startLine": 1770,
                     "startColumn": 4,
-                    "startOffset": 138830,
+                    "startOffset": 139020,
                     "endColumn": 53,
-                    "endOffset": 138879
+                    "endOffset": 139069
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11173,11 +11194,11 @@
             },
             {
                 "to": {
-                    "startLine": 1767,
+                    "startLine": 1771,
                     "startColumn": 4,
-                    "startOffset": 138884,
+                    "startOffset": 139074,
                     "endColumn": 63,
-                    "endOffset": 138943
+                    "endOffset": 139133
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11192,11 +11213,11 @@
             },
             {
                 "to": {
-                    "startLine": 1768,
+                    "startLine": 1772,
                     "startColumn": 4,
-                    "startOffset": 138948,
+                    "startOffset": 139138,
                     "endColumn": 105,
-                    "endOffset": 139049
+                    "endOffset": 139239
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11211,11 +11232,11 @@
             },
             {
                 "to": {
-                    "startLine": 1769,
+                    "startLine": 1773,
                     "startColumn": 4,
-                    "startOffset": 139054,
+                    "startOffset": 139244,
                     "endColumn": 109,
-                    "endOffset": 139159
+                    "endOffset": 139349
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11230,11 +11251,11 @@
             },
             {
                 "to": {
-                    "startLine": 1770,
+                    "startLine": 1774,
                     "startColumn": 4,
-                    "startOffset": 139164,
+                    "startOffset": 139354,
                     "endColumn": 83,
-                    "endOffset": 139243
+                    "endOffset": 139433
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11249,11 +11270,11 @@
             },
             {
                 "to": {
-                    "startLine": 1771,
+                    "startLine": 1775,
                     "startColumn": 4,
-                    "startOffset": 139248,
+                    "startOffset": 139438,
                     "endColumn": 119,
-                    "endOffset": 139363
+                    "endOffset": 139553
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values/values.xml",
@@ -11268,12 +11289,12 @@
             },
             {
                 "to": {
-                    "startLine": 1772,
+                    "startLine": 1776,
                     "startColumn": 4,
-                    "startOffset": 139368,
-                    "endLine": 1775,
+                    "startOffset": 139558,
+                    "endLine": 1779,
                     "endColumn": 12,
-                    "endOffset": 139581
+                    "endOffset": 139771
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -11289,12 +11310,12 @@
             },
             {
                 "to": {
-                    "startLine": 1776,
+                    "startLine": 1780,
                     "startColumn": 4,
-                    "startOffset": 139586,
-                    "endLine": 1781,
+                    "startOffset": 139776,
+                    "endLine": 1785,
                     "endColumn": 12,
-                    "endOffset": 139979
+                    "endOffset": 140169
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -11310,12 +11331,12 @@
             },
             {
                 "to": {
-                    "startLine": 1782,
+                    "startLine": 1786,
                     "startColumn": 4,
-                    "startOffset": 139984,
-                    "endLine": 1785,
+                    "startOffset": 140174,
+                    "endLine": 1789,
                     "endColumn": 12,
-                    "endOffset": 140186
+                    "endOffset": 140376
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -11331,12 +11352,12 @@
             },
             {
                 "to": {
-                    "startLine": 1786,
+                    "startLine": 1790,
                     "startColumn": 4,
-                    "startOffset": 140191,
-                    "endLine": 1788,
+                    "startOffset": 140381,
+                    "endLine": 1792,
                     "endColumn": 12,
-                    "endOffset": 140345
+                    "endOffset": 140535
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -11352,12 +11373,12 @@
             },
             {
                 "to": {
-                    "startLine": 1789,
+                    "startLine": 1793,
                     "startColumn": 4,
-                    "startOffset": 140350,
-                    "endLine": 1797,
+                    "startOffset": 140540,
+                    "endLine": 1801,
                     "endColumn": 12,
-                    "endOffset": 140912
+                    "endOffset": 141102
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -11373,12 +11394,12 @@
             },
             {
                 "to": {
-                    "startLine": 1798,
+                    "startLine": 1802,
                     "startColumn": 4,
-                    "startOffset": 140917,
-                    "endLine": 1803,
+                    "startOffset": 141107,
+                    "endLine": 1807,
                     "endColumn": 12,
-                    "endOffset": 141273
+                    "endOffset": 141463
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -11394,12 +11415,12 @@
             },
             {
                 "to": {
-                    "startLine": 1804,
+                    "startLine": 1808,
                     "startColumn": 4,
-                    "startOffset": 141278,
-                    "endLine": 1806,
+                    "startOffset": 141468,
+                    "endLine": 1810,
                     "endColumn": 12,
-                    "endOffset": 141402
+                    "endOffset": 141592
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -11415,12 +11436,12 @@
             },
             {
                 "to": {
-                    "startLine": 1807,
+                    "startLine": 1811,
                     "startColumn": 4,
-                    "startOffset": 141407,
-                    "endLine": 1816,
+                    "startOffset": 141597,
+                    "endLine": 1820,
                     "endColumn": 12,
-                    "endOffset": 142146
+                    "endOffset": 142336
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -11436,12 +11457,12 @@
             },
             {
                 "to": {
-                    "startLine": 1817,
+                    "startLine": 1821,
                     "startColumn": 4,
-                    "startOffset": 142151,
-                    "endLine": 1820,
+                    "startOffset": 142341,
+                    "endLine": 1824,
                     "endColumn": 12,
-                    "endOffset": 142326
+                    "endOffset": 142516
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",
@@ -11457,12 +11478,12 @@
             },
             {
                 "to": {
-                    "startLine": 1821,
+                    "startLine": 1825,
                     "startColumn": 4,
-                    "startOffset": 142331,
-                    "endLine": 1826,
+                    "startOffset": 142521,
+                    "endLine": 1830,
                     "endColumn": 12,
-                    "endOffset": 142767
+                    "endOffset": 142957
                 },
                 "from": {
                     "file": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/values/values.xml",

@@ -1,5 +1,6 @@
 package com.example.edwardlucci.edwardzhihupaper.base;
 
+import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -49,4 +50,6 @@ public abstract class BaseActivity extends RxAppCompatActivity {
             getWindow().setExitTransition(fade);
         }
     }
+
+    protected Activity getActivity(){return this;}
 }
