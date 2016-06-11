@@ -13,6 +13,7 @@ import rx.Observable;
 /**
  * Created by edwardlucci on 16/6/9.
  */
+@Deprecated
 public class ThemeLoader extends AsyncLoader<List<Story>>{
 
     int id;

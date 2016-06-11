@@ -1,5 +1,7 @@
 package com.example.edwardlucci.edwardzhihupaper.ui;
 
+import android.app.LoaderManager;
+import android.content.Loader;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,6 +18,8 @@ import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.bean.ChangeContentEvent;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
+import com.example.edwardlucci.edwardzhihupaper.bean.Theme;
+import com.example.edwardlucci.edwardzhihupaper.network.ThemeLoader;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
@@ -26,24 +30,27 @@ import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.TimeZone;
 
 import butterknife.Bind;
 import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action1;
+import rx.functions.Func1;
 
 /**
  * Created by edwardlucci on 16/4/23.
  * load splashView and data
  */
-public class SplashActivity extends BaseActivity {
+public class SplashActivity extends BaseActivity implements LoaderManager.LoaderCallbacks<List<Story>>{
 
     private String latestDate;//used to record the latest data
 
     public static final String DUPLICATE_DATE = "duplicate date";
-
     public static final String CN_TIMEZONE = "Asia/Hong_Kong";
+    public static final String THEME_ID = "theme id";
+
 
     @Bind(R.id.swipeRefreshLayout)
     SwipeRefreshLayout swipeRefreshLayout;
@@ -81,15 +88,27 @@ public class SplashActivity extends BaseActivity {
 
         setupDrawer();
 
-        RxBus.getInstance()
-                .toObservable(ChangeContentEvent.class)
-                .compose(bindToLifecycle())
-                .subscribe(new Action1<ChangeContentEvent>() {
-                    @Override
-                    public void call(ChangeContentEvent changeContentEvent) {
-                        Toast.makeText(getActivity(),String.valueOf(changeContentEvent.getOther().getId()),Toast.LENGTH_SHORT).show();
-                    }
-                });
+//        RxBus.getInstance()
+//                .toObservable(ChangeContentEvent.class)
+//                .compose(bindToLifecycle())
+//                .subscribe(changeContentEvent -> {
+//                    Toast.makeText(getActivity(),String.valueOf(changeContentEvent.getOther().getId()),Toast.LENGTH_SHORT).show();
+//                    ZhihuService.getInstance()
+//                            .getThemeStories(changeContentEvent.getOther().getId())
+//                            .compose(bindToLifecycle())
+//                            .compose(RxUtil.fromIOtoMainThread())
+//                            .subscribe(new Action1<Theme>() {
+//                                @Override
+//                                public void call(Theme theme) {
+//                                    stories.clear();
+//                                    for (Story story : theme.getStories()) {
+//                                        stories.add(story);
+//                                    }
+//                                    contentAdapter.notifyDataSetChanged();
+//                                    Toast.makeText(getActivity(),theme.getName(),Toast.LENGTH_SHORT).show();
+//                                }
+//                            });
+//                });
 
     }
 
@@ -222,4 +241,25 @@ public class SplashActivity extends BaseActivity {
     private Observable<String> calendarToStringObservable(Calendar mCalendar) {
         return Observable.defer(() -> Observable.just(calendarToString(mCalendar, sdf)));
     }
+
+    @Override
+    public Loader<List<Story>> onCreateLoader(int id, Bundle args) {
+        return new ThemeLoader(getActivity(),args.getInt(THEME_ID));
+    }
+
+    @Override
+    public void onLoadFinished(Loader<List<Story>> loader, List<Story> data) {
+        stories.clear();
+        for (Story story : data) {
+            stories.add(story);
+        }
+        contentAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onLoaderReset(Loader<List<Story>> loader) {
+
+    }
+
+
 }

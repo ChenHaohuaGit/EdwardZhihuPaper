@@ -23,7 +23,7 @@ import butterknife.ButterKnife;
 /**
  * Created by edwardlucci on 16/6/9.
  */
-public class ThemesRecyclerViewAdapter extends RecyclerView.Adapter<ThemesRecyclerViewAdapter.ThemeVH>{
+public class ThemesRecyclerViewAdapter extends RecyclerView.Adapter<ThemesRecyclerViewAdapter.ThemeVH> {
 
     private Context mContext;
     private ArrayList<Other> others;
@@ -35,34 +35,35 @@ public class ThemesRecyclerViewAdapter extends RecyclerView.Adapter<ThemesRecycl
 
     @Override
     public ThemeVH onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ThemeVH(LayoutInflater.from(mContext).inflate(R.layout.themes_item_layout,parent,false));
+        return new ThemeVH(LayoutInflater.from(mContext).inflate(R.layout.themes_item_layout, parent, false));
     }
 
     @Override
     public void onBindViewHolder(ThemeVH holder, int position) {
         holder.themeTitleTextview.setText(getItem(position).getName());
+
         Picasso.with(mContext)
                 .load(getItem(position).getThumbnail())
                 .into(holder.themeImageview);
 
-        holder.themeImageview.setOnClickListener(v ->
-                RxBus.getInstance().post(new ChangeContentEvent(getItem(position))));
+//        holder.themeImageview.setOnClickListener(v ->
+//                RxBus.getInstance().post(new ChangeContentEvent(getItem(position))));
     }
 
-    private Other getItem(int pos){
-        return  others.get(pos);
+    private Other getItem(int pos) {
+        return others.get(pos);
     }
 
     @Override
     public int getItemCount() {
-        if (others!=null){
+        if (others != null) {
             return others.size();
-        }else {
+        } else {
             return 0;
         }
     }
 
-    class ThemeVH extends RecyclerView.ViewHolder{
+    class ThemeVH extends RecyclerView.ViewHolder {
 
         @Bind(R.id.themes_imageview)
         ImageView themeImageview;
@@ -72,7 +73,7 @@ public class ThemesRecyclerViewAdapter extends RecyclerView.Adapter<ThemesRecycl
 
         public ThemeVH(View itemView) {
             super(itemView);
-            ButterKnife.bind(this,itemView);
+            ButterKnife.bind(this, itemView);
 
         }
     }
