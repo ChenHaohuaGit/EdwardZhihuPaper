@@ -44,7 +44,7 @@ import rx.functions.Func1;
  * Created by edwardlucci on 16/4/23.
  * load splashView and data
  */
-public class SplashActivity extends BaseActivity implements LoaderManager.LoaderCallbacks<List<Story>> {
+public class SplashActivity extends BaseActivity{
 
 
     private boolean isLoading = false;
@@ -64,8 +64,6 @@ public class SplashActivity extends BaseActivity implements LoaderManager.Loader
 
     ContentAdapter contentAdapter;
     ZhihuApi zhihuApi;
-
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 
     @Bind(R.id.toolbar)
     Toolbar toolbar;
@@ -112,20 +110,6 @@ public class SplashActivity extends BaseActivity implements LoaderManager.Loader
                 if (!isLoading) loadPassedData();
             }
         });
-    }
-
-    private void loadSplashView() {
-
-//        zhihuApi.getSplashImg(480, 728)
-//                .compose(RxUtil.<SplashResponse>fromIOtoMainThread())
-//                .subscribe(imgResponse -> {
-//                    Picasso.with(SplashActivity.this)
-//                            .load(imgResponse.getImg())
-//                            .transform(new BlurTransformation(SplashActivity.this))
-//                            .placeholder(R.mipmap.ic_launcher)
-//                            .into(splashView);
-//                });
-
     }
 
     @Override
@@ -184,33 +168,4 @@ public class SplashActivity extends BaseActivity implements LoaderManager.Loader
                     }
                 });
     }
-
-    private String calendarToString(Calendar mCalendar, SimpleDateFormat simpleDateFormat) {
-        return simpleDateFormat.format(mCalendar.getTime());
-    }
-
-    private Observable<String> calendarToStringObservable(Calendar mCalendar) {
-        return Observable.defer(() -> Observable.just(calendarToString(mCalendar, sdf)));
-    }
-
-    @Override
-    public Loader<List<Story>> onCreateLoader(int id, Bundle args) {
-        return new ThemeLoader(getActivity(), args.getInt(THEME_ID));
-    }
-
-    @Override
-    public void onLoadFinished(Loader<List<Story>> loader, List<Story> data) {
-        stories.clear();
-        for (Story story : data) {
-            stories.add(story);
-        }
-        contentAdapter.notifyDataSetChanged();
-    }
-
-    @Override
-    public void onLoaderReset(Loader<List<Story>> loader) {
-
-    }
-
-
 }
