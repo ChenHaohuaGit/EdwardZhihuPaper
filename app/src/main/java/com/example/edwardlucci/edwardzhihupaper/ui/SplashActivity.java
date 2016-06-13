@@ -17,6 +17,7 @@ import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.bean.ChangeContentEvent;
+import com.example.edwardlucci.edwardzhihupaper.bean.LatestStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.bean.Theme;
 import com.example.edwardlucci.edwardzhihupaper.network.ThemeLoader;
@@ -43,14 +44,15 @@ import rx.functions.Func1;
  * Created by edwardlucci on 16/4/23.
  * load splashView and data
  */
-public class SplashActivity extends BaseActivity implements LoaderManager.LoaderCallbacks<List<Story>>{
+public class SplashActivity extends BaseActivity implements LoaderManager.LoaderCallbacks<List<Story>> {
 
+
+    private boolean isLoading = false;
     private String latestDate;//used to record the latest data
 
     public static final String DUPLICATE_DATE = "duplicate date";
     public static final String CN_TIMEZONE = "Asia/Hong_Kong";
     public static final String THEME_ID = "theme id";
-
 
     @Bind(R.id.swipeRefreshLayout)
     SwipeRefreshLayout swipeRefreshLayout;
@@ -65,8 +67,6 @@ public class SplashActivity extends BaseActivity implements LoaderManager.Loader
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 
-    Calendar mCalendar;
-
     @Bind(R.id.toolbar)
     Toolbar toolbar;
 
@@ -80,50 +80,22 @@ public class SplashActivity extends BaseActivity implements LoaderManager.Loader
 
         setupRecyclerView();
 
-        moveMCalendarToToday();
-
         swipeRefreshLayout.setOnRefreshListener(this::loadLatestData);
 
         loadLatestData();
 
         setupDrawer();
 
-//        RxBus.getInstance()
-//                .toObservable(ChangeContentEvent.class)
-//                .compose(bindToLifecycle())
-//                .subscribe(changeContentEvent -> {
-//                    Toast.makeText(getActivity(),String.valueOf(changeContentEvent.getOther().getId()),Toast.LENGTH_SHORT).show();
-//                    ZhihuService.getInstance()
-//                            .getThemeStories(changeContentEvent.getOther().getId())
-//                            .compose(bindToLifecycle())
-//                            .compose(RxUtil.fromIOtoMainThread())
-//                            .subscribe(new Action1<Theme>() {
-//                                @Override
-//                                public void call(Theme theme) {
-//                                    stories.clear();
-//                                    for (Story story : theme.getStories()) {
-//                                        stories.add(story);
-//                                    }
-//                                    contentAdapter.notifyDataSetChanged();
-//                                    Toast.makeText(getActivity(),theme.getName(),Toast.LENGTH_SHORT).show();
-//                                }
-//                            });
-//                });
-
     }
 
     private void setupDrawer() {
-        getFragmentManager().beginTransaction().replace(R.id.drawer_container,new ThemesCategoryFragment()).commit();
+        getFragmentManager().beginTransaction().replace(R.id.drawer_container, new ThemesCategoryFragment()).commit();
     }
 
     private void setupToolbar() {
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
 
-    }
-
-    private void moveMCalendarToToday() {
-        mCalendar = Calendar.getInstance(TimeZone.getTimeZone(CN_TIMEZONE));
     }
 
     private void setupRecyclerView() {
@@ -137,17 +109,7 @@ public class SplashActivity extends BaseActivity implements LoaderManager.Loader
             @Override
             public void onScrolledToBottom() {
                 super.onScrolledToBottom();
-                loadPassedData();
-            }
-
-            @Override
-            public void onScrolledDown() {
-                super.onScrolledDown();
-            }
-
-            @Override
-            public void onScrolledUp() {
-                super.onScrolledUp();
+                if (!isLoading) loadPassedData();
             }
         });
     }
@@ -172,6 +134,7 @@ public class SplashActivity extends BaseActivity implements LoaderManager.Loader
     }
 
     private void loadLatestData() {
+        isLoading = true;
         stories.clear();
         zhihuApi.getLatestStories()
                 .compose(RxUtil.fromIOtoMainThread())
@@ -180,9 +143,9 @@ public class SplashActivity extends BaseActivity implements LoaderManager.Loader
                 .subscribe(new Subscriber<Story>() {
                     @Override
                     public void onCompleted() {
-                        moveMCalendarToToday();
                         contentAdapter.notifyDataSetChanged();
                         swipeRefreshLayout.setRefreshing(false);
+                        isLoading = false;
                     }
 
                     @Override
@@ -198,32 +161,20 @@ public class SplashActivity extends BaseActivity implements LoaderManager.Loader
     }
 
     private void loadPassedData() {
+        isLoading = true;
 
-        calendarToStringObservable(mCalendar)
-                .doOnNext(mCalendarString -> {
-                    if (mCalendarString.equals(latestDate))
-                        try {
-                            throw new Exception(DUPLICATE_DATE);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-
-                })
-                .flatMap(s -> zhihuApi.getPastStories(s))
+        zhihuApi.getPastStories(latestDate)
                 .compose(RxUtil.fromIOtoMainThread())
+                .doOnNext(latestStories -> latestDate = latestStories.getDate())
                 .flatMap(latestStories -> Observable.from(latestStories.getStories()))
                 .subscribe(new Subscriber<Story>() {
                     @Override
                     public void onCompleted() {
-                        mCalendar.add(Calendar.DATE, -1);
+                        isLoading = false;
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        if (e.getMessage().equals(DUPLICATE_DATE)) {
-                            mCalendar.add(Calendar.DATE, -1);
-                            loadPassedData();
-                        }
                     }
 
                     @Override
@@ -244,7 +195,7 @@ public class SplashActivity extends BaseActivity implements LoaderManager.Loader
 
     @Override
     public Loader<List<Story>> onCreateLoader(int id, Bundle args) {
-        return new ThemeLoader(getActivity(),args.getInt(THEME_ID));
+        return new ThemeLoader(getActivity(), args.getInt(THEME_ID));
     }
 
     @Override
