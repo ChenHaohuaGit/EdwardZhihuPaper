@@ -1,9 +1,7 @@
 package com.example.edwardlucci.edwardzhihupaper.network;
 
 import com.example.edwardlucci.edwardzhihupaper.base.MyApp;
-import com.facebook.stetho.Stetho;
 
-import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -19,7 +17,7 @@ public class ZhihuService {
             .baseUrl(base_url)
             .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
-            .client(MyApp.okHttpClient)
+//            .client(MyApp.okHttpClient)
             .build();
 
     private ZhihuService() {}
@@ -28,6 +26,7 @@ public class ZhihuService {
         return SingletonHolder.INSTANCE;
     }
 
+    @Deprecated
     public static ZhihuApi createZhihuService() {
         return retrofit.create(ZhihuApi.class);
     }

@@ -93,7 +93,6 @@ public class SplashActivity extends BaseActivity{
     private void setupToolbar() {
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
-
     }
 
     private void setupRecyclerView() {

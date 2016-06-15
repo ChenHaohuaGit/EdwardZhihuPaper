@@ -15,6 +15,9 @@ import rx.Observable;
  * Created by edwardlucci on 16/4/23.
  */
 public interface ZhihuApi {
+
+    int PAST_STORIES_LOADER_ID = 0;
+
     @GET("start-image/{width}*{height}")
     Observable<SplashResponse> getSplashImg(@Path("width")int width, @Path("height")int height);
 

@@ -52,7 +52,7 @@ public class TopicActivity extends AppCompatActivity{
         setSupportActionBar(toolbar);
 
         ButterKnife.bind(this);
-        zhihuApi = ZhihuService.createZhihuService();
+        zhihuApi = ZhihuService.getInstance();
 
         ArrayList<View> views = new ArrayList<>();
 
