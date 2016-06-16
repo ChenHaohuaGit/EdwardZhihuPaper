@@ -22,6 +22,7 @@ import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.bean.StoryDetail;
+import com.example.edwardlucci.edwardzhihupaper.comment.CommentActivity;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.HtmlUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;

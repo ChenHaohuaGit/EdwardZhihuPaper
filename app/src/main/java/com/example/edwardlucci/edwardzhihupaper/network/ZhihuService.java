@@ -17,7 +17,7 @@ public class ZhihuService {
             .baseUrl(base_url)
             .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
-//            .client(MyApp.okHttpClient)
+            .client(OkClient.getInstance())
             .build();
 
     private ZhihuService() {}

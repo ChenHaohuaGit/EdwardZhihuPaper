@@ -3,6 +3,7 @@ package com.example.edwardlucci.edwardzhihupaper.base;
 import android.app.Application;
 import android.os.Build;
 
+import com.example.edwardlucci.edwardzhihupaper.network.OkClient;
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.orhanobut.logger.Logger;
@@ -27,9 +28,10 @@ public class MyApp extends Application{
         //stetho
         Stetho.initializeWithDefaults(this);
 
-        okHttpClient = new OkHttpClient.Builder()
-                .addNetworkInterceptor(new StethoInterceptor())
-                .build();
+//        okHttpClient = new OkHttpClient.Builder()
+//                .addNetworkInterceptor(new StethoInterceptor())
+//                .build();
+        okHttpClient = OkClient.getInstance();
 
         SDK_VERSION = Build.VERSION.SDK_INT;
         Logger.i(String.valueOf(SDK_VERSION));

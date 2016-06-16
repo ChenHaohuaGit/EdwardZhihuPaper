@@ -20,7 +20,7 @@
 
         </activity>
 
-        <activity android:name=".ui.CommentActivity"
+        <activity android:name=".comment.CommentActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
 

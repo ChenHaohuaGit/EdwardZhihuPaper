@@ -14,6 +14,12 @@ public class RxUtil {
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
+    public static <T> Observable.Transformer<T, T> fromIOtoImmediateThread() {
+        return observable -> observable.subscribeOn(Schedulers.io())
+                .observeOn(Schedulers.immediate());
+    }
+
+
     public static void unsubscribeIfNotNull(Subscription subscription) {
         if (subscription != null) {
             subscription.unsubscribe();
