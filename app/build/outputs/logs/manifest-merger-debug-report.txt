@@ -70,14 +70,14 @@ ADDED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/Android
 		ADDED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml:19:13-56
 	android:name
 		ADDED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml:16:13-45
-activity#com.example.edwardlucci.edwardzhihupaper.ui.CommentActivity
+activity#com.example.edwardlucci.edwardzhihupaper.comment.CommentActivity
 ADDED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml:23:9-25:58
 	android:screenOrientation
 		ADDED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml:24:13-49
 	android:theme
 		ADDED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml:25:13-56
 	android:name
-		ADDED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml:23:19-53
+		ADDED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml:23:19-58
 activity#com.example.edwardlucci.edwardzhihupaper.ui.SplashActivity
 ADDED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml:27:9-35:20
 	android:screenOrientation

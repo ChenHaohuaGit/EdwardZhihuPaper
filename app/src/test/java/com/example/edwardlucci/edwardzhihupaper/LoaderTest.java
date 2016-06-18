@@ -54,7 +54,7 @@ public class LoaderTest {
                 .compose(RxUtil.fromIOtoImmediateThread())
                 .toBlocking()
                 .forEach(commentResponse ->
-                        Assert.assertEquals(true, commentResponse.getComments().size() > 0)
+                        Assert.assertNotNull(commentResponse.getComments())
         );
     }
 

@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
-        "source": "/Users/edwardlucci/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/color-v23/abc_color_highlight_material.xml"
-    },
-    {
         "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
         "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/color-v23/abc_color_highlight_material.xml"
     }

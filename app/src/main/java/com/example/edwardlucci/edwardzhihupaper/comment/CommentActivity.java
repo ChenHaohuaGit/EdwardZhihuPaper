@@ -10,6 +10,7 @@ import com.example.edwardlucci.edwardzhihupaper.adapter.CommentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
 import com.example.edwardlucci.edwardzhihupaper.bean.CommentResponse;
+import com.example.edwardlucci.edwardzhihupaper.network.CommentLoader;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
@@ -27,9 +28,8 @@ import rx.Subscriber;
 /**
  * Created by edwardlucci on 16/4/24.
  */
-public class CommentActivity extends BaseActivity implements CommentContract.View{
+public class CommentActivity extends BaseActivity implements CommentContract.View {
 
-    ZhihuApi zhihuApi;
     int story_id;
 
     ArrayList<Comment> comments = new ArrayList<>();
@@ -39,29 +39,35 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
     @Bind(R.id.recyclerView)
     RecyclerView recyclerView;
 
+    CommentContract.Presenter presenter;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        story_id = getIntent().getIntExtra("story_id",0);
+        story_id = getIntent().getIntExtra("story_id", 0);
 
-        if (story_id == 0){
+        if (story_id == 0) {
             finish();
         }
 
-        zhihuApi = ZhihuService.getInstance();
-
         int paddingDimen = (int) getResources().getDimension(R.dimen.fab_margin);
-        recyclerView.setPadding(paddingDimen,paddingDimen,paddingDimen,paddingDimen);
+        recyclerView.setPadding(paddingDimen, paddingDimen, paddingDimen, paddingDimen);
         recyclerView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
         recyclerView.setLayoutManager(new LinearLayoutManager(CommentActivity.this));
         recyclerView.addItemDecoration(new ItemOffsetDecoration(DensityUtil.dpToPx(10)));
         setContentView(recyclerView);
-        commentAdapter = new CommentAdapter(CommentActivity.this,comments);
+        commentAdapter = new CommentAdapter(CommentActivity.this, comments);
         recyclerView.setAdapter(commentAdapter);
 
-        loadComments();
+        new CommentPresenter(story_id, this, getLoaderManager(), new CommentLoader(getActivity(), story_id));
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        presenter.start();
     }
 
     @Override
@@ -69,52 +75,14 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
         return R.layout.recyclerview_layout;
     }
 
-    private void loadComments() {
-        Observable<CommentResponse> longCommentResponseObservable
-                = zhihuApi.getLongComment(story_id);
-
-        Observable<CommentResponse> shortCommentResponseObservable
-                = zhihuApi.getShortComment(story_id);
-
-        Observable.merge(shortCommentResponseObservable,longCommentResponseObservable)
-                .compose(RxUtil.fromIOtoMainThread())
-                .compose(bindToLifecycle())
-                .flatMap(commentResponse -> {
-                    List<Comment> comments = commentResponse.getComments();
-                    Collections.sort(comments,new Comment.LikesCompare());
-                    return Observable.from(comments);
-                })
-                .subscribe(new Subscriber<Comment>() {
-                    @Override
-                    public void onCompleted() {
-                        commentAdapter.notifyDataSetChanged();
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-
-                    }
-
-                    @Override
-                    public void onNext(Comment comment) {
-                        System.out.println(comment.getLikes());
-                        comments.add(comment);
-                    }
-                });
-    }
-
     @Override
-    public void showData() {
-
-    }
-
-    @Override
-    public void commentDialog() {
-
+    public void showData(ArrayList<Comment> comments) {
+        this.comments.addAll(comments);
+        commentAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void setPresenter(CommentContract.Presenter basePresenter) {
-
+        presenter = basePresenter;
     }
 }

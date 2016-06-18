@@ -25,7 +25,7 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name="com.example.edwardlucci.edwardzhihupaper.ui.CommentActivity"
+            android:name="com.example.edwardlucci.edwardzhihupaper.comment.CommentActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

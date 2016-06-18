@@ -3,7 +3,6 @@ package com.example.edwardlucci.edwardzhihupaper.comment;
 import com.example.edwardlucci.edwardzhihupaper.base.BasePresenter;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseView;
 import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
-import com.example.edwardlucci.edwardzhihupaper.bean.CommentResponse;
 
 import java.util.ArrayList;
 
@@ -12,12 +11,10 @@ import java.util.ArrayList;
  */
 public class CommentContract {
     interface Presenter extends BasePresenter{
-        void loadData(ArrayList<Comment> comments);
+        void loadData();
     }
 
     interface View extends BaseView<Presenter>{
-        void showData();
-
-        void commentDialog();
+        void showData(ArrayList<Comment> comments);
     }
 }
