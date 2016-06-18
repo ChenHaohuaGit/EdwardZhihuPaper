@@ -53,7 +53,6 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
 
         int paddingDimen = (int) getResources().getDimension(R.dimen.fab_margin);
         recyclerView.setPadding(paddingDimen, paddingDimen, paddingDimen, paddingDimen);
-        recyclerView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
         recyclerView.setLayoutManager(new LinearLayoutManager(CommentActivity.this));
         recyclerView.addItemDecoration(new ItemOffsetDecoration(DensityUtil.dpToPx(10)));
         setContentView(recyclerView);
