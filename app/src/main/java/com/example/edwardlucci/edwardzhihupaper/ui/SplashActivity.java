@@ -1,5 +1,7 @@
 package com.example.edwardlucci.edwardzhihupaper.ui;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,7 +15,10 @@ import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
+import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
+import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseContract;
+import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseHelper;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
@@ -138,7 +143,9 @@ public class SplashActivity extends BaseActivity{
 
         zhihuApi.getPastStories(latestDate)
                 .compose(RxUtil.fromIOtoMainThread())
+                .compose(bindToLifecycle())
                 .doOnNext(latestStories -> latestDate = latestStories.getDate())
+                .doOnNext(dailyStories -> putDailyStoriesInputDatabase(dailyStories))
                 .flatMap(latestStories -> Observable.from(latestStories.getStories()))
                 .subscribe(new Subscriber<Story>() {
                     @Override
@@ -156,5 +163,15 @@ public class SplashActivity extends BaseActivity{
                         contentAdapter.notifyItemInserted(stories.size() - 1);
                     }
                 });
+    }
+
+    private void putDailyStoriesInputDatabase(DailyStories dailyStories) {
+        StoryDatabaseHelper helper = new StoryDatabaseHelper(getActivity());
+        SQLiteDatabase sqliteDatabase = helper.getWritableDatabase();
+
+        for (Story story : dailyStories.getStories()) {
+            sqliteDatabase.insertWithOnConflict(StoryDatabaseContract.StoryTable.TABLE_NAME,null,story.story2contentvalues(dailyStories.getDate()),SQLiteDatabase.CONFLICT_REPLACE);
+        }
+
     }
 }

@@ -1,6 +1,7 @@
 package com.example.edwardlucci.edwardzhihupaper.base;
 
 import android.app.Application;
+import android.content.Context;
 import android.os.Build;
 
 import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseHelper;
@@ -44,5 +45,9 @@ public class MyApp extends Application{
 
     public static int getSdkVersion() {
         return SDK_VERSION;
+    }
+
+    public Context getContext(){
+        return getApplicationContext();
     }
 }

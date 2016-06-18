@@ -11,6 +11,7 @@ import com.orhanobut.logger.Logger;
  */
 public class StoryDatabaseHelper extends SQLiteOpenHelper{
 
+
     public static final String DB_NAME = "zhihupaper.db";
     public static final int DB_VERSION = 1;
 

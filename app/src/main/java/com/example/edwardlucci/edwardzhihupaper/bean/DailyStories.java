@@ -1,5 +1,8 @@
 package com.example.edwardlucci.edwardzhihupaper.bean;
 
+import android.content.ContentValues;
+
+import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseContract;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -58,6 +61,12 @@ public class DailyStories {
      */
     public void setTopStories(List<Story> topStories) {
         this.topStories = topStories;
+    }
+
+    public ContentValues dailyStories2Contentvalues(){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE,this.date);
+        return contentValues;
     }
 
 }

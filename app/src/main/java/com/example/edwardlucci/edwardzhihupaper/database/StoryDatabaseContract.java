@@ -22,7 +22,7 @@ public final class StoryDatabaseContract {
                     StoryTable.COLUMN_NAME_DATE + TEXT_TYPE + COMMA_SEP +
                     StoryTable.COLUMN_NAME_TITLE + TEXT_TYPE + COMMA_SEP +
                     StoryTable.COLUMN_NAME_IMAGES + TEXT_TYPE + COMMA_SEP +
-                    StoryTable.COLUMN_NAME_ID + TEXT_TYPE + COMMA_SEP +
+                    StoryTable.COLUMN_NAME_ID + TEXT_TYPE + " UNIQUE" + COMMA_SEP +
                     StoryTable.COLUMN_NAME_MULTIPIC + TEXT_TYPE + COMMA_SEP +
                     StoryTable.COLUMN_NAME_TYPE + TEXT_TYPE+ " )";
 
