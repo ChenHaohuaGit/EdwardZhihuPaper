@@ -1,7 +1,5 @@
 package com.example.edwardlucci.edwardzhihupaper.ui;
 
-import android.app.LoaderManager;
-import android.content.Loader;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,35 +8,23 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
-import android.widget.Toast;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
-import com.example.edwardlucci.edwardzhihupaper.bean.ChangeContentEvent;
-import com.example.edwardlucci.edwardzhihupaper.bean.LatestStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
-import com.example.edwardlucci.edwardzhihupaper.bean.Theme;
-import com.example.edwardlucci.edwardzhihupaper.network.ThemeLoader;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
-import com.example.edwardlucci.edwardzhihupaper.util.RxBus;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-import java.util.TimeZone;
 
 import butterknife.Bind;
 import rx.Observable;
 import rx.Subscriber;
-import rx.functions.Action1;
-import rx.functions.Func1;
 
 /**
  * Created by edwardlucci on 16/4/23.
@@ -93,6 +79,10 @@ public class SplashActivity extends BaseActivity{
     private void setupToolbar() {
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
+        if (getActionBar()!=null){
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+            getActionBar().setDisplayShowHomeEnabled(true);
+        }
     }
 
     private void setupRecyclerView() {

@@ -3,6 +3,7 @@ package com.example.edwardlucci.edwardzhihupaper.base;
 import android.app.Application;
 import android.os.Build;
 
+import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseHelper;
 import com.example.edwardlucci.edwardzhihupaper.network.OkClient;
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
@@ -34,6 +35,10 @@ public class MyApp extends Application{
         okHttpClient = OkClient.getInstance();
 
         SDK_VERSION = Build.VERSION.SDK_INT;
+
+        StoryDatabaseHelper storyDatabaseHelper = new StoryDatabaseHelper(this);
+        storyDatabaseHelper.getWritableDatabase();
+
         Logger.i(String.valueOf(SDK_VERSION));
     }
 

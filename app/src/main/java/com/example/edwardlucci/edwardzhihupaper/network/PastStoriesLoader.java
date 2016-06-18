@@ -3,12 +3,12 @@ package com.example.edwardlucci.edwardzhihupaper.network;
 import android.content.Context;
 
 import com.example.edwardlucci.edwardzhihupaper.base.AsyncLoader;
-import com.example.edwardlucci.edwardzhihupaper.bean.LatestStories;
+import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 
 /**
  * Created by edward on 16/6/14.
  */
-public class PastStoriesLoader extends AsyncLoader<LatestStories>{
+public class PastStoriesLoader extends AsyncLoader<DailyStories>{
 
     String date;
 
@@ -18,7 +18,7 @@ public class PastStoriesLoader extends AsyncLoader<LatestStories>{
     }
 
     @Override
-    public LatestStories loadInBackground() {
+    public DailyStories loadInBackground() {
         //database
         //network
 

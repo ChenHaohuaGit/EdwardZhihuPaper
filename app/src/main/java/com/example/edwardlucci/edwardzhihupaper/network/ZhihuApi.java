@@ -1,6 +1,6 @@
 package com.example.edwardlucci.edwardzhihupaper.network;
 
-import com.example.edwardlucci.edwardzhihupaper.bean.LatestStories;
+import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.CommentResponse;
 import com.example.edwardlucci.edwardzhihupaper.bean.SplashResponse;
 import com.example.edwardlucci.edwardzhihupaper.bean.StoryDetail;
@@ -22,7 +22,7 @@ public interface ZhihuApi {
     Observable<SplashResponse> getSplashImg(@Path("width")int width, @Path("height")int height);
 
     @GET("news/latest")
-    Observable<LatestStories> getLatestStories();
+    Observable<DailyStories> getLatestStories();
 
     @GET("news/{id}")
     Observable<StoryDetail> getStoryDetail(@Path("id")int id);
@@ -37,7 +37,7 @@ public interface ZhihuApi {
     Observable<Themes> getThemes();
 
     @GET("news/before/{date}")
-    Observable<LatestStories> getPastStories(@Path("date")String date);
+    Observable<DailyStories> getPastStories(@Path("date")String date);
 
     @GET("theme/{id}")
     Observable<Theme> getThemeStories(@Path("id")int id);

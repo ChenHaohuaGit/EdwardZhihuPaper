@@ -5,18 +5,13 @@ import android.provider.BaseColumns;
 /**
  * Created by edwardlucci on 16/5/25.
  */
-public abstract class BaseTable implements BaseColumns{
+public abstract class BaseTable implements BaseColumns {
 
-//    public abstract BaseTable(){
-//
-//    }
-//
-//
-//    public String tableName;
-//
-//    public String[] columns;
-//
-//     String setTableName();
-//
-//     String[] setColumns();
+    public String tableName;
+
+    public String[] columns;
+
+    abstract String getTableName();
+
+    abstract String[] getColumns();
 }
