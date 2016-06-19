@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="x86"
-    api-level="23"
-    density="560dpi"
+    api-level="21"
+    density="xxhdpi"
     format="7"
-    timestamp="74105398848191"
+    timestamp="87078430786328"
     token="-4917776629582793416" >
 
     <task
         name="javac"
-        duration="1402" />
+        duration="2254" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="451" />
+        duration="223" />
     <task
         name="verifier"
-        duration="90" />
+        duration="8" />
 
     <artifact
-        location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+        type="DEX" />
 
-    <build timestamp="74105398848191" >
+    <build timestamp="86991993650989" >
         <artifact
             location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="87078430786328" >
+        <artifact
+            location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

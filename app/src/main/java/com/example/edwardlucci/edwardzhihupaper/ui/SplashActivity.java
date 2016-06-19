@@ -1,6 +1,6 @@
 package com.example.edwardlucci.edwardzhihupaper.ui;
 
-import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
@@ -19,31 +20,32 @@ import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseContract;
 import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseHelper;
+import com.example.edwardlucci.edwardzhihupaper.network.MemoryCache;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
+import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 
 import butterknife.Bind;
 import rx.Observable;
 import rx.Subscriber;
+import rx.functions.Action1;
+import rx.functions.Func1;
+import rx.schedulers.Schedulers;
 
 /**
  * Created by edwardlucci on 16/4/23.
  * load splashView and data
  */
-public class SplashActivity extends BaseActivity{
+public class SplashActivity extends BaseActivity {
 
 
     private boolean isLoading = false;
     private String latestDate;//used to record the latest data
-
-    public static final String DUPLICATE_DATE = "duplicate date";
-    public static final String CN_TIMEZONE = "Asia/Hong_Kong";
-    public static final String THEME_ID = "theme id";
 
     @Bind(R.id.swipeRefreshLayout)
     SwipeRefreshLayout swipeRefreshLayout;
@@ -59,9 +61,16 @@ public class SplashActivity extends BaseActivity{
     @Bind(R.id.toolbar)
     Toolbar toolbar;
 
+    StoryDatabaseHelper helper;
+    SQLiteDatabase sqliteDatabase;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        helper = new StoryDatabaseHelper(getActivity());
+        sqliteDatabase = helper.getWritableDatabase();
+
         zhihuApi = ZhihuService.getInstance();
 
         setupToolbar();
@@ -84,7 +93,7 @@ public class SplashActivity extends BaseActivity{
     private void setupToolbar() {
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
-        if (getActionBar()!=null){
+        if (getActionBar() != null) {
             getActionBar().setDisplayHomeAsUpEnabled(true);
             getActionBar().setDisplayShowHomeEnabled(true);
         }
@@ -141,11 +150,14 @@ public class SplashActivity extends BaseActivity{
     private void loadPassedData() {
         isLoading = true;
 
-        zhihuApi.getPastStories(latestDate)
+        Observable.concat(Observable.just(MemoryCache.getInstance().getDailyStories(latestDate)), zhihuApi.getPastStories(latestDate))
+                .filter(dailyStories -> dailyStories != null)
+                .first()
                 .compose(RxUtil.fromIOtoMainThread())
                 .compose(bindToLifecycle())
+                .doOnNext(latestStories -> MemoryCache.getInstance().putDailyStories(latestDate, latestStories))
                 .doOnNext(latestStories -> latestDate = latestStories.getDate())
-                .doOnNext(dailyStories -> putDailyStoriesInputDatabase(dailyStories))
+                .doOnNext(this::putDailyStoriesIntoDatabase)
                 .flatMap(latestStories -> Observable.from(latestStories.getStories()))
                 .subscribe(new Subscriber<Story>() {
                     @Override
@@ -155,6 +167,7 @@ public class SplashActivity extends BaseActivity{
 
                     @Override
                     public void onError(Throwable e) {
+                        Logger.i(e.getMessage());
                     }
 
                     @Override
@@ -165,13 +178,37 @@ public class SplashActivity extends BaseActivity{
                 });
     }
 
-    private void putDailyStoriesInputDatabase(DailyStories dailyStories) {
-        StoryDatabaseHelper helper = new StoryDatabaseHelper(getActivity());
-        SQLiteDatabase sqliteDatabase = helper.getWritableDatabase();
-
-        for (Story story : dailyStories.getStories()) {
-            sqliteDatabase.insertWithOnConflict(StoryDatabaseContract.StoryTable.TABLE_NAME,null,story.story2contentvalues(dailyStories.getDate()),SQLiteDatabase.CONFLICT_REPLACE);
+    private DailyStories getDailyStoriesFromDatabase(String date) {
+        Cursor cursor = sqliteDatabase.query(StoryDatabaseContract.StoryTable.TABLE_NAME,
+                null,
+                StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE + "=?",
+                new String[]{date},
+                null, null, null, null);
+        DailyStories dailyStories = new DailyStories();
+        dailyStories.setDate(date);
+        while (cursor.moveToNext()) {
+            Story story = new Story();
+            story.setId(cursor.getInt(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_ID)));
+            story.setTitle(cursor.getString(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_TITLE)));
+            //story.setImages(cursor.getString(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_IMAGES)));
+            dailyStories.getStories().add(story);
         }
+        cursor.close();
+        if (dailyStories.getStories().size()>0){
+            return dailyStories;
+        }else {
+            return null;
+        }
+    }
 
+    private void putDailyStoriesIntoDatabase(DailyStories dailyStories) {
+        Observable.from(dailyStories.getStories())
+                .observeOn(Schedulers.io())
+                .subscribe(story -> {
+                    sqliteDatabase.insertWithOnConflict(
+                            StoryDatabaseContract.StoryTable.TABLE_NAME, null,
+                            story.story2contentvalues(dailyStories.getDate()),
+                            SQLiteDatabase.CONFLICT_REPLACE);
+                });
     }
 }

@@ -30,17 +30,9 @@ public class MyApp extends Application{
         //stetho
         Stetho.initializeWithDefaults(this);
 
-//        okHttpClient = new OkHttpClient.Builder()
-//                .addNetworkInterceptor(new StethoInterceptor())
-//                .build();
         okHttpClient = OkClient.getInstance();
 
         SDK_VERSION = Build.VERSION.SDK_INT;
-
-        StoryDatabaseHelper storyDatabaseHelper = new StoryDatabaseHelper(this);
-        storyDatabaseHelper.getWritableDatabase();
-
-        Logger.i(String.valueOf(SDK_VERSION));
     }
 
     public static int getSdkVersion() {

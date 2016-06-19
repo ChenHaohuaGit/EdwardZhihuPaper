@@ -2,10 +2,6 @@ package com.example.edwardlucci.edwardzhihupaper.database;
 
 import android.provider.BaseColumns;
 
-
-/**
- *
- */
 public final class StoryDatabaseContract {
     // To prevent someone from accidentally instantiating the contract class,
     // give it an empty constructor.
@@ -15,6 +11,7 @@ public final class StoryDatabaseContract {
 
     private static final String TEXT_TYPE = " TEXT";
     private static final String COMMA_SEP = ",";
+    private static final String UNIQUE = " UNIQUE";
 
     public static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + StoryTable.TABLE_NAME + " (" +
@@ -22,7 +19,7 @@ public final class StoryDatabaseContract {
                     StoryTable.COLUMN_NAME_DATE + TEXT_TYPE + COMMA_SEP +
                     StoryTable.COLUMN_NAME_TITLE + TEXT_TYPE + COMMA_SEP +
                     StoryTable.COLUMN_NAME_IMAGES + TEXT_TYPE + COMMA_SEP +
-                    StoryTable.COLUMN_NAME_ID + TEXT_TYPE + " UNIQUE" + COMMA_SEP +
+                    StoryTable.COLUMN_NAME_ID + TEXT_TYPE + UNIQUE + COMMA_SEP +
                     StoryTable.COLUMN_NAME_MULTIPIC + TEXT_TYPE + COMMA_SEP +
                     StoryTable.COLUMN_NAME_TYPE + TEXT_TYPE+ " )";
 
