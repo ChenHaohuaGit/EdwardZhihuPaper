@@ -7,6 +7,7 @@ import com.orhanobut.logger.Logger;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import rx.Observable;
@@ -25,6 +26,12 @@ public class LoaderTest {
     }
 
     @Test
+    public void deserilizerTest(){
+        ZhihuService.getInstance().getLatestStories().toBlocking().single();
+    }
+
+    @Test
+    @Ignore
     public void checkLongCommentLoader() {
         Assert.assertEquals(ZhihuService.getInstance()
                 .getLongComment(4232852)
@@ -34,6 +41,7 @@ public class LoaderTest {
     }
 
     @Test
+    @Ignore
     public void checkShortCommentLoader() {
 
         Assert.assertEquals(ZhihuService.getInstance()
