@@ -26,20 +26,26 @@ public class ZhihuService {
 
     private static final String base_url = "http://news-at.zhihu.com/api/4/";
 
+    public static Gson normalGson = new Gson();
+
     public static Gson gson = new GsonBuilder()
             .registerTypeAdapter(Story.class, new JsonDeserializer<Story>() {
                 @Override
                 public Story deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+                    Story story = new Story();
                     JsonObject object = json.getAsJsonObject();
                     if (object.get("images").isJsonArray()){
-                        JsonArray jsonArray = (JsonArray) object.get("images");
-                        jsonArray.get(0).getAsString();
+                        String[] images = normalGson.fromJson(json,String[].class);
+                        story.setImage(images[0]);
+//                        JsonArray jsonArray = (JsonArray) object.get("images");
+//                        jsonArray.get(0).getAsString();
                     }
+                    story.setTitle(object.get("title").getAsString());
+                    story.setId(object.get("id").getAsInt());
                     return null;
                 }
             })
             .create();
-
 
     private static Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(base_url)
