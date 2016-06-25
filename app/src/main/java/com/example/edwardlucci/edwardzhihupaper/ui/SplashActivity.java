@@ -150,7 +150,7 @@ public class SplashActivity extends BaseActivity {
     private void loadPassedData() {
         isLoading = true;
 
-        Observable.concat(Observable.just(MemoryCache.getInstance().getDailyStories(latestDate)), zhihuApi.getPastStories(latestDate))
+        Observable.concat(Observable.just(MemoryCache.getInstance().getDailyStories(latestDate)) ,zhihuApi.getPastStories(latestDate))
                 .filter(dailyStories -> dailyStories != null)
                 .first()
                 .compose(RxUtil.fromIOtoMainThread())

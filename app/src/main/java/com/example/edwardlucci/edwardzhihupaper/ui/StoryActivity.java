@@ -12,6 +12,7 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.Toolbar;
 import android.transition.Explode;
 import android.util.Pair;
+import android.view.View;
 import android.view.Window;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -67,6 +68,7 @@ public class StoryActivity extends BaseActivity {
         storyWebView = new WebView(getApplicationContext());
         webContainer.addView(storyWebView);
 
+
         WebSettings webSettings = storyWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
@@ -95,6 +97,7 @@ public class StoryActivity extends BaseActivity {
 
         Picasso.with(StoryActivity.this)
                 .load(storyDetail.getImage())
+                .placeholder()
                 .into(collapsingBgImageView);
     }
 
@@ -123,11 +126,4 @@ public class StoryActivity extends BaseActivity {
             context.startActivity(intent);
         }
     }
-
-//    Intent sendIntent = new Intent();
-//    sendIntent.setAction(Intent.ACTION_SEND);
-//    sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
-//    sendIntent.setType("text/plain");
-//    startActivity(sendIntent);
-
 }

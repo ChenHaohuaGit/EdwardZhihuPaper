@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.CommentAdapter;
@@ -16,6 +17,7 @@ import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
+import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -48,6 +50,7 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
         story_id = getIntent().getIntExtra("story_id", 0);
 
         if (story_id == 0) {
+            Toast.makeText(getActivity(),"story id = null",Toast.LENGTH_SHORT).show();
             finish();
         }
 
@@ -76,7 +79,9 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
 
     @Override
     public void showData(ArrayList<Comment> comments) {
+        this.comments.clear();
         this.comments.addAll(comments);
+        Logger.i(String.valueOf(comments.size()));
         commentAdapter.notifyDataSetChanged();
     }
 

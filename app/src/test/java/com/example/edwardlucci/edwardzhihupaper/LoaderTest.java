@@ -1,5 +1,6 @@
 package com.example.edwardlucci.edwardzhihupaper;
 
+import com.example.edwardlucci.edwardzhihupaper.base.MyApp;
 import com.example.edwardlucci.edwardzhihupaper.bean.CommentResponse;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
@@ -22,6 +23,7 @@ public class LoaderTest {
 
     @BeforeClass
     static public void setup() {
+        MyApp app = new MyApp();
         Logger.init();
     }
 

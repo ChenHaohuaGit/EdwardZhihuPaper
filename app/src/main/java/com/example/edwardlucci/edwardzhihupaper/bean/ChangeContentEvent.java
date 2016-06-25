@@ -1,6 +1,5 @@
 package com.example.edwardlucci.edwardzhihupaper.bean;
 
-import com.example.edwardlucci.edwardzhihupaper.util.RxBus;
 import com.example.edwardlucci.edwardzhihupaper.util.RxEvent;
 
 /**

@@ -14,7 +14,7 @@ public class CommentContract {
         void loadData();
     }
 
-    interface View extends BaseView<Presenter>{
+    public interface View extends BaseView<Presenter>{
         void showData(ArrayList<Comment> comments);
     }
 }

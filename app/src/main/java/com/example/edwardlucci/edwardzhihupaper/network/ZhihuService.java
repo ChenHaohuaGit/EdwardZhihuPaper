@@ -1,17 +1,13 @@
 package com.example.edwardlucci.edwardzhihupaper.network;
 
-import com.example.edwardlucci.edwardzhihupaper.base.MyApp;
-import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
-import com.orhanobut.logger.Logger;
 
 import java.lang.reflect.Type;
 
@@ -26,7 +22,7 @@ public class ZhihuService {
 
     private static final String base_url = "http://news-at.zhihu.com/api/4/";
 
-    public static Gson normalGson = new Gson();
+    public static Gson defaultGson = new Gson();
 
     public static Gson gson = new GsonBuilder()
             .registerTypeAdapter(Story.class, new JsonDeserializer<Story>() {
@@ -35,7 +31,7 @@ public class ZhihuService {
                     Story story = new Story();
                     JsonObject object = json.getAsJsonObject();
                     if (object.get("images").isJsonArray()){
-                        String[] images = normalGson.fromJson(json,String[].class);
+                        String[] images = defaultGson.fromJson(json,String[].class);
                         story.setImage(images[0]);
 //                        JsonArray jsonArray = (JsonArray) object.get("images");
 //                        jsonArray.get(0).getAsString();
