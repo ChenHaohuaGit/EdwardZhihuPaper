@@ -3,9 +3,11 @@ package com.example.edwardlucci.edwardzhihupaper.network;
 import android.content.Context;
 
 import com.example.edwardlucci.edwardzhihupaper.base.AsyncLoader;
+import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
 import com.example.edwardlucci.edwardzhihupaper.bean.CommentResponse;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import rx.Observable;
@@ -13,7 +15,7 @@ import rx.Observable;
 /**
  * Created by edward on 16/6/15.
  */
-public class CommentLoader extends AsyncLoader<Iterable<CommentResponse>> {
+public class CommentLoader extends AsyncLoader<ArrayList<Comment>> {
 
     int id;
 
@@ -23,15 +25,24 @@ public class CommentLoader extends AsyncLoader<Iterable<CommentResponse>> {
     }
 
     @Override
-    public Iterable<CommentResponse> loadInBackground() {
+    public ArrayList<Comment> loadInBackground() {
         Observable<CommentResponse> commentsObservable =
                 Observable.merge(
                         ZhihuService.getInstance().getLongComment(id),
                         ZhihuService.getInstance().getShortComment(id));
 
-        return commentsObservable
+        Iterable<CommentResponse> commentResponses;
+
+        commentResponses = commentsObservable
                 .compose(RxUtil.fromIOtoImmediateThread())
                 .toBlocking()
                 .toIterable();
+
+        ArrayList<Comment> comments = new ArrayList<>();
+
+        for (CommentResponse commentResponse : commentResponses) {
+            comments.addAll(commentResponse.getComments());
+        }
+        return comments;
     }
 }

@@ -25,21 +25,16 @@ public class ZhihuService {
     public static Gson defaultGson = new Gson();
 
     public static Gson gson = new GsonBuilder()
-            .registerTypeAdapter(Story.class, new JsonDeserializer<Story>() {
-                @Override
-                public Story deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-                    Story story = new Story();
-                    JsonObject object = json.getAsJsonObject();
-                    if (object.get("images").isJsonArray()){
-                        String[] images = defaultGson.fromJson(json,String[].class);
-                        story.setImage(images[0]);
-//                        JsonArray jsonArray = (JsonArray) object.get("images");
-//                        jsonArray.get(0).getAsString();
-                    }
-                    story.setTitle(object.get("title").getAsString());
-                    story.setId(object.get("id").getAsInt());
-                    return null;
+            .registerTypeAdapter(Story.class, (JsonDeserializer<Story>) (json, typeOfT, context) -> {
+                Story story = new Story();
+                JsonObject object = json.getAsJsonObject();
+                if (object.get("images").isJsonArray()){
+                    String[] images = defaultGson.fromJson(json,String[].class);
+                    story.setImage(images[0]);
                 }
+                story.setTitle(object.get("title").getAsString());
+                story.setId(object.get("id").getAsInt());
+                return null;
             })
             .create();
 
@@ -50,8 +45,7 @@ public class ZhihuService {
             .client(OkClient.getInstance())
             .build();
 
-    private ZhihuService() {
-    }
+    private ZhihuService() {}
 
     public static ZhihuApi getInstance() {
         return SingletonHolder.INSTANCE;

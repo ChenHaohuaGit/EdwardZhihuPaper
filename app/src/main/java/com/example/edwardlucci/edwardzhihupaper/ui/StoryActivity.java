@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -53,11 +54,6 @@ public class StoryActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-            getWindow().setEnterTransition(new Explode());
-            getWindow().setExitTransition(new Explode());
-        }
         super.onCreate(savedInstanceState);
         setSupportActionBar(toolbar);
 
@@ -67,7 +63,6 @@ public class StoryActivity extends BaseActivity {
 
         storyWebView = new WebView(getApplicationContext());
         webContainer.addView(storyWebView);
-
 
         WebSettings webSettings = storyWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -97,7 +92,6 @@ public class StoryActivity extends BaseActivity {
 
         Picasso.with(StoryActivity.this)
                 .load(storyDetail.getImage())
-                .placeholder()
                 .into(collapsingBgImageView);
     }
 
@@ -117,7 +111,7 @@ public class StoryActivity extends BaseActivity {
         super.onDestroy();
     }
 
-    public static void toStoryActivity(@NonNull Context context, @NonNull Story story, @Nullable Pair... sharedView) {
+    public static void startActivity(@NonNull Context context, @NonNull Story story, @Nullable Pair... sharedView) {
         Intent intent = new Intent(context, StoryActivity.class);
         intent.putExtra("story", story);
         if (Build.VERSION.SDK_INT > 20) {

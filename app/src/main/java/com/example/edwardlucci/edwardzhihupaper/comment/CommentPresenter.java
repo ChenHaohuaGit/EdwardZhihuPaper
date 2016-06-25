@@ -14,7 +14,7 @@ import java.util.ArrayList;
 /**
  * Created by edward on 16/6/18.
  */
-public class CommentPresenter implements CommentContract.Presenter, LoaderManager.LoaderCallbacks<Iterable<CommentResponse>> {
+public class CommentPresenter implements CommentContract.Presenter, LoaderManager.LoaderCallbacks<ArrayList<Comment>> {
 
     int id;
 
@@ -43,21 +43,18 @@ public class CommentPresenter implements CommentContract.Presenter, LoaderManage
     }
 
     @Override
-    public Loader<Iterable<CommentResponse>> onCreateLoader(int id, Bundle args) {
+    public Loader<ArrayList<Comment>> onCreateLoader(int id, Bundle args) {
         return mCommentLoader;
     }
 
     @Override
-    public void onLoadFinished(Loader<Iterable<CommentResponse>> loader, Iterable<CommentResponse> data) {
-        ArrayList<Comment> comments = new ArrayList<>();
-        for (CommentResponse commentResponse : data) {
-            comments.addAll(commentResponse.getComments());
-        }
-        mView.showData(comments);
+    public void onLoadFinished(Loader<ArrayList<Comment>> loader, ArrayList<Comment> data) {
+        mView.showData(data);
     }
 
     @Override
-    public void onLoaderReset(Loader<Iterable<CommentResponse>> loader) {
+    public void onLoaderReset(Loader<ArrayList<Comment>> loader) {
 
     }
+
 }

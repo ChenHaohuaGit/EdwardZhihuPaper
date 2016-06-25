@@ -11,8 +11,4 @@ import com.example.edwardlucci.edwardzhihupaper.ui.StoryActivity;
 public class Go {
 
     private Go() {}
-
-    public static void toStoryActivity(Context context, Story story){
-//        StoryActivity.toStoryActivity(context,story,null);
-    }
 }

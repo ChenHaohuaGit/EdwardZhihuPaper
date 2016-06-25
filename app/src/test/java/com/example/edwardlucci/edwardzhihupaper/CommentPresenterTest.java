@@ -18,6 +18,7 @@ import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by edward on 16/6/19.
@@ -60,7 +61,6 @@ public class CommentPresenterTest {
         comments2.add(comment);
         comments2.add(comment);
         commentResponse.setComments(comments);
-
 
         Mockito.doAnswer(invocation -> {
             Object[] arguments = invocation.getArguments();
