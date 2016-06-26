@@ -16,10 +16,7 @@ public class DailyStories {
     private String date;
     @SerializedName("stories")
     @Expose
-    private List<Story> stories = new ArrayList<Story>();
-    @SerializedName("top_stories")
-    @Expose
-    private List<Story> topStories = new ArrayList<Story>();
+    private List<Story> stories = new ArrayList<>();
 
     /**
      * @return The date
@@ -49,20 +46,6 @@ public class DailyStories {
         this.stories = stories;
     }
 
-    /**
-     * @return The topStories
-     */
-    public List<Story> getTopStories() {
-        return topStories;
-    }
-
-    /**
-     * @param topStories The top_stories
-     */
-    public void setTopStories(List<Story> topStories) {
-        this.topStories = topStories;
-    }
-
     public ContentValues dailyStories2Contentvalues(){
         ContentValues contentValues = new ContentValues();
         contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE,this.date);
@@ -74,7 +57,6 @@ public class DailyStories {
         return "DailyStories{" +
                 "date='" + date + '\'' +
                 ", stories=" + stories +
-                ", topStories=" + topStories +
                 '}';
     }
 }
