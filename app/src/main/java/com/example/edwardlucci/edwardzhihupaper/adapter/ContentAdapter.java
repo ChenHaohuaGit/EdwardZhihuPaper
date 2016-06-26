@@ -3,6 +3,7 @@ package com.example.edwardlucci.edwardzhihupaper.adapter;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.graphics.Palette;
@@ -57,41 +58,81 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.NewsView
     public void onBindViewHolder(NewsViewHolder holder, int position) {
         final Story story = stories.get(position);
 
-        if (story.getImages() != null || !story.getImages().isEmpty()) {
+        boolean hasImage = false;
+        if (story.getImages() != null && story.getImages().size() > 0)
+            hasImage = true;
 
-            Picasso.with(mContext)
-                    .load(story.getImages().get(0))
-                    .placeholder(R.drawable.transparent)
-                    .error(R.mipmap.ic_launcher)
-                    .into(holder.news_imageview, new Callback() {
-                        @Override
-                        public void onSuccess() {
-                            Bitmap bitmap = ((BitmapDrawable) holder.news_imageview.getDrawable()).getBitmap();
-
-                            Palette.from(bitmap)
-                                    .generate(palette -> {
-                                        if (null != palette.getVibrantSwatch()) {
-                                            holder.news_title_textview.setBackgroundColor(palette.getVibrantSwatch().getRgb());
-                                            holder.news_title_textview.setTextColor(palette.getVibrantSwatch().getTitleTextColor());
-                                        } else {
-                                            holder.news_title_textview.setBackgroundColor(mContext.getResources().getColor(R.color.colorPrimaryDark));
-                                            holder.news_title_textview.setTextColor(mContext.getResources().getColor(R.color.colorAccent));
-                                        }
-                                    });
-
-                        }
-
-                        @Override
-                        public void onError() {
-
-                        }
-                    });
+        if (story.getImages() != null && story.getImages().size() > 0) {
+            loadImageFromNetwork(story,holder);
+        }else {
+            loadImageFromDrawable(holder);
         }
 
         holder.news_title_textview.setText(story.getTitle());
 
         holder.container.setOnClickListener(v ->
-                StoryActivity.startActivity(mContext,stories.get(position), Pair.create(holder.news_imageview,"image"), Pair.create(holder.news_title_textview,"title")));
+                StoryActivity.startActivity(mContext, stories.get(position), Pair.create(holder.news_imageview, "image"), Pair.create(holder.news_title_textview, "title")));
+    }
+
+    private void loadImageFromDrawable(NewsViewHolder holder) {
+        Picasso.with(mContext)
+                .load(R.drawable.unknown)
+                .placeholder(R.drawable.transparent)
+                .into(holder.news_imageview, new Callback() {
+                    @Override
+                    public void onSuccess() {
+                        Bitmap bitmap = ((BitmapDrawable) holder.news_imageview.getDrawable()).getBitmap();
+
+                        Palette.from(bitmap)
+                                .generate(palette -> {
+                                    if (null != palette.getVibrantSwatch()) {
+                                        holder.news_title_textview.setBackgroundColor(palette.getVibrantSwatch().getRgb());
+                                        holder.news_title_textview.setTextColor(palette.getVibrantSwatch().getTitleTextColor());
+                                    } else {
+                                        holder.news_title_textview.setBackgroundColor(mContext.getResources().getColor(R.color.colorPrimaryDark));
+                                        holder.news_title_textview.setTextColor(mContext.getResources().getColor(R.color.colorAccent));
+                                    }
+                                });
+
+                    }
+
+                    @Override
+                    public void onError() {
+
+                    }
+                });
+
+    }
+
+    private void loadImageFromNetwork(Story story,NewsViewHolder holder) {
+        Picasso.with(mContext)
+                .load(story.getImages().get(0))
+                .placeholder(R.drawable.transparent)
+                .error(R.drawable.unknown)
+                .into(holder.news_imageview, new Callback() {
+                    @Override
+                    public void onSuccess() {
+                        Bitmap bitmap = ((BitmapDrawable) holder.news_imageview.getDrawable()).getBitmap();
+
+                        Palette.from(bitmap)
+                                .generate(palette -> {
+                                    if (null != palette.getVibrantSwatch()) {
+                                        holder.news_title_textview.setBackgroundColor(palette.getVibrantSwatch().getRgb());
+                                        holder.news_title_textview.setTextColor(palette.getVibrantSwatch().getTitleTextColor());
+                                    } else {
+                                        holder.news_title_textview.setBackgroundColor(mContext.getResources().getColor(R.color.colorPrimaryDark));
+                                        holder.news_title_textview.setTextColor(mContext.getResources().getColor(R.color.colorAccent));
+                                    }
+                                });
+
+                    }
+
+                    @Override
+                    public void onError() {
+
+                    }
+                });
+
     }
 
 //    @Override

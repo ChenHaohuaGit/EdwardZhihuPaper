@@ -108,6 +108,10 @@
         "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_dialog_material_background_light.xml"
     },
     {
+        "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/drawable/unknown.png",
+        "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/res/drawable/unknown.png"
+    },
+    {
         "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
         "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_btn_default_mtrl_shape.xml"
     },

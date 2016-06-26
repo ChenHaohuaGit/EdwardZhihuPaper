@@ -28,13 +28,11 @@ public class ZhihuService {
             .registerTypeAdapter(Story.class, (JsonDeserializer<Story>) (json, typeOfT, context) -> {
                 Story story = new Story();
                 JsonObject object = json.getAsJsonObject();
-                if (object.get("images").isJsonArray()){
-                    String[] images = defaultGson.fromJson(json,String[].class);
-                    story.setImage(images[0]);
-                }
+                String[] images = defaultGson.fromJson(object.get("images").getAsJsonArray(), String[].class);
+                story.setImage(images[0]);
                 story.setTitle(object.get("title").getAsString());
                 story.setId(object.get("id").getAsInt());
-                return null;
+                return story;
             })
             .create();
 
@@ -45,7 +43,8 @@ public class ZhihuService {
             .client(OkClient.getInstance())
             .build();
 
-    private ZhihuService() {}
+    private ZhihuService() {
+    }
 
     public static ZhihuApi getInstance() {
         return SingletonHolder.INSTANCE;

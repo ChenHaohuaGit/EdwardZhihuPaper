@@ -9,14 +9,15 @@ import okhttp3.OkHttpClient;
  */
 public class OkClient {
 
-    private OkClient() {}
+    private OkClient() {
+    }
 
-    public static OkHttpClient getInstance(){
+    public static OkHttpClient getInstance() {
         return SingletonHolder.INSTANCE;
     }
 
-    private static class SingletonHolder{
-        static final  OkHttpClient INSTANCE = new OkHttpClient.Builder()
+    private static class SingletonHolder {
+        static final OkHttpClient INSTANCE = new OkHttpClient.Builder()
                 .addNetworkInterceptor(new StethoInterceptor())
                 .build();
     }

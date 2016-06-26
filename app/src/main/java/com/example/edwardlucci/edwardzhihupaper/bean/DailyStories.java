@@ -69,4 +69,12 @@ public class DailyStories {
         return contentValues;
     }
 
+    @Override
+    public String toString() {
+        return "DailyStories{" +
+                "date='" + date + '\'' +
+                ", stories=" + stories +
+                ", topStories=" + topStories +
+                '}';
+    }
 }

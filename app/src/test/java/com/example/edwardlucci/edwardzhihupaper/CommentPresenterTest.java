@@ -4,7 +4,6 @@ import android.app.LoaderManager;
 import android.os.Bundle;
 
 import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
-import com.example.edwardlucci.edwardzhihupaper.bean.CommentResponse;
 import com.example.edwardlucci.edwardzhihupaper.comment.CommentContract;
 import com.example.edwardlucci.edwardzhihupaper.comment.CommentPresenter;
 import com.example.edwardlucci.edwardzhihupaper.network.CommentLoader;
@@ -14,11 +13,8 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.mockito.invocation.InvocationOnMock;
-import org.mockito.stubbing.Answer;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 /**
  * Created by edward on 16/6/19.
@@ -34,9 +30,6 @@ public class CommentPresenterTest {
     @Mock
     CommentLoader mockLoader;
 
-    @Mock
-    LoaderManager.LoaderCallbacks mockCallback;
-
     CommentPresenter commentPresenter;
 
     Comment comment = new Comment();
@@ -49,8 +42,6 @@ public class CommentPresenterTest {
 
     @Test
     public void testLoadData(){
-
-        CommentResponse commentResponse = new CommentResponse();
         ArrayList<Comment> comments = new ArrayList<>();
         comment.setId(45);
         comments.add(comment);
@@ -60,7 +51,7 @@ public class CommentPresenterTest {
         comments2.add(comment);
         comments2.add(comment);
         comments2.add(comment);
-        commentResponse.setComments(comments);
+
 
         Mockito.doAnswer(invocation -> {
             Object[] arguments = invocation.getArguments();
@@ -68,17 +59,16 @@ public class CommentPresenterTest {
             //callback是第三个参数
             LoaderManager.LoaderCallbacks callback = (LoaderManager.LoaderCallbacks) arguments[2];
 
-            callback.onLoadFinished(mockLoader,commentResponse);
+            callback.onLoadFinished(mockLoader,comments2);
 
             return null;
         }).when(mockLoaderManager).initLoader(Mockito.anyInt(),Mockito.any(Bundle.class),Mockito.any(LoaderManager.LoaderCallbacks.class));
 
         commentPresenter.loadData();
 
-        Mockito.verify(mockLoaderManager).initLoader(Mockito.anyInt(),null,mockCallback);
+        Mockito.verify(mockLoaderManager).initLoader(Mockito.anyInt(),Mockito.any(Bundle.class),Mockito.any(LoaderManager.LoaderCallbacks.class));
+//        Mockito.verify(mockLoader).loadInBackground();
+        Mockito.verify(mockView).showData(comments2);
 
-        Mockito.verify(mockView).showData(comments);
-//
-//        Mockito.verify()
     }
 }

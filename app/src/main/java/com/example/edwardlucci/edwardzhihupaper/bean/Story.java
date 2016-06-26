@@ -16,21 +16,12 @@ public class Story implements Serializable{
     @SerializedName("images")
     @Expose
     private List<String> images = new ArrayList<String>();
-    @SerializedName("type")
-    @Expose
-    private Integer type;
     @SerializedName("id")
     @Expose
     private Integer id;
-    @SerializedName("ga_prefix")
-    @Expose
-    private String gaPrefix;
     @SerializedName("title")
     @Expose
     private String title;
-    @SerializedName("multipic")
-    @Expose
-    private Boolean multipic;
 
     private String image;
 
@@ -57,20 +48,6 @@ public class Story implements Serializable{
     }
 
     /**
-     * @return The type
-     */
-    public Integer getType() {
-        return type;
-    }
-
-    /**
-     * @param type The type
-     */
-    public void setType(Integer type) {
-        this.type = type;
-    }
-
-    /**
      * @return The id
      */
     public Integer getId() {
@@ -82,20 +59,6 @@ public class Story implements Serializable{
      */
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    /**
-     * @return The gaPrefix
-     */
-    public String getGaPrefix() {
-        return gaPrefix;
-    }
-
-    /**
-     * @param gaPrefix The ga_prefix
-     */
-    public void setGaPrefix(String gaPrefix) {
-        this.gaPrefix = gaPrefix;
     }
 
     /**
@@ -112,28 +75,12 @@ public class Story implements Serializable{
         this.title = title;
     }
 
-    /**
-     * @return The multipic
-     */
-    public Boolean getMultipic() {
-        return multipic;
-    }
-
-    /**
-     * @param multipic The multipic
-     */
-    public void setMultipic(Boolean multipic) {
-        this.multipic = multipic;
-    }
-
     public ContentValues story2contentvalues(String date){
         ContentValues contentValues = new ContentValues();
         contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE,date);
         contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_ID,this.id);
         contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_IMAGES, String.valueOf(this.getImages()));
-        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_MULTIPIC,this.multipic);
         contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_TITLE,this.title);
-        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_TYPE,this.type);
         return contentValues;
     }
 }

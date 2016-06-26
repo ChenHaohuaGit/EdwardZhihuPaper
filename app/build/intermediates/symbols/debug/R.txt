@@ -607,8 +607,9 @@ int drawable comment_icon 0x7f02004b
 int drawable design_fab_background 0x7f02004c
 int drawable design_snackbar_background 0x7f02004d
 int drawable gradient_black 0x7f02004e
-int drawable notification_template_icon_bg 0x7f020050
+int drawable notification_template_icon_bg 0x7f020051
 int drawable transparent 0x7f02004f
+int drawable unknown 0x7f020050
 int id action0 0x7f0c007f
 int id action_bar 0x7f0c005a
 int id action_bar_activity_content 0x7f0c0000
