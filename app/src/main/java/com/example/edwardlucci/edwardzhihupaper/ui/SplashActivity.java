@@ -150,7 +150,10 @@ public class SplashActivity extends BaseActivity {
     private void loadPassedData() {
         isLoading = true;
 
-        Observable.concat(Observable.just(MemoryCache.getInstance().getDailyStories(latestDate)) ,zhihuApi.getPastStories(latestDate))
+        Observable.concat(
+                Observable.just(MemoryCache.getInstance().getDailyStories(latestDate)),
+//                Observable.just(getDailyStoriesFromDatabase(latestDate)),
+                zhihuApi.getPastStories(latestDate))
                 .filter(dailyStories -> dailyStories != null)
                 .first()
                 .compose(RxUtil.fromIOtoMainThread())
@@ -158,29 +161,51 @@ public class SplashActivity extends BaseActivity {
                 .doOnNext(latestStories -> MemoryCache.getInstance().putDailyStories(latestDate, latestStories))
                 .doOnNext(latestStories -> latestDate = latestStories.getDate())
                 .doOnNext(this::putDailyStoriesIntoDatabase)
-                .flatMap(latestStories -> Observable.from(latestStories.getStories()))
-                .subscribe(new Subscriber<Story>() {
+                .doOnTerminate(() -> isLoading = false)
+                .subscribe(new Subscriber<DailyStories>() {
                     @Override
                     public void onCompleted() {
-                        isLoading = false;
+
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        Logger.i(e.getMessage());
+
                     }
 
                     @Override
-                    public void onNext(Story story) {
-                        stories.add(story);
-                        contentAdapter.notifyItemInserted(stories.size() - 1);
+                    public void onNext(DailyStories dailyStories) {
+                        stories.addAll(dailyStories.getStories());
+                        contentAdapter.notifyDataSetChanged();
                     }
                 });
     }
 
+    //    private Observable<DailyStories> getDailyStoriesFromDatabase(String date) {
+//        Cursor cursor = sqliteDatabase.query(StoryDatabaseContract.StoryTable.TABLE_NAME,
+//                null,
+//                StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE + "=?",
+//                new String[]{date},
+//                null, null, null, null);
+//        DailyStories dailyStories = new DailyStories();
+//        dailyStories.setDate(date);
+//        while (cursor.moveToNext()) {
+//            Story story = new Story();
+//            story.setId(cursor.getInt(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_ID)));
+//            story.setTitle(cursor.getString(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_TITLE)));
+//            story.setImage(cursor.getString(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_IMAGES)));
+//            dailyStories.getStories().add(story);
+//        }
+//        cursor.close();
+//        if (dailyStories.getStories().size() > 0) {
+//            return Observable.just(dailyStories);
+//        } else {
+//            return null;
+//        }
+//    }
     private DailyStories getDailyStoriesFromDatabase(String date) {
         Cursor cursor = sqliteDatabase.query(StoryDatabaseContract.StoryTable.TABLE_NAME,
-                null,
+                StoryDatabaseContract.projection,
                 StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE + "=?",
                 new String[]{date},
                 null, null, null, null);
@@ -190,16 +215,17 @@ public class SplashActivity extends BaseActivity {
             Story story = new Story();
             story.setId(cursor.getInt(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_ID)));
             story.setTitle(cursor.getString(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_TITLE)));
-            //story.setImages(cursor.getString(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_IMAGES)));
+            story.setImage(cursor.getString(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_IMAGES)));
             dailyStories.getStories().add(story);
         }
         cursor.close();
-        if (dailyStories.getStories().size()>0){
+        if (dailyStories.getStories().size() > 0) {
             return dailyStories;
-        }else {
+        } else {
             return null;
         }
     }
+
 
     private void putDailyStoriesIntoDatabase(DailyStories dailyStories) {
         Observable.from(dailyStories.getStories())

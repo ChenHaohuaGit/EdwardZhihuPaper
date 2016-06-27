@@ -5,6 +5,8 @@ import android.support.v4.util.LruCache;
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 
+import rx.Observable;
+
 /**
  * Created by edward on 16/6/18.
  */
@@ -32,6 +34,16 @@ public class MemoryCache {
             }
         }
     }
+
+//    public Observable<DailyStories> getDailyStories(String key) {
+//        synchronized (dailyStoriesLruCache) {
+//            if (dailyStoriesLruCache.get(key) != null) {
+//                return Observable.just(dailyStoriesLruCache.get(key));
+//            } else {
+//                return null;
+//            }
+//        }
+//    }
 
     public DailyStories getDailyStories(String key) {
         synchronized (dailyStoriesLruCache) {
