@@ -5,6 +5,8 @@ import android.support.annotation.Nullable;
 
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -18,7 +20,7 @@ import java.util.List;
 /**
  * Created by edward on 16/6/26.
  */
-class DailyStoriesDeserializer implements JsonDeserializer<DailyStories> {
+public class DailyStoriesDeserializer implements JsonDeserializer<DailyStories> {
     @Override
     public DailyStories deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
 
@@ -28,9 +30,16 @@ class DailyStoriesDeserializer implements JsonDeserializer<DailyStories> {
 
         dailyStories.setDate(jsonObject.get("date").getAsString());
 
-        Type type = new TypeToken<List<Story>>() {
-        }.getType();
-        dailyStories.setStories(getList(context, jsonObject, "images", type));
+//        Type type = new TypeToken<List<Story>>() {
+//        }.getType();
+
+        Gson gson = new GsonBuilder().registerTypeAdapter(Story.class, new StoryDeserializer()).create();
+
+        List<Story> stories = gson.fromJson(((JsonObject) json).get("stories"), new TypeToken<List<Story>>() {
+        }.getType());
+
+//        dailyStories.setStories(getList(context, jsonObject, "images", type));
+        dailyStories.setStories(stories);
 
         return dailyStories;
     }
@@ -44,7 +53,7 @@ class DailyStoriesDeserializer implements JsonDeserializer<DailyStories> {
             if (jsonObject.has(memberName))
                 return context.deserialize(jsonObject.get(memberName), type);
         } catch (Exception e) {
-                e.printStackTrace();
+            e.printStackTrace();
         }
         return null;
     }

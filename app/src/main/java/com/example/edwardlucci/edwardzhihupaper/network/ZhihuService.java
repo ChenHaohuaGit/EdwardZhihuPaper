@@ -1,5 +1,8 @@
 package com.example.edwardlucci.edwardzhihupaper.network;
 
+import com.example.edwardlucci.edwardzhihupaper.base.DailyStoriesDeserializer;
+import com.example.edwardlucci.edwardzhihupaper.base.StoryDeserializer;
+import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -10,6 +13,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 
 import java.lang.reflect.Type;
+import java.util.List;
 
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -22,24 +26,15 @@ public class ZhihuService {
 
     private static final String base_url = "http://news-at.zhihu.com/api/4/";
 
-    public static Gson defaultGson = new Gson();
-
     public static Gson gson = new GsonBuilder()
-            .registerTypeAdapter(Story.class, (JsonDeserializer<Story>) (json, typeOfT, context) -> {
-                Story story = new Story();
-                JsonObject object = json.getAsJsonObject();
-                String[] images = defaultGson.fromJson(object.get("images").getAsJsonArray(), String[].class);
-                story.setImage(images[0]);
-                story.setTitle(object.get("title").getAsString());
-                story.setId(object.get("id").getAsInt());
-                return story;
-            })
+            .registerTypeAdapter(Story.class, new StoryDeserializer())
+            .registerTypeAdapter(DailyStories.class,new DailyStoriesDeserializer())
             .create();
 
     private static Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(base_url)
             .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .client(OkClient.getInstance())
             .build();
 

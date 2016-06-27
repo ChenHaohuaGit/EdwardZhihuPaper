@@ -13,9 +13,6 @@ import java.util.List;
 
 public class Story implements Serializable{
 
-    @SerializedName("images")
-    @Expose
-    private List<String> images = new ArrayList<String>();
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -31,20 +28,6 @@ public class Story implements Serializable{
 
     public void setImage(String image) {
         this.image = image;
-    }
-
-    /**
-     * @return The images
-     */
-    public List<String> getImages() {
-        return images;
-    }
-
-    /**
-     * @param images The images
-     */
-    public void setImages(List<String> images) {
-        this.images = images;
     }
 
     /**
@@ -79,7 +62,7 @@ public class Story implements Serializable{
         ContentValues contentValues = new ContentValues();
         contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE,date);
         contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_ID,this.id);
-        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_IMAGES, String.valueOf(this.getImages()));
+        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_IMAGES, this.image);
         contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_TITLE,this.title);
         return contentValues;
     }

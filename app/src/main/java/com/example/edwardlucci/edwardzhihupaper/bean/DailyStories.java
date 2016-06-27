@@ -46,7 +46,7 @@ public class DailyStories {
         this.stories = stories;
     }
 
-    public ContentValues dailyStories2Contentvalues(){
+    public ContentValues dailyStories2ContentValues(){
         ContentValues contentValues = new ContentValues();
         contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE,this.date);
         return contentValues;

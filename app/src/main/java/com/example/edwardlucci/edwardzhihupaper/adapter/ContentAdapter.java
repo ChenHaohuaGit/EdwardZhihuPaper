@@ -59,14 +59,7 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.NewsView
         final Story story = stories.get(position);
 
         boolean hasImage = false;
-        if (story.getImages() != null && story.getImages().size() > 0)
-            hasImage = true;
-
-        if (story.getImages() != null && story.getImages().size() > 0) {
-            loadImageFromNetwork(story,holder);
-        }else {
-            loadImageFromDrawable(holder);
-        }
+        loadImageFromNetwork(story, holder);
 
         holder.news_title_textview.setText(story.getTitle());
 
@@ -104,9 +97,9 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.NewsView
 
     }
 
-    private void loadImageFromNetwork(Story story,NewsViewHolder holder) {
+    private void loadImageFromNetwork(Story story, NewsViewHolder holder) {
         Picasso.with(mContext)
-                .load(story.getImages().get(0))
+                .load(story.getImage())
                 .placeholder(R.drawable.transparent)
                 .error(R.drawable.unknown)
                 .into(holder.news_imageview, new Callback() {
