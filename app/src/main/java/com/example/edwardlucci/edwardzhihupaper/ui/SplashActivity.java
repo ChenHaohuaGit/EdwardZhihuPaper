@@ -10,7 +10,6 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
-import android.widget.Toast;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
@@ -18,15 +17,15 @@ import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
+import com.example.edwardlucci.edwardzhihupaper.database.DateDatabaseContract;
 import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseContract;
-import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseHelper;
+import com.example.edwardlucci.edwardzhihupaper.database.DatabaseHelper;
 import com.example.edwardlucci.edwardzhihupaper.network.MemoryCache;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
-import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 
@@ -34,7 +33,6 @@ import butterknife.Bind;
 import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action1;
-import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
@@ -61,14 +59,14 @@ public class SplashActivity extends BaseActivity {
     @Bind(R.id.toolbar)
     Toolbar toolbar;
 
-    StoryDatabaseHelper helper;
+    DatabaseHelper helper;
     SQLiteDatabase sqliteDatabase;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        helper = new StoryDatabaseHelper(getActivity());
+        helper = new DatabaseHelper(getActivity());
         sqliteDatabase = helper.getWritableDatabase();
 
         zhihuApi = ZhihuService.getInstance();
@@ -152,15 +150,15 @@ public class SplashActivity extends BaseActivity {
 
         Observable.concat(
                 Observable.just(MemoryCache.getInstance().getDailyStories(latestDate)),
-//                Observable.just(getDailyStoriesFromDatabase(latestDate)),
+                Observable.just(getDailyStoriesFromDatabase(latestDate)),
                 zhihuApi.getPastStories(latestDate))
                 .filter(dailyStories -> dailyStories != null)
                 .first()
                 .compose(RxUtil.fromIOtoMainThread())
                 .compose(bindToLifecycle())
-                .doOnNext(latestStories -> MemoryCache.getInstance().putDailyStories(latestDate, latestStories))
-                .doOnNext(latestStories -> latestDate = latestStories.getDate())
-                .doOnNext(this::putDailyStoriesIntoDatabase)
+                .doOnNext(dailyStories1 -> MemoryCache.getInstance().putDailyStories(latestDate, dailyStories1))
+                .doOnNext(dailyStories -> putDailyStoriesIntoDatabase(latestDate,dailyStories))
+                .doOnNext(dailyStories2 -> latestDate = dailyStories2.getDate())
                 .doOnTerminate(() -> isLoading = false)
                 .subscribe(new Subscriber<DailyStories>() {
                     @Override
@@ -181,36 +179,21 @@ public class SplashActivity extends BaseActivity {
                 });
     }
 
-    //    private Observable<DailyStories> getDailyStoriesFromDatabase(String date) {
-//        Cursor cursor = sqliteDatabase.query(StoryDatabaseContract.StoryTable.TABLE_NAME,
-//                null,
-//                StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE + "=?",
-//                new String[]{date},
-//                null, null, null, null);
-//        DailyStories dailyStories = new DailyStories();
-//        dailyStories.setDate(date);
-//        while (cursor.moveToNext()) {
-//            Story story = new Story();
-//            story.setId(cursor.getInt(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_ID)));
-//            story.setTitle(cursor.getString(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_TITLE)));
-//            story.setImage(cursor.getString(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_IMAGES)));
-//            dailyStories.getStories().add(story);
-//        }
-//        cursor.close();
-//        if (dailyStories.getStories().size() > 0) {
-//            return Observable.just(dailyStories);
-//        } else {
-//            return null;
-//        }
-//    }
     private DailyStories getDailyStoriesFromDatabase(String date) {
+        Cursor dateCursor = sqliteDatabase.query(DateDatabaseContract.DateTable.TABLE_NAME,
+                DateDatabaseContract.projection,
+                DateDatabaseContract.DateTable.COLUMN_NAME_DATE + "=?",
+                new String[]{date},
+                null, null, null, null);
         Cursor cursor = sqliteDatabase.query(StoryDatabaseContract.StoryTable.TABLE_NAME,
                 StoryDatabaseContract.projection,
                 StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE + "=?",
                 new String[]{date},
                 null, null, null, null);
         DailyStories dailyStories = new DailyStories();
-        dailyStories.setDate(date);
+        if (dateCursor.moveToNext()){
+            dailyStories.setDate(dateCursor.getString(dateCursor.getColumnIndex(DateDatabaseContract.DateTable.COLUMN_NAME_PREVIOUS_DATE)));
+        }
         while (cursor.moveToNext()) {
             Story story = new Story();
             story.setId(cursor.getInt(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_ID)));
@@ -218,6 +201,7 @@ public class SplashActivity extends BaseActivity {
             story.setImage(cursor.getString(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_IMAGES)));
             dailyStories.getStories().add(story);
         }
+        dateCursor.close();
         cursor.close();
         if (dailyStories.getStories().size() > 0) {
             return dailyStories;
@@ -227,14 +211,20 @@ public class SplashActivity extends BaseActivity {
     }
 
 
-    private void putDailyStoriesIntoDatabase(DailyStories dailyStories) {
-        Observable.from(dailyStories.getStories())
+    private void putDailyStoriesIntoDatabase(String currentDate,DailyStories dailyStories) {
+        Observable.just(dailyStories)
+                .doOnNext(dailyStories1 ->
+                        sqliteDatabase.insertWithOnConflict(
+                                DateDatabaseContract.DateTable.TABLE_NAME, null,
+                                dailyStories1.dailyStoriesDate2ContentValues(currentDate),
+                                SQLiteDatabase.CONFLICT_REPLACE))
+                .flatMap(dailyStories1 -> Observable.from(dailyStories1.getStories()))
                 .observeOn(Schedulers.io())
-                .subscribe(story -> {
-                    sqliteDatabase.insertWithOnConflict(
-                            StoryDatabaseContract.StoryTable.TABLE_NAME, null,
-                            story.story2contentvalues(dailyStories.getDate()),
-                            SQLiteDatabase.CONFLICT_REPLACE);
-                });
+                .subscribe(story ->
+                        sqliteDatabase.insertWithOnConflict(
+                                StoryDatabaseContract.StoryTable.TABLE_NAME, null,
+                                story.story2contentvalues(currentDate),
+                                SQLiteDatabase.CONFLICT_REPLACE)
+                );
     }
 }

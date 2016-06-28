@@ -5,8 +5,6 @@ import android.support.annotation.Nullable;
 
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -37,19 +35,4 @@ public class DailyStoriesDeserializer implements JsonDeserializer<DailyStories> 
 
         return dailyStories;
     }
-
-    @Nullable
-    protected static <T> List<T> getList(@NonNull JsonDeserializationContext context,
-                                         @NonNull JsonObject jsonObject,
-                                         @NonNull String memberName,
-                                         @NonNull Type type) {
-        try {
-            if (jsonObject.has(memberName))
-                return context.deserialize(jsonObject.get(memberName), type);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
 }

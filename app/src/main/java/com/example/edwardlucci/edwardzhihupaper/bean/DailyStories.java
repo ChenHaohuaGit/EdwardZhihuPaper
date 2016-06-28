@@ -2,6 +2,7 @@ package com.example.edwardlucci.edwardzhihupaper.bean;
 
 import android.content.ContentValues;
 
+import com.example.edwardlucci.edwardzhihupaper.database.DateDatabaseContract;
 import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseContract;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -46,9 +47,10 @@ public class DailyStories {
         this.stories = stories;
     }
 
-    public ContentValues dailyStories2ContentValues(){
+    public ContentValues dailyStoriesDate2ContentValues(String currentDate){
         ContentValues contentValues = new ContentValues();
-        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE,this.date);
+        contentValues.put(DateDatabaseContract.DateTable.COLUMN_NAME_DATE,currentDate);
+        contentValues.put(DateDatabaseContract.DateTable.COLUMN_NAME_PREVIOUS_DATE,this.date);
         return contentValues;
     }
 
