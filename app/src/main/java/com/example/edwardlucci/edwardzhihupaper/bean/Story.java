@@ -11,7 +11,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Story implements Serializable{
+import io.realm.RealmObject;
+
+public class Story extends RealmObject implements Serializable{
 
     @SerializedName("id")
     @Expose

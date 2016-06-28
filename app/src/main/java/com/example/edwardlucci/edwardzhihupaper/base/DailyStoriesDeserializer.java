@@ -30,15 +30,9 @@ public class DailyStoriesDeserializer implements JsonDeserializer<DailyStories> 
 
         dailyStories.setDate(jsonObject.get("date").getAsString());
 
-//        Type type = new TypeToken<List<Story>>() {
-//        }.getType();
-
-        Gson gson = new GsonBuilder().registerTypeAdapter(Story.class, new StoryDeserializer()).create();
-
-        List<Story> stories = gson.fromJson(((JsonObject) json).get("stories"), new TypeToken<List<Story>>() {
+        List<Story> stories = context.deserialize(((JsonObject) json).get("stories"), new TypeToken<List<Story>>() {
         }.getType());
 
-//        dailyStories.setStories(getList(context, jsonObject, "images", type));
         dailyStories.setStories(stories);
 
         return dailyStories;
