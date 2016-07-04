@@ -17,9 +17,9 @@ import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
+import com.example.edwardlucci.edwardzhihupaper.database.DatabaseHelper;
 import com.example.edwardlucci.edwardzhihupaper.database.DateDatabaseContract;
 import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseContract;
-import com.example.edwardlucci.edwardzhihupaper.database.DatabaseHelper;
 import com.example.edwardlucci.edwardzhihupaper.network.MemoryCache;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
@@ -32,12 +32,10 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import rx.Observable;
 import rx.Subscriber;
-import rx.functions.Action1;
 import rx.schedulers.Schedulers;
 
 /**
  * Created by edwardlucci on 16/4/23.
- * load splashView and data
  */
 public class SplashActivity extends BaseActivity {
 
@@ -149,9 +147,9 @@ public class SplashActivity extends BaseActivity {
         isLoading = true;
 
         Observable.concat(
-                Observable.just(MemoryCache.getInstance().getDailyStories(latestDate)),
-                Observable.just(getDailyStoriesFromDatabase(latestDate)),
-                zhihuApi.getPastStories(latestDate))
+                fromMemoryCache(latestDate),
+                fromDataBase(latestDate),
+                fromNetwork(latestDate))
                 .filter(dailyStories -> dailyStories != null)
                 .first()
                 .compose(RxUtil.fromIOtoMainThread())
@@ -208,6 +206,18 @@ public class SplashActivity extends BaseActivity {
         } else {
             return null;
         }
+    }
+
+    private Observable<DailyStories> fromMemoryCache(String date){
+        return Observable.defer(() -> Observable.just(MemoryCache.getInstance().getDailyStories(date)));
+    }
+
+    private Observable<DailyStories> fromDataBase(String date){
+        return Observable.defer(() -> Observable.just(getDailyStoriesFromDatabase(date)));
+    }
+
+    private Observable<DailyStories> fromNetwork(String date){
+        return Observable.defer(() -> zhihuApi.getPastStories(date));
     }
 
 
