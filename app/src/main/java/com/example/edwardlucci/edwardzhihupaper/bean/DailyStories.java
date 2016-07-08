@@ -10,14 +10,22 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DailyStories {
+import io.realm.RealmList;
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+
+public class DailyStories extends RealmObject{
 
     @SerializedName("date")
     @Expose
+    @PrimaryKey
     private String date;
+
     @SerializedName("stories")
     @Expose
-    private List<Story> stories = new ArrayList<>();
+    private RealmList<Story> stories = new RealmList<>();
+
+    private String realDate;
 
     /**
      * @return The date
@@ -43,8 +51,16 @@ public class DailyStories {
     /**
      * @param stories The stories
      */
-    public void setStories(List<Story> stories) {
+    public void setStories(RealmList<Story> stories) {
         this.stories = stories;
+    }
+
+    public String getRealDate() {
+        return realDate;
+    }
+
+    public void setRealDate(String realDate) {
+        this.realDate = realDate;
     }
 
     public ContentValues dailyStoriesDate2ContentValues(String currentDate){
@@ -59,6 +75,7 @@ public class DailyStories {
         return "DailyStories{" +
                 "date='" + date + '\'' +
                 ", stories=" + stories +
+                ", realDate='" + realDate + '\'' +
                 '}';
     }
 }

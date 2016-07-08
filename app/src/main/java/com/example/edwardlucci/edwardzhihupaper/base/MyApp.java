@@ -7,7 +7,10 @@ import android.os.Build;
 import com.example.edwardlucci.edwardzhihupaper.network.OkClient;
 import com.facebook.stetho.Stetho;
 import com.orhanobut.logger.Logger;
+import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
 
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 import okhttp3.OkHttpClient;
 
 /**
@@ -26,11 +29,19 @@ public class MyApp extends Application{
         Logger.init("Zhihu");
 
         //stetho
-        Stetho.initializeWithDefaults(this);
+        Stetho.initialize(
+                Stetho.newInitializerBuilder(this)
+                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                        .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
+                        .build());
 
         okHttpClient = OkClient.getInstance();
 
         SDK_VERSION = Build.VERSION.SDK_INT;
+
+        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this).build();
+        Realm.setDefaultConfiguration(realmConfiguration);
+
     }
 
     public static int getSdkVersion() {

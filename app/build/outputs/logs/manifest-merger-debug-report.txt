@@ -106,7 +106,7 @@ ADDED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/Android
 		ADDED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml:37:19-51
 uses-sdk
 INJECTED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [io.realm:realm-android-library:1.0.1] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/io.realm/realm-android-library/1.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [io.realm:realm-android-library:1.1.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/io.realm/realm-android-library/1.1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.getkeepsafe.relinker:relinker:1.2.1] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.getkeepsafe.relinker/relinker/1.2.1/AndroidManifest.xml:7:5-43
 MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
@@ -147,6 +147,7 @@ MERGED from [com.android.support:support-v4:23.4.0] /Users/edward/Desktop/worksp
 MERGED from [com.android.support:support-v4:23.4.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-v4:23.4.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.uphyca:stetho_realm:0.9.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.uphyca/stetho_realm/0.9.0/AndroidManifest.xml:8:5-10:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:23.4.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion

@@ -16,6 +16,7 @@ import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
+import com.example.edwardlucci.edwardzhihupaper.bean.DateMatcher;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.database.DatabaseHelper;
 import com.example.edwardlucci.edwardzhihupaper.database.DateDatabaseContract;
@@ -30,8 +31,12 @@ import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 import java.util.ArrayList;
 
 import butterknife.Bind;
+import io.realm.Realm;
+import io.realm.RealmObject;
 import rx.Observable;
 import rx.Subscriber;
+import rx.functions.Action1;
+import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
@@ -39,9 +44,8 @@ import rx.schedulers.Schedulers;
  */
 public class SplashActivity extends BaseActivity {
 
-
     private boolean isLoading = false;
-    private String latestDate;//used to record the latest data
+    private String latestDate;//used to record the latest date
 
     @Bind(R.id.swipeRefreshLayout)
     SwipeRefreshLayout swipeRefreshLayout;
@@ -66,6 +70,8 @@ public class SplashActivity extends BaseActivity {
 
         helper = new DatabaseHelper(getActivity());
         sqliteDatabase = helper.getWritableDatabase();
+
+//        realm = realm.getDefaultInstance();
 
         zhihuApi = ZhihuService.getInstance();
 
@@ -121,25 +127,12 @@ public class SplashActivity extends BaseActivity {
         stories.clear();
         zhihuApi.getLatestStories()
                 .compose(RxUtil.fromIOtoMainThread())
-                .doOnNext(latestStories -> latestDate = latestStories.getDate())
-                .flatMap(latestStories -> Observable.from(latestStories.getStories()))
-                .subscribe(new Subscriber<Story>() {
-                    @Override
-                    public void onCompleted() {
-                        contentAdapter.notifyDataSetChanged();
-                        swipeRefreshLayout.setRefreshing(false);
-                        isLoading = false;
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-
-                    }
-
-                    @Override
-                    public void onNext(Story story) {
-                        stories.add(story);
-                    }
+                .doOnTerminate(() -> isLoading = false)
+                .subscribe(dailyStories -> {
+                    stories.addAll(dailyStories.getStories());
+                    latestDate = dailyStories.getDate();
+                    contentAdapter.notifyDataSetChanged();
+                    swipeRefreshLayout.setRefreshing(false);
                 });
     }
 
@@ -148,15 +141,34 @@ public class SplashActivity extends BaseActivity {
 
         Observable.concat(
                 fromMemoryCache(latestDate),
-                fromDataBase(latestDate),
+//                fromRealm(latestDate),
                 fromNetwork(latestDate))
                 .filter(dailyStories -> dailyStories != null)
                 .first()
                 .compose(RxUtil.fromIOtoMainThread())
                 .compose(bindToLifecycle())
-                .doOnNext(dailyStories1 -> MemoryCache.getInstance().putDailyStories(latestDate, dailyStories1))
-                .doOnNext(dailyStories -> putDailyStoriesIntoDatabase(latestDate,dailyStories))
-                .doOnNext(dailyStories2 -> latestDate = dailyStories2.getDate())
+                .doOnNext(dailyStories3 -> {
+                    Realm realm1 = Realm.getDefaultInstance();
+
+                    realm1.beginTransaction();
+                    MemoryCache.getInstance().putDailyStories(latestDate, dailyStories3);
+                    dailyStories3.setRealDate(latestDate);
+                    latestDate = dailyStories3.getDate();
+                    System.out.println(dailyStories3.toString());
+                    DailyStories dailyStoriesInRealm = realm1.where(DailyStories.class).equalTo("date", latestDate).findFirst();
+                    if (dailyStoriesInRealm==null){
+                        realm1.copyToRealm(dailyStories3);
+                    }
+                    realm1.commitTransaction();
+                    realm1.close();
+//                    if (dailyStoriesInRealm == null) {
+//                        realm1.executeTransaction(realm -> {
+//                                    realm.copyToRealm(dailyStories3);
+//                                    realm1.close();
+//                                }
+//                        );
+//                    }
+                })
                 .doOnTerminate(() -> isLoading = false)
                 .subscribe(new Subscriber<DailyStories>() {
                     @Override
@@ -166,7 +178,7 @@ public class SplashActivity extends BaseActivity {
 
                     @Override
                     public void onError(Throwable e) {
-
+                        System.out.println(e);
                     }
 
                     @Override
@@ -177,64 +189,27 @@ public class SplashActivity extends BaseActivity {
                 });
     }
 
-    private DailyStories getDailyStoriesFromDatabase(String date) {
-        Cursor dateCursor = sqliteDatabase.query(DateDatabaseContract.DateTable.TABLE_NAME,
-                DateDatabaseContract.projection,
-                DateDatabaseContract.DateTable.COLUMN_NAME_DATE + "=?",
-                new String[]{date},
-                null, null, null, null);
-        Cursor cursor = sqliteDatabase.query(StoryDatabaseContract.StoryTable.TABLE_NAME,
-                StoryDatabaseContract.projection,
-                StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE + "=?",
-                new String[]{date},
-                null, null, null, null);
-        DailyStories dailyStories = new DailyStories();
-        if (dateCursor.moveToNext()){
-            dailyStories.setDate(dateCursor.getString(dateCursor.getColumnIndex(DateDatabaseContract.DateTable.COLUMN_NAME_PREVIOUS_DATE)));
-        }
-        while (cursor.moveToNext()) {
-            Story story = new Story();
-            story.setId(cursor.getInt(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_ID)));
-            story.setTitle(cursor.getString(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_TITLE)));
-            story.setImage(cursor.getString(cursor.getColumnIndex(StoryDatabaseContract.StoryTable.COLUMN_NAME_IMAGES)));
-            dailyStories.getStories().add(story);
-        }
-        dateCursor.close();
-        cursor.close();
-        if (dailyStories.getStories().size() > 0) {
-            return dailyStories;
-        } else {
-            return null;
-        }
-    }
-
-    private Observable<DailyStories> fromMemoryCache(String date){
+    private Observable<DailyStories> fromMemoryCache(String date) {
         return Observable.defer(() -> Observable.just(MemoryCache.getInstance().getDailyStories(date)));
     }
 
-    private Observable<DailyStories> fromDataBase(String date){
-        return Observable.defer(() -> Observable.just(getDailyStoriesFromDatabase(date)));
-    }
-
-    private Observable<DailyStories> fromNetwork(String date){
+    private Observable<DailyStories> fromNetwork(String date) {
         return Observable.defer(() -> zhihuApi.getPastStories(date));
     }
 
+    private Observable<DailyStories> fromRealm(String date) {
+        return Observable.defer(() -> {
+            Realm realmInNewThread = Realm.getDefaultInstance();
+            realmInNewThread.beginTransaction();
+            DailyStories dailyStoriesInRealm = realmInNewThread.where(DailyStories.class).equalTo("date", date).findFirst();
+            realmInNewThread.commitTransaction();
+            realmInNewThread.close();
+            return Observable.just(dailyStoriesInRealm);
+        });
+    }
 
-    private void putDailyStoriesIntoDatabase(String currentDate,DailyStories dailyStories) {
-        Observable.just(dailyStories)
-                .doOnNext(dailyStories1 ->
-                        sqliteDatabase.insertWithOnConflict(
-                                DateDatabaseContract.DateTable.TABLE_NAME, null,
-                                dailyStories1.dailyStoriesDate2ContentValues(currentDate),
-                                SQLiteDatabase.CONFLICT_REPLACE))
-                .flatMap(dailyStories1 -> Observable.from(dailyStories1.getStories()))
-                .observeOn(Schedulers.io())
-                .subscribe(story ->
-                        sqliteDatabase.insertWithOnConflict(
-                                StoryDatabaseContract.StoryTable.TABLE_NAME, null,
-                                story.story2contentvalues(currentDate),
-                                SQLiteDatabase.CONFLICT_REPLACE)
-                );
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

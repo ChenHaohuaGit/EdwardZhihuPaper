@@ -1,23 +1,23 @@
 package com.example.edwardlucci.edwardzhihupaper.bean;
 
 import android.content.ContentValues;
-import android.view.SoundEffectConstants;
 
 import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseContract;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 public class Story extends RealmObject implements Serializable{
 
     @SerializedName("id")
     @Expose
+    @PrimaryKey
     private Integer id;
+
     @SerializedName("title")
     @Expose
     private String title;

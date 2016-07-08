@@ -1,8 +1,5 @@
 package com.example.edwardlucci.edwardzhihupaper.base;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.google.gson.JsonDeserializationContext;
@@ -14,6 +11,8 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.List;
+
+import io.realm.RealmList;
 
 /**
  * Created by edward on 16/6/26.
@@ -31,7 +30,11 @@ public class DailyStoriesDeserializer implements JsonDeserializer<DailyStories> 
         List<Story> stories = context.deserialize(((JsonObject) json).get("stories"), new TypeToken<List<Story>>() {
         }.getType());
 
-        dailyStories.setStories(stories);
+        RealmList<Story> storyRealmList = new RealmList<>();
+
+        storyRealmList.addAll(stories);
+
+        dailyStories.setStories(storyRealmList);
 
         return dailyStories;
     }
