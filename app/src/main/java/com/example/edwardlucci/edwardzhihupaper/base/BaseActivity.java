@@ -9,6 +9,7 @@ import android.transition.Explode;
 import android.transition.Fade;
 import android.transition.Slide;
 import android.view.Window;
+import android.view.WindowManager;
 
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
@@ -25,6 +26,10 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setupTransitionAnimation();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = this.getWindow();
+            w.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
         setContentView(getLayout());
         ButterKnife.bind(this);
     }

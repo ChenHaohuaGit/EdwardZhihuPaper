@@ -35,16 +35,6 @@ public class MemoryCache {
         }
     }
 
-//    public Observable<DailyStories> getDailyStories(String key) {
-//        synchronized (dailyStoriesLruCache) {
-//            if (dailyStoriesLruCache.get(key) != null) {
-//                return Observable.just(dailyStoriesLruCache.get(key));
-//            } else {
-//                return null;
-//            }
-//        }
-//    }
-
     public DailyStories getDailyStories(String key) {
         synchronized (dailyStoriesLruCache) {
             if (dailyStoriesLruCache.get(key) != null) {

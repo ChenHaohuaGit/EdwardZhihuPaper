@@ -1,6 +1,5 @@
 package com.example.edwardlucci.edwardzhihupaper.ui;
 
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -16,11 +15,8 @@ import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
-import com.example.edwardlucci.edwardzhihupaper.bean.DateMatcher;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.database.DatabaseHelper;
-import com.example.edwardlucci.edwardzhihupaper.database.DateDatabaseContract;
-import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseContract;
 import com.example.edwardlucci.edwardzhihupaper.network.MemoryCache;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
@@ -29,15 +25,15 @@ import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import io.realm.Realm;
-import io.realm.RealmObject;
+import io.realm.RealmConfiguration;
+import io.realm.rx.RealmObservableFactory;
 import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action1;
-import rx.functions.Func1;
-import rx.schedulers.Schedulers;
 
 /**
  * Created by edwardlucci on 16/4/23.
@@ -70,8 +66,6 @@ public class SplashActivity extends BaseActivity {
 
         helper = new DatabaseHelper(getActivity());
         sqliteDatabase = helper.getWritableDatabase();
-
-//        realm = realm.getDefaultInstance();
 
         zhihuApi = ZhihuService.getInstance();
 
@@ -140,53 +134,57 @@ public class SplashActivity extends BaseActivity {
         isLoading = true;
 
         Observable.concat(
-                fromMemoryCache(latestDate),
-//                fromRealm(latestDate),
+//                fromMemoryCache(latestDate),
+                fromRealm(latestDate),
                 fromNetwork(latestDate))
                 .filter(dailyStories -> dailyStories != null)
                 .first()
                 .compose(RxUtil.fromIOtoMainThread())
                 .compose(bindToLifecycle())
                 .doOnNext(dailyStories3 -> {
-                    Realm realm1 = Realm.getDefaultInstance();
+                    Realm realm = Realm.getDefaultInstance();
 
-                    realm1.beginTransaction();
+                    realm.beginTransaction();
                     MemoryCache.getInstance().putDailyStories(latestDate, dailyStories3);
                     dailyStories3.setRealDate(latestDate);
                     latestDate = dailyStories3.getDate();
                     System.out.println(dailyStories3.toString());
-                    DailyStories dailyStoriesInRealm = realm1.where(DailyStories.class).equalTo("date", latestDate).findFirst();
-                    if (dailyStoriesInRealm==null){
-                        realm1.copyToRealm(dailyStories3);
+                    DailyStories dailyStoriesInRealm = realm.where(DailyStories.class).equalTo("date", latestDate).findFirst();
+                    if (dailyStoriesInRealm == null) {
+                        realm.copyToRealm(dailyStories3);
                     }
-                    realm1.commitTransaction();
-                    realm1.close();
-//                    if (dailyStoriesInRealm == null) {
-//                        realm1.executeTransaction(realm -> {
-//                                    realm.copyToRealm(dailyStories3);
-//                                    realm1.close();
-//                                }
-//                        );
-//                    }
+                    realm.commitTransaction();
+                    realm.close();
+
                 })
-                .doOnTerminate(() -> isLoading = false)
-                .subscribe(new Subscriber<DailyStories>() {
-                    @Override
-                    public void onCompleted() {
-
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        System.out.println(e);
-                    }
-
-                    @Override
-                    public void onNext(DailyStories dailyStories) {
-                        stories.addAll(dailyStories.getStories());
-                        contentAdapter.notifyDataSetChanged();
-                    }
+                .doOnTerminate(() -> {
+                    isLoading = false;
+//                    if (realmInIOThread != null)
+//                        realmInIOThread.close();
+                })
+                .subscribe(dailyStories -> {
+                    stories.addAll(dailyStories.getStories());
+                    contentAdapter.notifyDataSetChanged();
+//                    if (realmInIOThread != null)
+//                        realmInIOThread.close();
                 });
+//                .subscribe(new Subscriber<DailyStories>() {
+//                    @Override
+//                    public void onCompleted() {
+//
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//                        System.out.println(e);
+//                    }
+//
+//                    @Override
+//                    public void onNext(DailyStories dailyStories) {
+//                        stories.addAll(dailyStories.getStories());
+//                        contentAdapter.notifyDataSetChanged();
+//                    }
+//                });
     }
 
     private Observable<DailyStories> fromMemoryCache(String date) {
@@ -199,12 +197,30 @@ public class SplashActivity extends BaseActivity {
 
     private Observable<DailyStories> fromRealm(String date) {
         return Observable.defer(() -> {
-            Realm realmInNewThread = Realm.getDefaultInstance();
-            realmInNewThread.beginTransaction();
-            DailyStories dailyStoriesInRealm = realmInNewThread.where(DailyStories.class).equalTo("date", date).findFirst();
-            realmInNewThread.commitTransaction();
-            realmInNewThread.close();
-            return Observable.just(dailyStoriesInRealm);
+            Realm realmInIOThread = Realm.getDefaultInstance();
+            DailyStories dailyStoriesInRealm = realmInIOThread.where(DailyStories.class).equalTo("realDate", date).findFirst();
+            if (dailyStoriesInRealm != null) {
+                DailyStories dailyStories = new DailyStories();
+                dailyStories.setRealDate(dailyStoriesInRealm.getRealDate());
+                dailyStories.setDate(dailyStoriesInRealm.getDate());
+                List<Story> stories = new ArrayList<>();
+
+                for (Story story : dailyStoriesInRealm.getStories()) {
+                    Story s = new Story();
+                    s.setId(story.getId());
+                    s.setImage(story.getImage());
+                    s.setTitle(story.getTitle());
+                    stories.add(s);
+                }
+                dailyStories.getStories().clear();
+                dailyStories.getStories().addAll(stories);
+
+                realmInIOThread.close();
+                return Observable.just(dailyStories);
+            } else {
+                return Observable.just(null);
+            }
+//            return Observable.just(dailyStoriesInRealm);
         });
     }
 

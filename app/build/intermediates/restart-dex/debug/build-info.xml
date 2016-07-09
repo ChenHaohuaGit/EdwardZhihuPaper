@@ -1,33 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="23"
-    density="560dpi"
+    abi="x86"
+    api-level="21"
+    density="xxhdpi"
     format="7"
-    timestamp="178859193724618"
-    token="-4917776629582793416" >
+    timestamp="233628806824040"
+    token="-4917776629582793416"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="4464" />
+        duration="3173" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="1380" />
     <task
         name="instant-run-transform"
-        duration="841" />
+        duration="20" />
     <task
         name="verifier"
-        duration="114" />
+        duration="3" />
 
     <artifact
-        location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
-    <build timestamp="178859193724618" >
+    <build timestamp="232742716573062" >
         <artifact
             location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="233320269015950"
+        verifier="STATIC_INITIALIZER_CHANGE" >
+        <artifact
+            location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="233412937413398" >
+        <artifact
+            location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="233628806824040"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
