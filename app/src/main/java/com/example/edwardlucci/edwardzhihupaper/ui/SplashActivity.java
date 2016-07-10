@@ -29,11 +29,8 @@ import java.util.List;
 
 import butterknife.Bind;
 import io.realm.Realm;
-import io.realm.RealmConfiguration;
-import io.realm.rx.RealmObservableFactory;
 import rx.Observable;
 import rx.Subscriber;
-import rx.functions.Action1;
 
 /**
  * Created by edwardlucci on 16/4/23.
@@ -134,7 +131,7 @@ public class SplashActivity extends BaseActivity {
         isLoading = true;
 
         Observable.concat(
-//                fromMemoryCache(latestDate),
+                fromMemoryCache(latestDate),
                 fromRealm(latestDate),
                 fromNetwork(latestDate))
                 .filter(dailyStories -> dailyStories != null)
@@ -142,49 +139,41 @@ public class SplashActivity extends BaseActivity {
                 .compose(RxUtil.fromIOtoMainThread())
                 .compose(bindToLifecycle())
                 .doOnNext(dailyStories3 -> {
+
+                    MemoryCache.getInstance().putDailyStories(latestDate, dailyStories3);
                     Realm realm = Realm.getDefaultInstance();
 
                     realm.beginTransaction();
                     MemoryCache.getInstance().putDailyStories(latestDate, dailyStories3);
                     dailyStories3.setRealDate(latestDate);
-                    latestDate = dailyStories3.getDate();
                     System.out.println(dailyStories3.toString());
-                    DailyStories dailyStoriesInRealm = realm.where(DailyStories.class).equalTo("date", latestDate).findFirst();
+                    DailyStories dailyStoriesInRealm = realm.where(DailyStories.class).equalTo("realDate", latestDate).findFirst();
                     if (dailyStoriesInRealm == null) {
                         realm.copyToRealm(dailyStories3);
                     }
+                    latestDate = dailyStories3.getDate();
                     realm.commitTransaction();
                     realm.close();
 
                 })
-                .doOnTerminate(() -> {
-                    isLoading = false;
-//                    if (realmInIOThread != null)
-//                        realmInIOThread.close();
-                })
-                .subscribe(dailyStories -> {
-                    stories.addAll(dailyStories.getStories());
-                    contentAdapter.notifyDataSetChanged();
-//                    if (realmInIOThread != null)
-//                        realmInIOThread.close();
+                .doOnTerminate(() -> isLoading = false)
+                .subscribe(new Subscriber<DailyStories>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        System.out.println(e);
+                    }
+
+                    @Override
+                    public void onNext(DailyStories dailyStories) {
+                        stories.addAll(dailyStories.getStories());
+                        contentAdapter.notifyDataSetChanged();
+                    }
                 });
-//                .subscribe(new Subscriber<DailyStories>() {
-//                    @Override
-//                    public void onCompleted() {
-//
-//                    }
-//
-//                    @Override
-//                    public void onError(Throwable e) {
-//                        System.out.println(e);
-//                    }
-//
-//                    @Override
-//                    public void onNext(DailyStories dailyStories) {
-//                        stories.addAll(dailyStories.getStories());
-//                        contentAdapter.notifyDataSetChanged();
-//                    }
-//                });
     }
 
     private Observable<DailyStories> fromMemoryCache(String date) {
@@ -220,7 +209,6 @@ public class SplashActivity extends BaseActivity {
             } else {
                 return Observable.just(null);
             }
-//            return Observable.just(dailyStoriesInRealm);
         });
     }
 
