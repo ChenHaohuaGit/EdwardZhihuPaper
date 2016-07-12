@@ -24,6 +24,7 @@ import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
+import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -154,37 +155,19 @@ public class SplashActivity extends BaseActivity {
 
                     realm.beginTransaction();
                     dailyStories3.setRealDate(latestDate);
-                    System.out.println(dailyStories3.toString());
+                    Logger.i(dailyStories3.toString());
                     DailyStories dailyStoriesInRealm = realm.where(DailyStories.class).equalTo("realDate", latestDate).findFirst();
                     if (dailyStoriesInRealm == null) {
                         realm.copyToRealm(dailyStories3);
                     }
                     latestDate = dailyStories3.getDate();
                     realm.commitTransaction();
-
                 })
                 .doOnTerminate(() -> isLoading = false)
                 .subscribe(dailyStories -> {
                     stories.addAll(dailyStories.getStories());
                     contentAdapter.notifyDataSetChanged();
                 });
-//                .subscribe(new Subscriber<DailyStories>() {
-//                    @Override
-//                    public void onCompleted() {
-//
-//                    }
-//
-//                    @Override
-//                    public void onError(Throwable e) {
-//                        System.out.println(e);
-//                    }
-//
-//                    @Override
-//                    public void onNext(DailyStories dailyStories) {
-//                        stories.addAll(dailyStories.getStories());
-//                        contentAdapter.notifyDataSetChanged();
-//                    }
-//                });
     }
 
     private Observable<DailyStories> fromMemoryCache(String date) {
