@@ -9,6 +9,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.test.suitebuilder.TestSuiteBuilder;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
@@ -31,6 +32,11 @@ import butterknife.Bind;
 import io.realm.Realm;
 import rx.Observable;
 import rx.Subscriber;
+import rx.Subscription;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action1;
+import rx.functions.Func0;
+import rx.schedulers.Schedulers;
 
 /**
  * Created by edwardlucci on 16/4/23.
@@ -57,9 +63,13 @@ public class SplashActivity extends BaseActivity {
     DatabaseHelper helper;
     SQLiteDatabase sqliteDatabase;
 
+    Realm realm;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        realm = Realm.getDefaultInstance();
 
         helper = new DatabaseHelper(getActivity());
         sqliteDatabase = helper.getWritableDatabase();
@@ -136,15 +146,13 @@ public class SplashActivity extends BaseActivity {
                 fromNetwork(latestDate))
                 .filter(dailyStories -> dailyStories != null)
                 .first()
-                .compose(RxUtil.fromIOtoMainThread())
+                .observeOn(AndroidSchedulers.mainThread())
                 .compose(bindToLifecycle())
                 .doOnNext(dailyStories3 -> {
 
                     MemoryCache.getInstance().putDailyStories(latestDate, dailyStories3);
-                    Realm realm = Realm.getDefaultInstance();
 
                     realm.beginTransaction();
-                    MemoryCache.getInstance().putDailyStories(latestDate, dailyStories3);
                     dailyStories3.setRealDate(latestDate);
                     System.out.println(dailyStories3.toString());
                     DailyStories dailyStoriesInRealm = realm.where(DailyStories.class).equalTo("realDate", latestDate).findFirst();
@@ -153,67 +161,90 @@ public class SplashActivity extends BaseActivity {
                     }
                     latestDate = dailyStories3.getDate();
                     realm.commitTransaction();
-                    realm.close();
 
                 })
                 .doOnTerminate(() -> isLoading = false)
-                .subscribe(new Subscriber<DailyStories>() {
-                    @Override
-                    public void onCompleted() {
-
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        System.out.println(e);
-                    }
-
-                    @Override
-                    public void onNext(DailyStories dailyStories) {
-                        stories.addAll(dailyStories.getStories());
-                        contentAdapter.notifyDataSetChanged();
-                    }
+                .subscribe(dailyStories -> {
+                    stories.addAll(dailyStories.getStories());
+                    contentAdapter.notifyDataSetChanged();
                 });
+//                .subscribe(new Subscriber<DailyStories>() {
+//                    @Override
+//                    public void onCompleted() {
+//
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//                        System.out.println(e);
+//                    }
+//
+//                    @Override
+//                    public void onNext(DailyStories dailyStories) {
+//                        stories.addAll(dailyStories.getStories());
+//                        contentAdapter.notifyDataSetChanged();
+//                    }
+//                });
     }
 
     private Observable<DailyStories> fromMemoryCache(String date) {
-        return Observable.defer(() -> Observable.just(MemoryCache.getInstance().getDailyStories(date)));
+        return Observable.defer(() ->
+                Observable.just(MemoryCache.getInstance()
+                        .getDailyStories(date))
+                        .compose(RxUtil.fromIOtoMainThread()));
     }
 
     private Observable<DailyStories> fromNetwork(String date) {
-        return Observable.defer(() -> zhihuApi.getPastStories(date));
+        return Observable.defer(() ->
+                zhihuApi.getPastStories(date)
+                        .compose(RxUtil.fromIOtoMainThread()));
     }
 
     private Observable<DailyStories> fromRealm(String date) {
         return Observable.defer(() -> {
-            Realm realmInIOThread = Realm.getDefaultInstance();
-            DailyStories dailyStoriesInRealm = realmInIOThread.where(DailyStories.class).equalTo("realDate", date).findFirst();
-            if (dailyStoriesInRealm != null) {
-                DailyStories dailyStories = new DailyStories();
-                dailyStories.setRealDate(dailyStoriesInRealm.getRealDate());
-                dailyStories.setDate(dailyStoriesInRealm.getDate());
-                List<Story> stories = new ArrayList<>();
+            DailyStories dailyStories =
+                    realm.where(DailyStories.class)
+                            .equalTo("realDate", date)
+                            .findFirst();
 
-                for (Story story : dailyStoriesInRealm.getStories()) {
-                    Story s = new Story();
-                    s.setId(story.getId());
-                    s.setImage(story.getImage());
-                    s.setTitle(story.getTitle());
-                    stories.add(s);
-                }
-                dailyStories.getStories().clear();
-                dailyStories.getStories().addAll(stories);
-
-                realmInIOThread.close();
-                return Observable.just(dailyStories);
-            } else {
-                return Observable.just(null);
-            }
+            return Observable.just(dailyStories)
+                    .subscribeOn(AndroidSchedulers.mainThread())
+                    .observeOn(AndroidSchedulers.mainThread());
         });
     }
+
+
+//    private Observable<DailyStories> fromRealm(String date) {
+//        return Observable.defer(() -> {
+//            Realm realmInIOThread = Realm.getDefaultInstance();
+//            DailyStories dailyStoriesInRealm = realmInIOThread.where(DailyStories.class).equalTo("realDate", date).findFirst();
+//            if (dailyStoriesInRealm != null) {
+//                DailyStories dailyStories = new DailyStories();
+//                dailyStories.setRealDate(dailyStoriesInRealm.getRealDate());
+//                dailyStories.setDate(dailyStoriesInRealm.getDate());
+//                List<Story> stories = new ArrayList<>();
+//
+//                for (Story story : dailyStoriesInRealm.getStories()) {
+//                    Story s = new Story();
+//                    s.setId(story.getId());
+//                    s.setImage(story.getImage());
+//                    s.setTitle(story.getTitle());
+//                    stories.add(s);
+//                }
+//                dailyStories.getStories().clear();
+//                dailyStories.getStories().addAll(stories);
+//
+//                realmInIOThread.close();
+//                return Observable.just(dailyStories);
+//            } else {
+//                return Observable.just(null);
+//            }
+//        });
+//    }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        realm.close();
     }
 }
