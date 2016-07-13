@@ -170,25 +170,23 @@ public class SplashActivity extends BaseActivity {
         return Observable.defer(() ->
                 Observable.just(MemoryCache.getInstance()
                         .getDailyStories(date))
-                        .filter(dailyStories -> dailyStories != null)
+                        .compose(RxUtil.filterNullPointer())
                         .flatMap(dailyStories -> {
                             dailyStories.setSource(DailyStories.SOURCE_TYPE.MEMORY);
                             return Observable.just(dailyStories);
                         })
-                        .compose(RxUtil.fromIOtoMainThread()))
-                ;
+                        .compose(RxUtil.fromIOtoMainThread()));
     }
 
     private Observable<DailyStories> fromNetwork(String date) {
         return Observable.defer(() ->
                 zhihuApi.getPastStories(date)
-                        .filter(dailyStories -> dailyStories != null)
+                        .compose(RxUtil.filterNullPointer())
                         .flatMap(dailyStories -> {
                             dailyStories.setSource(DailyStories.SOURCE_TYPE.NETWORK);
                             return Observable.just(dailyStories);
                         })
-                        .compose(RxUtil.fromIOtoMainThread())
-        );
+                        .compose(RxUtil.fromIOtoMainThread()));
     }
 
     private Observable<DailyStories> fromRealm(String date) {
@@ -206,35 +204,6 @@ public class SplashActivity extends BaseActivity {
                     .observeOn(AndroidSchedulers.mainThread());
         });
     }
-
-
-//    private Observable<DailyStories> fromRealm(String date) {
-//        return Observable.defer(() -> {
-//            Realm realmInIOThread = Realm.getDefaultInstance();
-//            DailyStories dailyStoriesInRealm = realmInIOThread.where(DailyStories.class).equalTo("realDate", date).findFirst();
-//            if (dailyStoriesInRealm != null) {
-//                DailyStories dailyStories = new DailyStories();
-//                dailyStories.setRealDate(dailyStoriesInRealm.getRealDate());
-//                dailyStories.setDate(dailyStoriesInRealm.getDate());
-//                List<Story> stories = new ArrayList<>();
-//
-//                for (Story story : dailyStoriesInRealm.getStories()) {
-//                    Story s = new Story();
-//                    s.setId(story.getId());
-//                    s.setImage(story.getImage());
-//                    s.setTitle(story.getTitle());
-//                    stories.add(s);
-//                }
-//                dailyStories.getStories().clear();
-//                dailyStories.getStories().addAll(stories);
-//
-//                realmInIOThread.close();
-//                return Observable.just(dailyStories);
-//            } else {
-//                return Observable.just(null);
-//            }
-//        });
-//    }
 
     @Override
     protected void onDestroy() {
