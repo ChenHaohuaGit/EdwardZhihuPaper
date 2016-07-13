@@ -9,7 +9,6 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
-import android.test.suitebuilder.TestSuiteBuilder;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
@@ -27,17 +26,14 @@ import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.Bind;
 import io.realm.Realm;
 import rx.Observable;
-import rx.Subscriber;
-import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func0;
-import rx.schedulers.Schedulers;
+import rx.functions.Func1;
 
 /**
  * Created by edwardlucci on 16/4/23.
@@ -174,13 +170,25 @@ public class SplashActivity extends BaseActivity {
         return Observable.defer(() ->
                 Observable.just(MemoryCache.getInstance()
                         .getDailyStories(date))
-                        .compose(RxUtil.fromIOtoMainThread()));
+                        .filter(dailyStories -> dailyStories != null)
+                        .flatMap(dailyStories -> {
+                            dailyStories.setSource(DailyStories.SOURCE_TYPE.MEMORY);
+                            return Observable.just(dailyStories);
+                        })
+                        .compose(RxUtil.fromIOtoMainThread()))
+                ;
     }
 
     private Observable<DailyStories> fromNetwork(String date) {
         return Observable.defer(() ->
                 zhihuApi.getPastStories(date)
-                        .compose(RxUtil.fromIOtoMainThread()));
+                        .filter(dailyStories -> dailyStories != null)
+                        .flatMap(dailyStories -> {
+                            dailyStories.setSource(DailyStories.SOURCE_TYPE.NETWORK);
+                            return Observable.just(dailyStories);
+                        })
+                        .compose(RxUtil.fromIOtoMainThread())
+        );
     }
 
     private Observable<DailyStories> fromRealm(String date) {
@@ -189,6 +197,9 @@ public class SplashActivity extends BaseActivity {
                     realm.where(DailyStories.class)
                             .equalTo("realDate", date)
                             .findFirst();
+
+            if (dailyStories != null)
+                dailyStories.setSource(DailyStories.SOURCE_TYPE.DATABASE);
 
             return Observable.just(dailyStories)
                     .subscribeOn(AndroidSchedulers.mainThread())

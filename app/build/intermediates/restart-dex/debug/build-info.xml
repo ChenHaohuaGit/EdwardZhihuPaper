@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="21"
-    density="xxhdpi"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="23"
+    density="560dpi"
     format="7"
-    timestamp="338998036236755"
-    token="-4917776629582793416" >
+    timestamp="20657831804998"
+    token="-4917776629582793416"
+    verifier="CLASS_ADDED" >
 
     <task
         name="javac"
-        duration="3147" />
+        duration="3371" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="58" />
+        duration="46" />
     <task
         name="verifier"
-        duration="1" />
+        duration="3" />
 
     <artifact
         location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
         type="DEX" />
 
-    <build timestamp="337866914627279" >
+    <build timestamp="19507931054467" >
         <artifact
             location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="338277969560208"
-        verifier="CLASS_ADDED" >
+    <build timestamp="20399276854924" >
+        <artifact
+            location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+            type="DEX" />
         <artifact
             location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
             type="DEX" />
     </build>
-    <build timestamp="338998036236755" >
+    <build
+        timestamp="20657831804998"
+        verifier="CLASS_ADDED" >
         <artifact
             location="/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
             type="DEX" />

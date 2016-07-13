@@ -12,9 +12,19 @@ import java.util.List;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 
-public class DailyStories extends RealmObject{
+public class DailyStories extends RealmObject {
+
+    public static final class SOURCE_TYPE {
+        public static final int MEMORY = 0;
+        public static final int DATABASE = 1;
+        public static final int NETWORK = 2;
+    }
+
+    @Ignore
+    private int source;
 
     @SerializedName("date")
     @Expose
@@ -63,17 +73,27 @@ public class DailyStories extends RealmObject{
         this.realDate = realDate;
     }
 
-    public ContentValues dailyStoriesDate2ContentValues(String currentDate){
+    public ContentValues dailyStoriesDate2ContentValues(String currentDate) {
         ContentValues contentValues = new ContentValues();
-        contentValues.put(DateDatabaseContract.DateTable.COLUMN_NAME_DATE,currentDate);
-        contentValues.put(DateDatabaseContract.DateTable.COLUMN_NAME_PREVIOUS_DATE,this.date);
+        contentValues.put(DateDatabaseContract.DateTable.COLUMN_NAME_DATE, currentDate);
+        contentValues.put(DateDatabaseContract.DateTable.COLUMN_NAME_PREVIOUS_DATE, this.date);
         return contentValues;
     }
+
+    public int getSource() {
+        return source;
+    }
+
+    public void setSource(int source) {
+        this.source = source;
+    }
+
 
     @Override
     public String toString() {
         return "DailyStories{" +
-                "date='" + date + '\'' +
+                "source=" + source +
+                ", date='" + date + '\'' +
                 ", stories=" + stories +
                 ", realDate='" + realDate + '\'' +
                 '}';
