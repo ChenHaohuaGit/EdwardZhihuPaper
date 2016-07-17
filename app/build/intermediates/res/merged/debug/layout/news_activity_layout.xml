@@ -56,12 +56,33 @@
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end" />
 
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="bottom|right|end"-->
-        <!--app:layout_anchor="@id/web_container"-->
-        <!--app:layout_anchorGravity="bottom|right|end"-->
-        <!--app:layout_behavior="com.example.edwardlucci.edwardzhihupaper.behavior.ScrollAwareFABBehavior" />-->
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:clipToPadding="true"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/share_fab"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/comment_icon"
+                android:layout_height="160dp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/comment_fab"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:src="@drawable/comment_icon"
+                android:layout_height="160dp" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>

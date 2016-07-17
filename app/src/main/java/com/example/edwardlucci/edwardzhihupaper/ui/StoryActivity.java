@@ -4,17 +4,15 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.Toolbar;
-import android.transition.Explode;
 import android.util.Pair;
 import android.view.View;
-import android.view.Window;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.FrameLayout;
@@ -22,7 +20,6 @@ import android.widget.ImageView;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
-import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.bean.StoryDetail;
 import com.example.edwardlucci.edwardzhihupaper.comment.CommentActivity;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
@@ -53,6 +50,10 @@ public class StoryActivity extends BaseActivity {
     @Bind(R.id.toolbar)
     Toolbar toolbar;
 
+    BottomSheetBehavior mBottomSheetBehavior;
+    @Bind(R.id.bottom_sheet)
+    View bottomSheetView;
+
     WebView storyWebView;
 
     @Override
@@ -73,6 +74,11 @@ public class StoryActivity extends BaseActivity {
 
         getStoryUrlAndLoadWebview();
 
+        initBottomSheet();
+    }
+
+    private void initBottomSheet() {
+        mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheetView);
     }
 
     @Override
@@ -101,6 +107,21 @@ public class StoryActivity extends BaseActivity {
     }
 
     @OnClick(R.id.fab)
+    public void openBottomSheet(){
+        mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+    }
+
+    @OnClick(R.id.share_fab)
+    public  void shareStory(){
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, storyDetail.getShareUrl());
+        sendIntent.setType("text/plain");
+        startActivity(Intent.createChooser(sendIntent, storyDetail.getTitle()));
+
+    }
+
+    @OnClick(R.id.comment_fab)
     public void toCommentActivity() {
         Intent intent = new Intent();
         intent.setClass(StoryActivity.this, CommentActivity.class);
