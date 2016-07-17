@@ -1696,6 +1696,27 @@
                         "endOffset": 17664
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 248,
+                    "startColumn": 4,
+                    "startOffset": 17970,
+                    "endLine": 249,
+                    "endColumn": 10,
+                    "endOffset": 18055
+                },
+                "from": {
+                    "file": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 3,
+                        "endColumn": 10,
+                        "endOffset": 140
+                    }
+                }
             }
         ]
     }

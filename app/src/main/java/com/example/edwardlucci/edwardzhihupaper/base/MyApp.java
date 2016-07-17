@@ -4,9 +4,11 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Build;
 
+import com.example.edwardlucci.edwardzhihupaper.BuildConfig;
 import com.example.edwardlucci.edwardzhihupaper.network.OkClient;
 import com.facebook.stetho.Stetho;
 import com.orhanobut.logger.Logger;
+import com.squareup.leakcanary.LeakCanary;
 import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
 
 import io.realm.Realm;
@@ -16,7 +18,7 @@ import okhttp3.OkHttpClient;
 /**
  * Created by edwardlucci on 16/5/20.
  */
-public class MyApp extends Application{
+public class MyApp extends Application {
 
     static public OkHttpClient okHttpClient;
     static private int SDK_VERSION;
@@ -24,6 +26,10 @@ public class MyApp extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
+
+        if (BuildConfig.DEBUG) {
+            LeakCanary.install(this);
+        }
 
         //logger setup
         Logger.init("Zhihu");
@@ -48,7 +54,7 @@ public class MyApp extends Application{
         return SDK_VERSION;
     }
 
-    public Context getContext(){
+    public Context getContext() {
         return getApplicationContext();
     }
 }

@@ -48,6 +48,7 @@ MERGED from [com.android.support:support-v4:23.4.0] /Users/edward/Desktop/worksp
 MERGED from [com.android.support:support-v4:23.4.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.4.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:28:5-57:19
 	android:label
 		ADDED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml:11:9-41
 	android:supportsRtl
@@ -148,6 +149,7 @@ MERGED from [com.android.support:support-v4:23.4.0] /Users/edward/Desktop/worksp
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-v4:23.4.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
 MERGED from [com.uphyca:stetho_realm:0.9.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.uphyca/stetho_realm/0.9.0/AndroidManifest.xml:8:5-10:41
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:20:5-22:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:23.4.0] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
@@ -156,3 +158,53 @@ MERGED from [com.uphyca:stetho_realm:0.9.0] /Users/edward/Desktop/workspace/Edwa
 	android:minSdkVersion
 		INJECTED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:25:5-80
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:25:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:26:5-81
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:26:22-78
+service#com.squareup.leakcanary.internal.HeapAnalyzerService
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:29:9-32:45
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:31:13-36
+	android:process
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:32:13-42
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:30:13-80
+service#com.squareup.leakcanary.DisplayLeakService
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:33:9-35:39
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:35:13-36
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:34:13-70
+activity#com.squareup.leakcanary.internal.DisplayLeakActivity
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:37:9-49:20
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:39:13-36
+	android:label
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:41:13-71
+	android:icon
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:40:13-54
+	android:theme
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:43:13-63
+	android:taskAffinity
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:42:13-59
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:38:13-80
+activity#com.squareup.leakcanary.internal.RequestStoragePermissionActivity
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:50:9-56:68
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:52:13-36
+	android:label
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:54:13-82
+	android:icon
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:53:13-54
+	android:theme
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:56:13-65
+	android:taskAffinity
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:55:13-59
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] /Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/AndroidManifest.xml:51:13-93

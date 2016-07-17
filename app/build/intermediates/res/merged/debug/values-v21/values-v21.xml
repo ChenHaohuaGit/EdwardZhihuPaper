@@ -246,4 +246,6 @@
     </style>
     <style name="Platform.ThemeOverlay.AppCompat.Dark"/>
     <style name="Platform.ThemeOverlay.AppCompat.Light"/>
+    <style name="leak_canary_LeakCanary.Base" parent="android:Theme.Material">
+  </style>
 </resources>

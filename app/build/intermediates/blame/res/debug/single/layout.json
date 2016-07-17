@@ -4,8 +4,16 @@
         "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
+        "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/leak_canary_display_leak.xml",
+        "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/res/layout/leak_canary_display_leak.xml"
+    },
+    {
         "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
         "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/leak_canary_heap_dump_toast.xml",
+        "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/res/layout/leak_canary_heap_dump_toast.xml"
     },
     {
         "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
@@ -96,6 +104,10 @@
         "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_menu_item_layout.xml"
     },
     {
+        "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/leak_canary_ref_top_row.xml",
+        "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/res/layout/leak_canary_ref_top_row.xml"
+    },
+    {
         "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
         "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_mode_close_item_material.xml"
     },
@@ -118,6 +130,10 @@
     {
         "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
         "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/leak_canary_leak_row.xml",
+        "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/res/layout/leak_canary_leak_row.xml"
     },
     {
         "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/topic_activity_layout.xml",
@@ -174,6 +190,10 @@
     {
         "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/themes_item_layout.xml",
         "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/src/main/res/layout/themes_item_layout.xml"
+    },
+    {
+        "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/leak_canary_ref_row.xml",
+        "source": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.4-beta2/res/layout/leak_canary_ref_row.xml"
     },
     {
         "merged": "/Users/edward/Desktop/workspace/EdwardZhihuPaper/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
