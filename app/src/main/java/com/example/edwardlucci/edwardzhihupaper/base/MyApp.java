@@ -29,17 +29,17 @@ public class MyApp extends Application {
 
         if (BuildConfig.DEBUG) {
             LeakCanary.install(this);
+
+            //stetho
+            Stetho.initialize(
+                    Stetho.newInitializerBuilder(this)
+                            .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                            .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
+                            .build());
         }
 
         //logger setup
         Logger.init("Zhihu");
-
-        //stetho
-        Stetho.initialize(
-                Stetho.newInitializerBuilder(this)
-                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
-                        .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
-                        .build());
 
         okHttpClient = OkClient.getInstance();
 
@@ -47,7 +47,6 @@ public class MyApp extends Application {
 
         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this).build();
         Realm.setDefaultConfiguration(realmConfiguration);
-
     }
 
     public static int getSdkVersion() {
