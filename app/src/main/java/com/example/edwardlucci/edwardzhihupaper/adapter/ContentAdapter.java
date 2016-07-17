@@ -64,7 +64,7 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.NewsView
         holder.news_title_textview.setText(story.getTitle());
 
         holder.container.setOnClickListener(v ->
-                StoryActivity.startActivity(mContext, stories.get(position), Pair.create(holder.news_imageview, "image"), Pair.create(holder.news_title_textview, "title")));
+                StoryActivity.startActivity(mContext, stories.get(position).getId(), Pair.create(holder.news_imageview, "image"), Pair.create(holder.news_title_textview, "title")));
     }
 
     private void loadImageFromDrawable(NewsViewHolder holder) {

@@ -35,7 +35,10 @@ import butterknife.OnClick;
 
 public class StoryActivity extends BaseActivity {
 
-    Story story;
+    public static final String STORY_ID = "story_id";
+
+    int storyId;
+
     StoryDetail storyDetail;
 
     @Bind(R.id.web_container)
@@ -57,9 +60,10 @@ public class StoryActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setSupportActionBar(toolbar);
 
-        story = (Story) getIntent().getSerializableExtra("story");
+        storyId = getIntent().getIntExtra(STORY_ID,0);
 
-        collapsingToolbar.setTitle(story.getTitle());
+        if (storyId==0)
+            finish();
 
         storyWebView = new WebView(getApplicationContext());
         webContainer.addView(storyWebView);
@@ -78,8 +82,9 @@ public class StoryActivity extends BaseActivity {
 
     private void getStoryUrlAndLoadWebview() {
         ZhihuService.getInstance()
-                .getStoryDetail(story.getId())
+                .getStoryDetail(storyId)
                 .doOnNext(sDetail -> storyDetail = sDetail)
+                .doOnNext(storyDetail -> collapsingToolbar.setTitle(storyDetail.getTitle()))
                 .map(storyDetail1 -> HtmlUtil.structHtml(storyDetail1.getBody(), "content_css.css"))
                 .compose(RxUtil.fromIOtoMainThread())
                 .subscribe(s -> {
@@ -90,7 +95,7 @@ public class StoryActivity extends BaseActivity {
 
     private void loadBgImage() {
 
-        Picasso.with(StoryActivity.this)
+        Picasso.with(getActivity())
                 .load(storyDetail.getImage())
                 .into(collapsingBgImageView);
     }
@@ -99,7 +104,7 @@ public class StoryActivity extends BaseActivity {
     public void toCommentActivity() {
         Intent intent = new Intent();
         intent.setClass(StoryActivity.this, CommentActivity.class);
-        intent.putExtra("story_id", story.getId());
+        intent.putExtra(STORY_ID, storyId);
         startActivity(intent);
     }
 
@@ -111,11 +116,11 @@ public class StoryActivity extends BaseActivity {
         super.onDestroy();
     }
 
-    public static void startActivity(@NonNull Context context, @NonNull Story story, @Nullable Pair... sharedView) {
+    public static void startActivity(@NonNull Context context, @NonNull int storyId, @Nullable Pair... sharedView) {
         Intent intent = new Intent(context, StoryActivity.class);
-        intent.putExtra("story", story);
+        intent.putExtra(STORY_ID, storyId);
         if (Build.VERSION.SDK_INT > 20) {
-            context.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation((Activity) context,sharedView).toBundle());
+            context.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation((Activity) context, sharedView).toBundle());
         } else {
             context.startActivity(intent);
         }
