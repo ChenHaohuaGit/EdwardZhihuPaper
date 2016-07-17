@@ -84,8 +84,9 @@ public class DailyStories extends RealmObject {
         return source;
     }
 
-    public void setSource(int source) {
+    public DailyStories setSource(int source) {
         this.source = source;
+        return this;
     }
 
 

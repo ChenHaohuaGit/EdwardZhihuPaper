@@ -150,7 +150,7 @@ public class SplashActivity extends BaseActivity {
                     MemoryCache.getInstance().putDailyStories(latestDate, dailyStories3);
 
                     realm.beginTransaction();
-                    dailyStories3.setRealDate(latestDate);
+//                    dailyStories3.setRealDate(latestDate);
                     Logger.i(dailyStories3.toString());
                     DailyStories dailyStoriesInRealm = realm.where(DailyStories.class).equalTo("realDate", latestDate).findFirst();
                     if (dailyStoriesInRealm == null) {
@@ -184,6 +184,7 @@ public class SplashActivity extends BaseActivity {
                         .compose(RxUtil.filterNullPointer())
                         .flatMap(dailyStories -> {
                             dailyStories.setSource(DailyStories.SOURCE_TYPE.NETWORK);
+                            dailyStories.setRealDate(latestDate);
                             return Observable.just(dailyStories);
                         })
                         .compose(RxUtil.fromIOtoMainThread()));
