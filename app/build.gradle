@@ -24,7 +24,7 @@ android {
     }
 
     productFlavors {
-        DEBUG {
+        Edward {
             applicationId "com.example.edwardlucci.edwardzhihupaper"
             buildConfigField "boolean", "LOGGER", "true"
         }
