@@ -54,6 +54,12 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
             finish();
         }
 
+        initRecyclerView();
+        new CommentPresenter(story_id, this, getLoaderManager(), new CommentLoader(getActivity(), story_id));
+
+    }
+
+    private void initRecyclerView() {
         int paddingDimen = (int) getResources().getDimension(R.dimen.fab_margin);
         recyclerView.setPadding(paddingDimen, paddingDimen, paddingDimen, paddingDimen);
         recyclerView.setLayoutManager(new LinearLayoutManager(CommentActivity.this));
@@ -61,8 +67,6 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
         setContentView(recyclerView);
         commentAdapter = new CommentAdapter(CommentActivity.this, comments);
         recyclerView.setAdapter(commentAdapter);
-
-        new CommentPresenter(story_id, this, getLoaderManager(), new CommentLoader(getActivity(), story_id));
 
     }
 

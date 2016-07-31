@@ -1,7 +1,8 @@
 package com.example.edwardlucci.edwardzhihupaper.ui;
 
-import android.database.sqlite.SQLiteDatabase;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -9,6 +10,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
@@ -16,7 +18,6 @@ import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
-import com.example.edwardlucci.edwardzhihupaper.database.DatabaseHelper;
 import com.example.edwardlucci.edwardzhihupaper.network.MemoryCache;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
@@ -30,9 +31,8 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import io.realm.Realm;
 import rx.Observable;
+import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-import rx.functions.Func0;
 import rx.functions.Func1;
 
 /**
@@ -57,9 +57,6 @@ public class SplashActivity extends BaseActivity {
     @Bind(R.id.toolbar)
     Toolbar toolbar;
 
-    DatabaseHelper helper;
-    SQLiteDatabase sqliteDatabase;
-
     Realm realm;
 
     @Override
@@ -68,10 +65,9 @@ public class SplashActivity extends BaseActivity {
 
         realm = Realm.getDefaultInstance();
 
-        helper = new DatabaseHelper(getActivity());
-        sqliteDatabase = helper.getWritableDatabase();
-
         zhihuApi = ZhihuService.getInstance();
+
+        checkDeeplinkLaunch();
 
         setupToolbar();
         contentAdapter = new ContentAdapter(SplashActivity.this, stories);
@@ -83,7 +79,18 @@ public class SplashActivity extends BaseActivity {
         loadLatestData();
 
         setupDrawer();
+    }
 
+    private void checkDeeplinkLaunch() {
+        Intent intent = getIntent();
+        if (intent != null) {
+            Uri uri = intent.getData();
+            if (uri != null) {
+                Log.i("slack", uri.toString());
+                String host = uri.getHost();
+                Log.i("slack", host);
+            }
+        }
     }
 
     private void setupDrawer() {
@@ -141,8 +148,7 @@ public class SplashActivity extends BaseActivity {
                 fromMemoryCache(latestDate),
                 fromRealm(latestDate),
                 fromNetwork(latestDate))
-                .filter(dailyStories -> dailyStories != null)
-                .first()
+                .first(dailyStories -> dailyStories != null && dailyStories.isLoaded())
                 .observeOn(AndroidSchedulers.mainThread())
                 .compose(bindToLifecycle())
                 .doOnNext(dailyStories3 -> {
@@ -150,12 +156,13 @@ public class SplashActivity extends BaseActivity {
                     MemoryCache.getInstance().putDailyStories(latestDate, dailyStories3);
 
                     realm.beginTransaction();
-//                    dailyStories3.setRealDate(latestDate);
                     Logger.i(dailyStories3.toString());
                     DailyStories dailyStoriesInRealm = realm.where(DailyStories.class).equalTo("realDate", latestDate).findFirst();
+
                     if (dailyStoriesInRealm == null) {
                         realm.copyToRealm(dailyStories3);
                     }
+
                     latestDate = dailyStories3.getDate();
                     realm.commitTransaction();
                 })
@@ -189,6 +196,35 @@ public class SplashActivity extends BaseActivity {
                         })
                         .compose(RxUtil.fromIOtoMainThread()));
     }
+
+//    private Observable<DailyStories> fromRealm(String date) {
+//        return Observable.defer(() ->
+//                realm.where(DailyStories.class)
+//                        .equalTo("realDate", date)
+//                        .findFirstAsync()
+//                        .<DailyStories>asObservable()
+//                        .filter(obj -> obj.isLoaded() && !obj.isValid())
+//                        .flatMap(dailyStories -> {
+//                            if (dailyStories != null) {
+//                                dailyStories.setSource(DailyStories.SOURCE_TYPE.DATABASE);
+//                                return Observable.create(new Observable.OnSubscribe<DailyStories>() {
+//                                    @Override
+//                                    public void call(Subscriber<? super DailyStories> subscriber) {
+//                                        subscriber.onNext(dailyStories);
+//                                    }
+//                                });
+//                            }else {
+//                                return Observable.create(new Observable.OnSubscribe<DailyStories>() {
+//                                    @Override
+//                                    public void call(Subscriber<? super DailyStories> subscriber) {
+//                                        subscriber.onCompleted();
+//                                    }
+//                                });
+//
+//                            }
+//                        }));
+//    }
+
 
     private Observable<DailyStories> fromRealm(String date) {
         return Observable.defer(() -> {
