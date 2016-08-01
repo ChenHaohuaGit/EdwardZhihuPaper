@@ -1,5 +1,7 @@
 package com.example.edwardlucci.edwardzhihupaper.comment;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -33,6 +35,8 @@ import rx.Subscriber;
 public class CommentActivity extends BaseActivity implements CommentContract.View {
 
     int story_id;
+
+    public static final String EXTRA_STORY_ID  ="story_id";
 
     ArrayList<Comment> comments = new ArrayList<>();
 
@@ -93,4 +97,12 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
     public void setPresenter(CommentContract.Presenter basePresenter) {
         presenter = basePresenter;
     }
+
+    public void start(Context context,int storyId){
+        Intent intent = new Intent();
+        intent.setClass(context,CommentActivity.class);
+        intent.putExtra(EXTRA_STORY_ID,storyId);
+        startActivity(intent);
+    }
+
 }

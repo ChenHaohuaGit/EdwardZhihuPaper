@@ -10,13 +10,17 @@ public interface StoryContract{
 
     interface Presenter extends BasePresenter{
         void loadWebContent();
+
+        void share();
     }
 
     interface View extends BaseView<Presenter>{
         void showWebView(String content);
 
-        void showBottomSheet();
+        void loadBgImage(String imageUrl);
 
-        void loadBgImage();
+        void setTitle(String title);
+
+        void share(String shareUrl,String title);
     }
 }

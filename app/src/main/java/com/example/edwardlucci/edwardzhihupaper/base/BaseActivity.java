@@ -1,6 +1,7 @@
 package com.example.edwardlucci.edwardzhihupaper.base;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -57,4 +58,6 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     }
 
     protected Activity getActivity(){return this;}
+
+
 }

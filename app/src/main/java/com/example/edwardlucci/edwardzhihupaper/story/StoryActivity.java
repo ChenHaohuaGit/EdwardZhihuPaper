@@ -1,4 +1,4 @@
-package com.example.edwardlucci.edwardzhihupaper.ui;
+package com.example.edwardlucci.edwardzhihupaper.story;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
@@ -20,23 +20,19 @@ import android.widget.ImageView;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
-import com.example.edwardlucci.edwardzhihupaper.bean.StoryDetail;
 import com.example.edwardlucci.edwardzhihupaper.comment.CommentActivity;
-import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
-import com.example.edwardlucci.edwardzhihupaper.util.HtmlUtil;
-import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
 import butterknife.OnClick;
 
-public class StoryActivity extends BaseActivity {
+public class StoryActivity extends BaseActivity implements StoryContract.View {
 
     public static final String STORY_ID = "story_id";
 
     int storyId;
 
-    StoryDetail storyDetail;
+    StoryPresenter storyPresenter;
 
     @Bind(R.id.web_container)
     FrameLayout webContainer;
@@ -61,9 +57,9 @@ public class StoryActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setSupportActionBar(toolbar);
 
-        storyId = getIntent().getIntExtra(STORY_ID,0);
+        storyId = getIntent().getIntExtra(STORY_ID, 0);
 
-        if (storyId==0)
+        if (storyId == 0)
             finish();
 
         storyWebView = new WebView(getApplicationContext());
@@ -72,9 +68,10 @@ public class StoryActivity extends BaseActivity {
         WebSettings webSettings = storyWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        getStoryUrlAndLoadWebview();
-
         initBottomSheet();
+
+        storyPresenter = new StoryPresenter(storyId, this);
+        storyPresenter.start();
     }
 
     private void initBottomSheet() {
@@ -86,39 +83,41 @@ public class StoryActivity extends BaseActivity {
         return R.layout.news_activity_layout;
     }
 
-    private void getStoryUrlAndLoadWebview() {
-        ZhihuService.getInstance()
-                .getStoryDetail(storyId)
-                .doOnNext(sDetail -> storyDetail = sDetail)
-                .doOnNext(storyDetail -> collapsingToolbar.setTitle(storyDetail.getTitle()))
-                .map(storyDetail1 -> HtmlUtil.structHtml(storyDetail1.getBody(), "content_css.css"))
-                .compose(RxUtil.fromIOtoMainThread())
-                .subscribe(s -> {
-                    storyWebView.loadDataWithBaseURL("\"file:///android_asset/\"", s, "text/html", "UTF-8", null);
-                    loadBgImage();
-                });
+    @Override
+    public void showWebView(String content) {
+        storyWebView.loadDataWithBaseURL("\"file:///android_asset/\"", content, "text/html", "UTF-8", null);
     }
 
-    private void loadBgImage() {
-
+    @Override
+    public void loadBgImage(String imageUrl) {
         Picasso.with(getActivity())
-                .load(storyDetail.getImage())
+                .load(imageUrl).fit().centerCrop()
                 .into(collapsingBgImageView);
     }
 
+    @Override
+    public void setTitle(String title) {
+        collapsingToolbar.setTitle(title);
+    }
+
+    @Override
+    public void share(String shareUrl,String shareTitle) {
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, shareUrl);
+        sendIntent.setType("text/plain");
+        startActivity(Intent.createChooser(sendIntent, shareTitle));
+    }
+
+
     @OnClick(R.id.fab)
-    public void openBottomSheet(){
+    public void openBottomSheet() {
         mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
     }
 
     @OnClick(R.id.share_fab)
-    public  void shareStory(){
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, storyDetail.getShareUrl());
-        sendIntent.setType("text/plain");
-        startActivity(Intent.createChooser(sendIntent, storyDetail.getTitle()));
-
+    public void shareStory() {
+        storyPresenter.share();
     }
 
     @OnClick(R.id.comment_fab)
@@ -145,5 +144,9 @@ public class StoryActivity extends BaseActivity {
         } else {
             context.startActivity(intent);
         }
+    }
+
+    @Override
+    public void setPresenter(StoryContract.Presenter basePresenter) {
     }
 }
