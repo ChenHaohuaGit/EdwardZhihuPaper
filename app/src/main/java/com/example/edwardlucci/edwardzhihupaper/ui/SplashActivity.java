@@ -174,15 +174,25 @@ public class SplashActivity extends BaseActivity {
     }
 
     private Observable<DailyStories> fromMemoryCache(String date) {
-        return Observable.defer(() ->
-                Observable.just(MemoryCache.getInstance()
-                        .getDailyStories(date))
-                        .compose(RxUtil.filterNullPointer())
-                        .flatMap(dailyStories -> {
-                            dailyStories.setSource(DailyStories.SOURCE_TYPE.MEMORY);
-                            return Observable.just(dailyStories);
-                        })
-                        .compose(RxUtil.fromIOtoMainThread()));
+        return Observable.create((Observable.OnSubscribe<DailyStories>) subscriber -> {
+            DailyStories dailyStories = MemoryCache.getInstance().getDailyStories(date);
+            if (dailyStories != null) {
+                dailyStories.setSource(DailyStories.SOURCE_TYPE.MEMORY);
+                subscriber.onNext(dailyStories);
+            } else {
+                subscriber.onCompleted();
+            }
+
+        }).compose(RxUtil.fromIOtoMainThread());
+//        return Observable.defer(() ->
+//                Observable.just(MemoryCache.getInstance()
+//                        .getDailyStories(date))
+//                        .compose(RxUtil.filterNullPointer())
+//                        .flatMap(dailyStories -> {
+//                            dailyStories.setSource(DailyStories.SOURCE_TYPE.MEMORY);
+//                            return Observable.just(dailyStories);
+//                        })
+//                        .compose(RxUtil.fromIOtoMainThread()));
     }
 
     private Observable<DailyStories> fromNetwork(String date) {
@@ -225,21 +235,38 @@ public class SplashActivity extends BaseActivity {
 //                        }));
 //    }
 
-
     private Observable<DailyStories> fromRealm(String date) {
-        return Observable.defer(() -> {
-            DailyStories dailyStories =
-                    realm.where(DailyStories.class)
-                            .equalTo("realDate", date)
-                            .findFirst();
 
-            if (dailyStories != null)
-                dailyStories.setSource(DailyStories.SOURCE_TYPE.DATABASE);
+        return Observable.create(new Observable.OnSubscribe<DailyStories>() {
+            @Override
+            public void call(Subscriber<? super DailyStories> subscriber) {
+                DailyStories dailyStories =
+                        realm.where(DailyStories.class).equalTo("realDate", date).findFirst();
 
-            return Observable.just(dailyStories)
-                    .subscribeOn(AndroidSchedulers.mainThread())
-                    .observeOn(AndroidSchedulers.mainThread());
-        });
+                if (dailyStories != null) {
+                    dailyStories.setSource(DailyStories.SOURCE_TYPE.DATABASE);
+                    subscriber.onNext(dailyStories);
+                } else {
+                    subscriber.onCompleted();
+                }
+            }
+        }).subscribeOn(AndroidSchedulers.mainThread())
+                .observeOn(AndroidSchedulers.mainThread());
+//        return Observable.defer(() -> {
+//            DailyStories dailyStories =
+//                    realm.where(DailyStories.class)
+//                            .equalTo("realDate", date)
+//                            .findFirst();
+//
+//            if (dailyStories != null){
+//                dailyStories.setSource(DailyStories.SOURCE_TYPE.DATABASE);
+//
+//            }
+//
+//            return Observable.just(dailyStories)
+//                    .subscribeOn(AndroidSchedulers.mainThread())
+//                    .observeOn(AndroidSchedulers.mainThread());
+//        });
     }
 
     @Override

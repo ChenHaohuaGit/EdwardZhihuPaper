@@ -89,11 +89,23 @@ public class DailyStories extends RealmObject {
         return this;
     }
 
+    private String getSourceName(int source){
+        switch (source){
+            case 0:
+                return "Memory";
+            case 1:
+                return "Disk";
+            case 2:
+                return "Network";
+            default:
+                return "Unknown";
+        }
+    }
 
     @Override
     public String toString() {
         return "DailyStories{" +
-                "source=" + source +
+                "source=" + getSourceName(source) +
                 ", date='" + date + '\'' +
                 ", stories=" + stories +
                 ", realDate='" + realDate + '\'' +
