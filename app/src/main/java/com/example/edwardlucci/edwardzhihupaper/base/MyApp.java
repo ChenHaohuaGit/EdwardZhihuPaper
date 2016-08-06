@@ -4,11 +4,14 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Build;
 
+import com.example.edwardlucci.edwardzhihupaper.AppModule;
 import com.example.edwardlucci.edwardzhihupaper.BuildConfig;
+import com.example.edwardlucci.edwardzhihupaper.network.DaggerDataComponent;
+import com.example.edwardlucci.edwardzhihupaper.network.DataComponent;
+import com.example.edwardlucci.edwardzhihupaper.network.DataModule;
 import com.example.edwardlucci.edwardzhihupaper.network.OkClient;
 import com.facebook.stetho.Stetho;
 import com.orhanobut.logger.Logger;
-import com.squareup.leakcanary.LeakCanary;
 import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
 
 import io.realm.Realm;
@@ -23,12 +26,14 @@ public class MyApp extends Application {
     static public OkHttpClient okHttpClient;
     static private int SDK_VERSION;
 
+    private DataComponent dataComponent;
+
     @Override
     public void onCreate() {
         super.onCreate();
 
         if (BuildConfig.DEBUG) {
-            LeakCanary.install(this);
+//            LeakCanary.install(this);
 
             //stetho
             Stetho.initialize(
@@ -37,6 +42,13 @@ public class MyApp extends Application {
                             .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
                             .build());
         }
+
+        dataComponent = DaggerDataComponent.builder()
+                .appModule(new AppModule(this))
+                .dataModule(new DataModule("http://news-at.zhihu.com/api/4/"))
+                .build();
+
+
 
         //logger setup
         Logger.init("Zhihu");
@@ -55,5 +67,9 @@ public class MyApp extends Application {
 
     public Context getContext() {
         return getApplicationContext();
+    }
+
+    public DataComponent getDataComponent() {
+        return dataComponent;
     }
 }

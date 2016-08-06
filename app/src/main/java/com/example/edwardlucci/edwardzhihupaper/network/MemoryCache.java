@@ -22,7 +22,7 @@ public class MemoryCache {
 
     public static final int SIZE = 4 * 1024 * 1024;
 
-    private MemoryCache() {
+    public MemoryCache() {
         storyLruCache = new LruCache<>(SIZE);
         dailyStoriesLruCache = new LruCache<>(SIZE/2);
     }

@@ -16,6 +16,7 @@ import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
+import com.example.edwardlucci.edwardzhihupaper.base.MyApp;
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.network.MemoryCache;
@@ -27,6 +28,8 @@ import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
+
+import javax.inject.Inject;
 
 import butterknife.Bind;
 import io.realm.Realm;
@@ -51,6 +54,11 @@ public class MainActivity extends BaseActivity {
     ArrayList<Story> stories = new ArrayList<>();
 
     ContentAdapter contentAdapter;
+
+//    @Inject
+    MemoryCache memoryCache;
+
+//    @Inject
     ZhihuApi zhihuApi;
 
     @Bind(R.id.toolbar)
@@ -62,9 +70,11 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        realm = Realm.getDefaultInstance();
+        ((MyApp)getApplication()).getDataComponent().inject(this);
 
+        realm = Realm.getDefaultInstance();
         zhihuApi = ZhihuService.getInstance();
+        memoryCache = MemoryCache.getInstance();
 
         checkDeeplinkLaunch();
 
@@ -153,7 +163,7 @@ public class MainActivity extends BaseActivity {
                 .compose(bindToLifecycle())
                 .doOnNext(dailyStories3 -> {
 
-                    MemoryCache.getInstance().putDailyStories(latestDate, dailyStories3);
+                    memoryCache.putDailyStories(latestDate, dailyStories3);
 
                     realm.beginTransaction();
                     Logger.i(dailyStories3.toString());
@@ -175,7 +185,7 @@ public class MainActivity extends BaseActivity {
 
     private Observable<DailyStories> fromMemoryCache(String date) {
         return Observable.create((Observable.OnSubscribe<DailyStories>) subscriber -> {
-            DailyStories dailyStories = MemoryCache.getInstance().getDailyStories(date);
+            DailyStories dailyStories = memoryCache.getDailyStories(date);
             if (dailyStories != null) {
                 dailyStories.setSource(DailyStories.SOURCE_TYPE.MEMORY);
                 subscriber.onNext(dailyStories);

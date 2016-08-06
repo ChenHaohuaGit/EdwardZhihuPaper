@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="PinnedSectionItemDecoration-1.1.1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.oushangfeng/PinnedSectionItemDecoration/1.1.1/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.oushangfeng/PinnedSectionItemDecoration/1.1.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.oushangfeng/PinnedSectionItemDecoration/1.1.1/44bc248b181096f667ec663b6159d4ecf05575ed/PinnedSectionItemDecoration-1.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
