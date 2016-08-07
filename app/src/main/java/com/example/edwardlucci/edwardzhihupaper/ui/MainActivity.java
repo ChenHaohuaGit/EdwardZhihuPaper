@@ -21,7 +21,6 @@ import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.network.MemoryCache;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
-import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
@@ -55,10 +54,10 @@ public class MainActivity extends BaseActivity {
 
     ContentAdapter contentAdapter;
 
-//    @Inject
+    @Inject
     MemoryCache memoryCache;
 
-//    @Inject
+    @Inject
     ZhihuApi zhihuApi;
 
     @Bind(R.id.toolbar)
@@ -73,8 +72,6 @@ public class MainActivity extends BaseActivity {
         ((MyApp)getApplication()).getDataComponent().inject(this);
 
         realm = Realm.getDefaultInstance();
-        zhihuApi = ZhihuService.getInstance();
-        memoryCache = MemoryCache.getInstance();
 
         checkDeeplinkLaunch();
 

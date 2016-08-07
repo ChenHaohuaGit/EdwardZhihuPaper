@@ -1,15 +1,10 @@
 package com.example.edwardlucci.edwardzhihupaper.story;
 
-import android.content.Intent;
-import android.view.View;
-
-import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.bean.StoryDetail;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.HtmlUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.Preconditions;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
-import com.trello.rxlifecycle.RxLifecycle;
 
 import rx.Subscriber;
 

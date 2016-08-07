@@ -14,6 +14,7 @@ import com.facebook.stetho.Stetho;
 import com.orhanobut.logger.Logger;
 import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
 
+import dagger.internal.DaggerCollections;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import okhttp3.OkHttpClient;
@@ -47,8 +48,6 @@ public class MyApp extends Application {
                 .appModule(new AppModule(this))
                 .dataModule(new DataModule("http://news-at.zhihu.com/api/4/"))
                 .build();
-
-
 
         //logger setup
         Logger.init("Zhihu");

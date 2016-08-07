@@ -136,8 +136,8 @@
     <orderEntry type="library" exported="" name="leakcanary-analyzer-1.4-beta2" level="project" />
     <orderEntry type="library" exported="" name="retrofit-2.0.2" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-24.1.1" level="project" />
-    <orderEntry type="library" exported="" name="rxjava-1.1.4" level="project" />
     <orderEntry type="library" exported="" name="adapter-rxjava-2.0.2" level="project" />
+    <orderEntry type="library" exported="" name="rxjava-1.1.4" level="project" />
     <orderEntry type="library" exported="" name="javax.inject-1" level="project" />
     <orderEntry type="library" exported="" name="rxandroid-1.1.0" level="project" />
     <orderEntry type="library" exported="" name="converter-gson-2.0.2" level="project" />

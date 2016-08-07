@@ -66,6 +66,12 @@ public class DataModule {
 
     @Provides
     @Singleton
+    String provideBaseUrl(){
+        return mBaseUrl;
+    }
+
+    @Provides
+    @Singleton
     Retrofit provideRetrofit(String baseUrl, Gson gson, OkHttpClient okHttpClient) {
         return new Retrofit.Builder()
                 .baseUrl(baseUrl)
