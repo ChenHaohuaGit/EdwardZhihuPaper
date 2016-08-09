@@ -12,22 +12,14 @@ import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.CommentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
-import com.example.edwardlucci.edwardzhihupaper.bean.CommentResponse;
 import com.example.edwardlucci.edwardzhihupaper.network.CommentLoader;
-import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
-import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
-import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 import butterknife.Bind;
-import rx.Observable;
-import rx.Subscriber;
 
 /**
  * Created by edwardlucci on 16/4/24.

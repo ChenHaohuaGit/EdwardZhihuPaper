@@ -2,7 +2,7 @@ package com.example.edwardlucci.edwardzhihupaper.bean;
 
 import android.content.ContentValues;
 
-import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseContract;
+import com.example.edwardlucci.edwardzhihupaper.data.database.StoryDatabaseContract;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

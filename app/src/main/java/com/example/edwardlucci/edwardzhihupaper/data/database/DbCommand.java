@@ -1,9 +1,8 @@
-package com.example.edwardlucci.edwardzhihupaper.database;
+package com.example.edwardlucci.edwardzhihupaper.data.database;
 
 import android.os.Handler;
 import android.os.Looper;
 
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

@@ -1,10 +1,8 @@
-package com.example.edwardlucci.edwardzhihupaper.database;
+package com.example.edwardlucci.edwardzhihupaper.data.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import com.orhanobut.logger.Logger;
 
 /**
  * Created by edward on 16/6/18.

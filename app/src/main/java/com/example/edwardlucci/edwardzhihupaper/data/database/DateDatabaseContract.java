@@ -1,4 +1,4 @@
-package com.example.edwardlucci.edwardzhihupaper.database;
+package com.example.edwardlucci.edwardzhihupaper.data.database;
 
 import android.provider.BaseColumns;
 

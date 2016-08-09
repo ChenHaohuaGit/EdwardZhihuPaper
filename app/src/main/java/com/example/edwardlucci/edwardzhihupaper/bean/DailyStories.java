@@ -2,12 +2,10 @@ package com.example.edwardlucci.edwardzhihupaper.bean;
 
 import android.content.ContentValues;
 
-import com.example.edwardlucci.edwardzhihupaper.database.DateDatabaseContract;
-import com.example.edwardlucci.edwardzhihupaper.database.StoryDatabaseContract;
+import com.example.edwardlucci.edwardzhihupaper.data.database.DateDatabaseContract;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import io.realm.RealmList;
