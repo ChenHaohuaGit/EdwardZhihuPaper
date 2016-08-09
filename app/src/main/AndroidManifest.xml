@@ -38,7 +38,6 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="http" android:host="daily.zhihu.com" android:pathPattern="/story/"/>
                 <data android:scheme="zhihudaily" android:host="story" android:pathPattern="/.*"/>
-                <!--<data android:scheme="zhihudaily://story/"/>-->
             </intent-filter>
         </activity>
 
