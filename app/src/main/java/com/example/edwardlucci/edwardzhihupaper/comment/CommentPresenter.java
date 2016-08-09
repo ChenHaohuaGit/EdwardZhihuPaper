@@ -5,8 +5,7 @@ import android.content.Loader;
 import android.os.Bundle;
 
 import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
-import com.example.edwardlucci.edwardzhihupaper.bean.CommentResponse;
-import com.example.edwardlucci.edwardzhihupaper.network.CommentLoader;
+import com.example.edwardlucci.edwardzhihupaper.data.network.CommentLoader;
 
 import java.util.ArrayList;
 

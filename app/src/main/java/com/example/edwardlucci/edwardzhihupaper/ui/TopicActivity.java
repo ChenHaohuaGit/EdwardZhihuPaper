@@ -13,8 +13,8 @@ import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.TopicPagerAdapter;
 import com.example.edwardlucci.edwardzhihupaper.bean.Other;
 import com.example.edwardlucci.edwardzhihupaper.bean.Themes;
-import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
-import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
+import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuApi;
+import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuService;
 
 import java.util.ArrayList;
 
@@ -46,7 +46,6 @@ public class TopicActivity extends AppCompatActivity{
 
         final CollapsingToolbarLayout collapsingToolbar =
                 (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

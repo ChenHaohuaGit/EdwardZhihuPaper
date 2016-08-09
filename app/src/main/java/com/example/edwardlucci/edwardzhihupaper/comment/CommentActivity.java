@@ -12,7 +12,7 @@ import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.CommentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
-import com.example.edwardlucci.edwardzhihupaper.network.CommentLoader;
+import com.example.edwardlucci.edwardzhihupaper.data.network.CommentLoader;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
 import com.orhanobut.logger.Logger;

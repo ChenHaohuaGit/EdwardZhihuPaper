@@ -6,15 +6,14 @@ import android.os.Build;
 
 import com.example.edwardlucci.edwardzhihupaper.AppModule;
 import com.example.edwardlucci.edwardzhihupaper.BuildConfig;
-import com.example.edwardlucci.edwardzhihupaper.network.DaggerDataComponent;
-import com.example.edwardlucci.edwardzhihupaper.network.DataComponent;
-import com.example.edwardlucci.edwardzhihupaper.network.DataModule;
-import com.example.edwardlucci.edwardzhihupaper.network.OkClient;
+import com.example.edwardlucci.edwardzhihupaper.data.network.DaggerDataComponent;
+import com.example.edwardlucci.edwardzhihupaper.data.network.DataComponent;
+import com.example.edwardlucci.edwardzhihupaper.data.network.DataModule;
+import com.example.edwardlucci.edwardzhihupaper.data.network.OkClient;
 import com.facebook.stetho.Stetho;
 import com.orhanobut.logger.Logger;
 import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
 
-import dagger.internal.DaggerCollections;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import okhttp3.OkHttpClient;
@@ -51,8 +50,6 @@ public class MyApp extends Application {
 
         //logger setup
         Logger.init("Zhihu");
-
-        okHttpClient = OkClient.getInstance();
 
         SDK_VERSION = Build.VERSION.SDK_INT;
 

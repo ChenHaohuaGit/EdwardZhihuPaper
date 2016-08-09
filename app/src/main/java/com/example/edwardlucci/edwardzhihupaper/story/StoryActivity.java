@@ -22,7 +22,6 @@ import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.base.MyApp;
 import com.example.edwardlucci.edwardzhihupaper.comment.CommentActivity;
-import com.example.edwardlucci.edwardzhihupaper.util.Preconditions;
 import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;

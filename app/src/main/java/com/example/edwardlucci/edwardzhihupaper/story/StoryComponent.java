@@ -1,8 +1,7 @@
 package com.example.edwardlucci.edwardzhihupaper.story;
 
 import com.example.edwardlucci.edwardzhihupaper.FragmentScoped;
-import com.example.edwardlucci.edwardzhihupaper.network.DataComponent;
-
+import com.example.edwardlucci.edwardzhihupaper.data.network.DataComponent;
 import dagger.Component;
 
 /**

@@ -19,8 +19,7 @@ import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.base.MyApp;
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
-import com.example.edwardlucci.edwardzhihupaper.network.MemoryCache;
-import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
+import com.example.edwardlucci.edwardzhihupaper.data.DataManager;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
@@ -55,10 +54,7 @@ public class MainActivity extends BaseActivity {
     ContentAdapter contentAdapter;
 
     @Inject
-    MemoryCache memoryCache;
-
-    @Inject
-    ZhihuApi zhihuApi;
+    DataManager dataManager;
 
     @Bind(R.id.toolbar)
     Toolbar toolbar;
@@ -136,7 +132,7 @@ public class MainActivity extends BaseActivity {
     private void loadLatestData() {
         isLoading = true;
         stories.clear();
-        zhihuApi.getLatestStories()
+        dataManager.getZhihuApi().getLatestStories()
                 .compose(RxUtil.fromIOtoMainThread())
                 .doOnTerminate(() -> isLoading = false)
                 .subscribe(dailyStories -> {
@@ -159,7 +155,7 @@ public class MainActivity extends BaseActivity {
                 .compose(bindToLifecycle())
                 .doOnNext(dailyStories3 -> {
 
-                    memoryCache.putDailyStories(latestDate, dailyStories3);
+                    dataManager.getMemoryCache().putDailyStories(latestDate, dailyStories3);
 
                     realm.beginTransaction();
                     Logger.i(dailyStories3.toString());
@@ -181,7 +177,7 @@ public class MainActivity extends BaseActivity {
 
     private Observable<DailyStories> fromMemoryCache(String date) {
         return Observable.create((Observable.OnSubscribe<DailyStories>) subscriber -> {
-            DailyStories dailyStories = memoryCache.getDailyStories(date);
+            DailyStories dailyStories = dataManager.getMemoryCache().getDailyStories(date);
             if (dailyStories != null) {
                 dailyStories.setSource(DailyStories.SOURCE_TYPE.MEMORY);
                 subscriber.onNext(dailyStories);
@@ -194,7 +190,7 @@ public class MainActivity extends BaseActivity {
 
     private Observable<DailyStories> fromNetwork(String date) {
         return Observable.defer(() ->
-                zhihuApi.getPastStories(date)
+                dataManager.getZhihuApi().getPastStories(date)
                         .compose(RxUtil.filterNullPointer())
                         .flatMap(dailyStories -> {
                             dailyStories.setSource(DailyStories.SOURCE_TYPE.NETWORK);

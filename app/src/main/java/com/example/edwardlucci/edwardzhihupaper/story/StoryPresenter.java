@@ -1,8 +1,8 @@
 package com.example.edwardlucci.edwardzhihupaper.story;
 
 import com.example.edwardlucci.edwardzhihupaper.bean.StoryDetail;
-import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
-import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
+import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuApi;
+import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.HtmlUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.Preconditions;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
@@ -21,13 +21,13 @@ public class StoryPresenter implements StoryContract.Presenter {
 
     StoryContract.View mView;
 
-    @Inject
     ZhihuApi zhihuApi;
 
     @Inject
     public StoryPresenter(int storyId, StoryContract.View mView) {
         this.storyId = storyId;
         this.mView = mView;
+        zhihuApi = ZhihuService.getInstance();
         mView.setPresenter(this);
     }
 
