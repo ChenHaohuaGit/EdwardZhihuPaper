@@ -9,33 +9,13 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2086302-d8ba-4dba-a084-835d40be999d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/data/DataManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/network/CommentLoader.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/data/network/CommentLoader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/network/DataComponent.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/data/network/DataComponent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/network/DataModule.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/data/network/DataModule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/network/MemoryCache.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/data/MemoryCache.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/network/OkClient.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/data/network/OkClient.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/network/PastStoriesLoader.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/data/network/PastStoriesLoader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/network/ThemeLoader.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/data/network/ThemeLoader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/network/ThemesLoader.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/data/network/ThemesLoader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/network/ZhihuApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/data/network/ZhihuApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/network/ZhihuService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/data/network/ZhihuService.java" />
+    <list default="true" id="b2086302-d8ba-4dba-a084-835d40be999d" name="Default" comment="ADD dataManager to manage data sources">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/base/MyApp.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/base/MyApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/comment/CommentActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/comment/CommentActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/comment/CommentPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/comment/CommentPresenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/story/StoryActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/story/StoryActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/story/StoryComponent.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/story/StoryComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/story/StoryPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/story/StoryPresenter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/ui/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/ui/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/ui/ThemesCategoryFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/ui/ThemesCategoryFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/ui/TopicActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/ui/TopicActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/adapter/CommentAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/adapter/CommentAdapter.java" />
     </list>
     <ignored path="EdwardZhihuPaper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,10 +45,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StoryActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StoryActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/story/StoryActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5414508">
+            <state vertical-scroll-proportion="0.0">
               <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -125,18 +105,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/ui/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StoryPresenter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/story/StoryPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -151,10 +119,32 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/comment/CommentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+              <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/adapter/CommentAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.66062176">
+              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+              <folding>
+                <element signature="e#2349#2371#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="values.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/commons/0.9.0.0/res/values/values.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.8867924">
+              <caret line="9" column="37" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -163,19 +153,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/comment/CommentPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/base/MyApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+              <caret line="49" column="40" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -3542,7 +3520,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/bean/DailyStories.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/ui/SplashActivity.java" />
         <option value="$PROJECT_DIR$/app/build/generated/source/apt/Edward/debug/com/example/edwardlucci/edwardzhihupaper/ui/SplashActivity$$ViewBinder.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/comment/CommentContract.java" />
@@ -3593,6 +3570,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/ui/TopicActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/ui/ThemesCategoryFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/story/StoryActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/adapter/CommentAdapter.java" />
       </list>
     </option>
   </component>
@@ -4594,7 +4572,13 @@
       <option name="project" value="LOCAL" />
       <updated>1470756956819</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="ADD dataManager to manage data sources">
+      <created>1470758306922</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1470758306922</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -4685,7 +4669,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added DailyStoriesDeserializer" />
     <MESSAGE value="fixed database change" />
     <MESSAGE value="added database cache&#10;fixed date bug" />
     <MESSAGE value="remove dateMatcher" />
@@ -4710,7 +4693,8 @@
     <MESSAGE value="ADD vector usage in storyActivity" />
     <MESSAGE value="UPDATE story module into dagger+MVP structure" />
     <MESSAGE value="backup befre changing network package location" />
-    <option name="LAST_COMMIT_MESSAGE" value="backup befre changing network package location" />
+    <MESSAGE value="ADD dataManager to manage data sources" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD dataManager to manage data sources" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4757,20 +4741,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/example/core/PhoneUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/example/core/ScreenUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/example/core/KeyboardUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -5123,34 +5093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/story/StoryPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/comment/CommentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/comment/CommentPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/data/network/DataComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -5193,10 +5135,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/story/StoryActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5414508">
+        <state vertical-scroll-proportion="0.0">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/comment/CommentPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="40" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.afollestad.material-dialogs/commons/0.9.0.0/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8867924">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/comment/CommentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/story/StoryPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/edwardlucci/edwardzhihupaper/adapter/CommentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.66062176">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding>
+            <element signature="e#2349#2371#0" expanded="true" />
           </folding>
         </state>
       </provider>

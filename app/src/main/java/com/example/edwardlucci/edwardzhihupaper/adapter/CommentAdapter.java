@@ -1,17 +1,15 @@
 package com.example.edwardlucci.edwardzhihupaper.adapter;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
 import com.example.edwardlucci.edwardzhihupaper.transformation.CircleTransform;
@@ -63,20 +61,12 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CommentV
     }
 
     private void showFullComment(int position) {
-        Dialog dialog = new Dialog(mContext);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        TextView commentTextview = new TextView(mContext);
-        commentTextview.setVerticalScrollBarEnabled(true);
-        commentTextview.setMovementMethod(new ScrollingMovementMethod());
-        commentTextview.setText(comments.get(position).getContent());
-        commentTextview.setLayoutParams(new LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        commentTextview.setPadding(20,20,20,20);
-        commentTextview.setTextSize(20);
-        dialog.setContentView(commentTextview);
-
-        dialog.show();
+        new MaterialDialog.Builder(mContext)
+                .title(comments.get(position).getAuthor())
+                .content(comments.get(position).getContent())
+                .positiveText(R.string.md_back_label)
+                .show();
     }
 
     @Override
