@@ -38,6 +38,11 @@ public class CommentPresenter implements CommentContract.Presenter, LoaderManage
     }
 
     @Override
+    public void destroy() {
+
+    }
+
+    @Override
     public void loadData() {
         mLoaderManager.initLoader(0, null, this);
     }

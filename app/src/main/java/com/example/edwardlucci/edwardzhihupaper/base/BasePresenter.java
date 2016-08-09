@@ -7,4 +7,6 @@ public interface BasePresenter {
 
     void start();
 
+    void destroy();
+
 }

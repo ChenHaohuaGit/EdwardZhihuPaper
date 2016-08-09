@@ -20,7 +20,9 @@ import android.widget.ImageView;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
+import com.example.edwardlucci.edwardzhihupaper.base.MyApp;
 import com.example.edwardlucci.edwardzhihupaper.comment.CommentActivity;
+import com.example.edwardlucci.edwardzhihupaper.util.Preconditions;
 import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
@@ -57,6 +59,11 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
         super.onCreate(savedInstanceState);
         setSupportActionBar(toolbar);
 
+        DaggerStoryComponent.builder()
+                .storyPresenterModule(new StoryPresenterModule(this))
+                .dataComponent(((MyApp)getApplication()).getDataComponent())
+                .build().inject(this);
+
         storyId = getIntent().getIntExtra(STORY_ID, 0);
 
         if (storyId == 0)
@@ -70,8 +77,7 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
 
         initBottomSheet();
 
-        storyPresenter = new StoryPresenter(storyId, this);
-        storyPresenter.start();
+        new StoryPresenter(storyId, this);
     }
 
     private void initBottomSheet() {
@@ -101,7 +107,7 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
     }
 
     @Override
-    public void share(String shareUrl,String shareTitle) {
+    public void share(String shareUrl, String shareTitle) {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, shareUrl);
@@ -128,11 +134,18 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
         startActivity(intent);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        storyPresenter.start();
+    }
 
     @Override
     protected void onDestroy() {
         webContainer.removeView(storyWebView);
         storyWebView = null;
+        storyPresenter.destroy();
+        storyPresenter = null;
         super.onDestroy();
     }
 
@@ -148,5 +161,7 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
 
     @Override
     public void setPresenter(StoryContract.Presenter basePresenter) {
+        storyPresenter = (StoryPresenter) basePresenter;
     }
+
 }

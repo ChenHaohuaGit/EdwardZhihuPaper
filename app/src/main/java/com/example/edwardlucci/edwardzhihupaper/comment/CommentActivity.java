@@ -60,7 +60,6 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
 
         initRecyclerView();
         new CommentPresenter(story_id, this, getLoaderManager(), new CommentLoader(getActivity(), story_id));
-
     }
 
     private void initRecyclerView() {
@@ -71,7 +70,6 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
         setContentView(recyclerView);
         commentAdapter = new CommentAdapter(CommentActivity.this, comments);
         recyclerView.setAdapter(commentAdapter);
-
     }
 
     @Override
@@ -105,4 +103,9 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
         startActivity(intent);
     }
 
+    @Override
+    protected void onDestroy() {
+        presenter.destroy();
+        super.onDestroy();
+    }
 }

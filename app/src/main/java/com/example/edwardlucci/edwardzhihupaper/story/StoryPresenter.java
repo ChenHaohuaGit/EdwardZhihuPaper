@@ -1,10 +1,13 @@
 package com.example.edwardlucci.edwardzhihupaper.story;
 
 import com.example.edwardlucci.edwardzhihupaper.bean.StoryDetail;
+import com.example.edwardlucci.edwardzhihupaper.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.HtmlUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.Preconditions;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
+
+import javax.inject.Inject;
 
 import rx.Subscriber;
 
@@ -18,16 +21,24 @@ public class StoryPresenter implements StoryContract.Presenter {
 
     StoryContract.View mView;
 
+    @Inject
+    ZhihuApi zhihuApi;
+
+    @Inject
     public StoryPresenter(int storyId, StoryContract.View mView) {
         this.storyId = storyId;
         this.mView = mView;
         mView.setPresenter(this);
     }
 
+//    @Inject
+//    void setupListeners() {
+//        mView.setPresenter(this);
+//    }
+
     @Override
     public void loadWebContent() {
-        ZhihuService.getInstance()
-                .getStoryDetail(storyId)
+        zhihuApi.getStoryDetail(storyId)
                 .doOnNext(sDetail -> storyDetail = sDetail)
                 .compose(RxUtil.fromIOtoMainThread())
                 .subscribe(new Subscriber<StoryDetail>() {
@@ -49,7 +60,6 @@ public class StoryPresenter implements StoryContract.Presenter {
                         mView.setTitle(storyDetail.getTitle());
                     }
                 });
-
     }
 
     @Override
@@ -61,5 +71,10 @@ public class StoryPresenter implements StoryContract.Presenter {
     @Override
     public void start() {
         loadWebContent();
+    }
+
+    @Override
+    public void destroy() {
+
     }
 }

@@ -85,7 +85,6 @@ public class MainActivity extends BaseActivity {
         loadLatestData();
 
         setupDrawer();
-
     }
 
     private void checkDeeplinkLaunch() {
