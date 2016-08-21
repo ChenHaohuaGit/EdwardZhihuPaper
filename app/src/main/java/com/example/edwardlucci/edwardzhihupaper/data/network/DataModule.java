@@ -1,6 +1,7 @@
 package com.example.edwardlucci.edwardzhihupaper.data.network;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
@@ -13,12 +14,15 @@ import com.example.edwardlucci.edwardzhihupaper.data.MemoryCache;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.orhanobut.logger.Logger;
+import com.squareup.picasso.Cache;
 
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -31,9 +35,12 @@ public class DataModule {
 
     String mBaseUrl;
 
+    Context mContext;
+
     // Constructor needs one parameter to instantiate.
-    public DataModule(String baseUrl) {
+    public DataModule(String baseUrl, Context mContext) {
         this.mBaseUrl = baseUrl;
+        this.mContext = mContext;
     }
 
     @Provides
@@ -60,15 +67,29 @@ public class DataModule {
 
     @Provides
     @Singleton
-    OkHttpClient provideOkHttpclient(){
+    HttpLoggingInterceptor provideHttpLoggingInterceptor() {
+        return new HttpLoggingInterceptor(Logger::json);
+    }
+
+    @Provides
+    @Singleton
+    okhttp3.Cache provideCache() {
+        return new okhttp3.Cache(mContext.getCacheDir(), 1024 * 1024 * 5);
+    }
+
+    @Provides
+    @Singleton
+    OkHttpClient provideOkHttpclient(HttpLoggingInterceptor httpLoggingInterceptor, okhttp3.Cache cache) {
         return new OkHttpClient.Builder()
                 .addNetworkInterceptor(new StethoInterceptor())
+                .addInterceptor(httpLoggingInterceptor)
+                .cache(cache)
                 .build();
     }
 
     @Provides
     @Singleton
-    String provideBaseUrl(){
+    String provideBaseUrl() {
         return mBaseUrl;
     }
 
@@ -85,13 +106,13 @@ public class DataModule {
 
     @Provides
     @Singleton
-    ZhihuApi providerZhihuApi(Retrofit retrofit){
+    ZhihuApi providerZhihuApi(Retrofit retrofit) {
         return retrofit.create(ZhihuApi.class);
     }
 
     @Provides
     @Singleton
-    DataManager provideDataManager(ZhihuApi zhihuApi, MemoryCache memoryCache){
-        return new DataManager(zhihuApi,memoryCache);
+    DataManager provideDataManager(ZhihuApi zhihuApi, MemoryCache memoryCache) {
+        return new DataManager(zhihuApi, memoryCache);
     }
 }

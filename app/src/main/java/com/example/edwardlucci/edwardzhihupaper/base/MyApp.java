@@ -23,7 +23,6 @@ import okhttp3.OkHttpClient;
  */
 public class MyApp extends Application {
 
-    static public OkHttpClient okHttpClient;
     static private int SDK_VERSION;
 
     private DataComponent dataComponent;
@@ -43,13 +42,13 @@ public class MyApp extends Application {
                             .build());
         }
 
-        dataComponent = DaggerDataComponent.builder()
-                .appModule(new AppModule(this))
-                .dataModule(new DataModule("http://news-at.zhihu.com/api/4/"))
-                .build();
-
         //logger setup
         Logger.init("Zhihu");
+
+        dataComponent = DaggerDataComponent.builder()
+                .appModule(new AppModule(this))
+                .dataModule(new DataModule("http://news-at.zhihu.com/api/4/", getContext()))
+                .build();
 
         SDK_VERSION = Build.VERSION.SDK_INT;
 

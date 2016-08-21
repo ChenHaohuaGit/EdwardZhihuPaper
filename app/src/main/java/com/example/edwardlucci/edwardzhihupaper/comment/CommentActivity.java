@@ -79,7 +79,6 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
     public void showData(ArrayList<Comment> comments) {
         this.comments.clear();
         this.comments.addAll(comments);
-        Logger.i(String.valueOf(comments.size()));
         commentAdapter.notifyDataSetChanged();
     }
 
