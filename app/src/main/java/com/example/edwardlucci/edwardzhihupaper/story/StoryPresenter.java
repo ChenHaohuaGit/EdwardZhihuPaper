@@ -11,7 +11,6 @@ import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 import javax.inject.Inject;
 
 import rx.Subscriber;
-import rx.Subscription;
 
 /**
  * Created by edward on 16/8/1.

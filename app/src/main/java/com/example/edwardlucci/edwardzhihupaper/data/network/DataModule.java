@@ -1,7 +1,6 @@
 package com.example.edwardlucci.edwardzhihupaper.data.network;
 
 import android.app.Application;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
@@ -15,7 +14,6 @@ import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.orhanobut.logger.Logger;
-import com.squareup.picasso.Cache;
 
 import javax.inject.Singleton;
 
@@ -35,12 +33,9 @@ public class DataModule {
 
     String mBaseUrl;
 
-    Context mContext;
-
     // Constructor needs one parameter to instantiate.
-    public DataModule(String baseUrl, Context mContext) {
+    public DataModule(String baseUrl) {
         this.mBaseUrl = baseUrl;
-        this.mContext = mContext;
     }
 
     @Provides
@@ -73,8 +68,8 @@ public class DataModule {
 
     @Provides
     @Singleton
-    okhttp3.Cache provideCache() {
-        return new okhttp3.Cache(mContext.getCacheDir(), 1024 * 1024 * 5);
+    okhttp3.Cache provideCache(Application application) {
+        return new okhttp3.Cache(application.getCacheDir(), 1024 * 1024 * 5);
     }
 
     @Provides

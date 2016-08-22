@@ -47,7 +47,7 @@ public class MyApp extends Application {
 
         dataComponent = DaggerDataComponent.builder()
                 .appModule(new AppModule(this))
-                .dataModule(new DataModule("http://news-at.zhihu.com/api/4/", getContext()))
+                .dataModule(new DataModule("http://news-at.zhihu.com/api/4/"))
                 .build();
 
         SDK_VERSION = Build.VERSION.SDK_INT;

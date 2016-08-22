@@ -11,7 +11,7 @@ import dagger.Component;
  * Created by edward on 16/8/1.
  */
 @Singleton
-@Component(modules = {AppModule.class,DataModule.class})
+@Component(modules = {AppModule.class, DataModule.class})
 public interface DataComponent {
     void inject(MainActivity mainActivity);
 }

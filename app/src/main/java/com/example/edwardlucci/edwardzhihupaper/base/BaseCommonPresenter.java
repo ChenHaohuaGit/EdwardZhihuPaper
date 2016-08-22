@@ -3,7 +3,6 @@ package com.example.edwardlucci.edwardzhihupaper.base;
 import com.example.edwardlucci.edwardzhihupaper.data.DataManager;
 
 import rx.Subscription;
-import rx.functions.Action0;
 import rx.subscriptions.CompositeSubscription;
 
 /**
