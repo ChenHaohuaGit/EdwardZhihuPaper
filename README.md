@@ -1,2 +1,4 @@
-# RxZhihuPaper
-Zhihu paper client with RxJava, Retrofit
+# EdwardZhihuDaily
+Zhihu daily client made with RxJava, Retrofit, Dagger2,Realm in MVP architecture.
+
+Some unit tests are included.
