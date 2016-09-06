@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
@@ -59,6 +60,7 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
         recyclerView.setPadding(paddingDimen, paddingDimen, paddingDimen, paddingDimen);
         recyclerView.setLayoutManager(new LinearLayoutManager(CommentActivity.this));
         recyclerView.addItemDecoration(new ItemOffsetDecoration(DensityUtil.dpToPx(10)));
+        new LinearSnapHelper().attachToRecyclerView(recyclerView);
         setContentView(recyclerView);
         commentAdapter = new CommentAdapter(CommentActivity.this, comments);
         recyclerView.setAdapter(commentAdapter);
