@@ -80,6 +80,7 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
     }
 
     private void initBottomSheet() {
+        //http://stackoverflow.com/a/39062055/3487847
         mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheetView);
         mBottomSheetBehavior.setHideable(true);
         mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
