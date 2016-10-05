@@ -81,6 +81,8 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
 
     private void initBottomSheet() {
         mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheetView);
+        mBottomSheetBehavior.setHideable(true);
+        mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
     }
 
     @Override
@@ -117,7 +119,11 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
 
     @OnClick(R.id.fab)
     public void openBottomSheet() {
-        mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+        mBottomSheetBehavior.setState((isBottomSheetExpanded())?BottomSheetBehavior.STATE_HIDDEN:BottomSheetBehavior.STATE_EXPANDED);
+    }
+
+    private boolean isBottomSheetExpanded() {
+        return mBottomSheetBehavior.getState()==BottomSheetBehavior.STATE_EXPANDED;
     }
 
     @OnClick(R.id.share_fab)
@@ -137,6 +143,7 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
     protected void onResume() {
         super.onResume();
         storyPresenter.start();
+
     }
 
     @Override
