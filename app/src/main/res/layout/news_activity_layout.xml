@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ui.StoryActivity">
+    tools:context=".story.StoryActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_more_horiz_black_24dp"
+        app:srcCompat="@drawable/ic_more_horiz_black_24dp"
         android:tint="@color/md_white_1000"
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end" />
@@ -78,17 +78,17 @@
                 android:layout_height="96dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:src="@drawable/ic_share_black_24dp"
-                android:tint="@color/colorPrimaryDark" />
+                android:tint="@color/colorPrimaryDark"
+                app:srcCompat="@drawable/ic_share_black_24dp" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/comment_fab"
                 android:layout_width="0dp"
-                android:layout_gravity="center"
                 android:layout_height="96dp"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:src="@drawable/ic_insert_comment_black_24dp"
-                android:tint="@color/colorPrimaryDark" />
+                android:tint="@color/colorPrimaryDark"
+                app:srcCompat="@drawable/ic_insert_comment_black_24dp" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>
