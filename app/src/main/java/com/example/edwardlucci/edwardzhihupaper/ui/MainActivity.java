@@ -6,11 +6,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
 import com.example.edwardlucci.edwardzhihupaper.R;
@@ -32,6 +29,7 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 import io.realm.Realm;
+import jp.wasabeef.recyclerview.animators.SlideInDownAnimator;
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -56,9 +54,6 @@ public class MainActivity extends BaseActivity {
 
     @Inject
     DataManager dataManager;
-
-    @Bind(R.id.toolbar)
-    Toolbar toolbar;
 
     Realm realm;
 
@@ -101,11 +96,14 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setupToolbar() {
-        setSupportActionBar(toolbar);
-        toolbar.setTitleTextColor(Color.WHITE);
-        if (getActionBar() != null) {
-            getActionBar().setDisplayHomeAsUpEnabled(true);
-            getActionBar().setDisplayShowHomeEnabled(true);
+        if (mToolbar!=null){
+            setSupportActionBar(mToolbar);
+            mToolbar.setTitleTextColor(Color.WHITE);
+
+            if (getActionBar() != null) {
+                getActionBar().setDisplayHomeAsUpEnabled(true);
+                getActionBar().setDisplayShowHomeEnabled(true);
+            }
         }
     }
 
@@ -114,7 +112,7 @@ public class MainActivity extends BaseActivity {
         RecyclerView.LayoutManager layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(new ItemOffsetDecoration(DensityUtil.dpToPx(10)));
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setItemAnimator(new SlideInDownAnimator());
         recyclerView.setAdapter(contentAdapter);
         recyclerView.addOnScrollListener(new OnVerticalScrollListener() {
             @Override
@@ -171,8 +169,9 @@ public class MainActivity extends BaseActivity {
                 })
                 .doOnTerminate(() -> isLoading = false)
                 .subscribe(dailyStories -> {
+                    int positionStarted = stories.size();
                     stories.addAll(dailyStories.getStories());
-                    contentAdapter.notifyDataSetChanged();
+                    contentAdapter.notifyItemRangeInserted(positionStarted,dailyStories.getStories().size());
                 });
     }
 

@@ -61,7 +61,6 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
         recyclerView.setLayoutManager(new LinearLayoutManager(CommentActivity.this));
         recyclerView.addItemDecoration(new ItemOffsetDecoration(DensityUtil.dpToPx(10)));
         new LinearSnapHelper().attachToRecyclerView(recyclerView);
-        setContentView(recyclerView);
         commentAdapter = new CommentAdapter(CommentActivity.this, comments);
         recyclerView.setAdapter(commentAdapter);
     }

@@ -44,9 +44,6 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
     @Bind(R.id.toolbar_layout)
     CollapsingToolbarLayout collapsingToolbar;
 
-    @Bind(R.id.toolbar)
-    Toolbar toolbar;
-
     BottomSheetBehavior mBottomSheetBehavior;
     @Bind(R.id.bottom_sheet)
     View bottomSheetView;
@@ -56,7 +53,7 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(mToolbar);
 
         DaggerStoryComponent.builder()
                 .storyPresenterModule(new StoryPresenterModule(this))

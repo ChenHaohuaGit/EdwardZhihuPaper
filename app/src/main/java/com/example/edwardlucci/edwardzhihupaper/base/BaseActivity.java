@@ -1,27 +1,28 @@
 package com.example.edwardlucci.edwardzhihupaper.base;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
-import android.transition.Explode;
 import android.transition.Fade;
-import android.transition.Slide;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.example.edwardlucci.edwardzhihupaper.R;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
-import java.util.Objects;
-
+import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
  * Created by edwardlucci on 16/5/18.
  */
 public abstract class BaseActivity extends RxAppCompatActivity {
+
+    @Nullable
+    @Bind(R.id.toolbar)
+    public android.support.v7.widget.Toolbar mToolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
