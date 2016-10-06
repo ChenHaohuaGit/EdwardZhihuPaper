@@ -52,10 +52,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_more_horiz_black_24dp"
         android:tint="@color/md_white_1000"
         app:layout_anchor="@id/app_bar"
-        app:layout_anchorGravity="bottom|end" />
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/ic_more_horiz_black_24dp" />
 
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/bottom_sheet"
@@ -73,23 +73,40 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/share_fab"
+            <com.example.edwardlucci.edwardzhihupaper.view.IconTextView
+                android:id="@+id/share_btn"
                 android:layout_width="0dp"
-                android:layout_height="96dp"
-                android:layout_gravity="center"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:tint="@color/colorPrimaryDark"
-                app:srcCompat="@drawable/ic_share_black_24dp" />
+                app:src="@drawable/ic_share_black_24dp"
+                app:text="share" />
 
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/comment_fab"
+            <com.example.edwardlucci.edwardzhihupaper.view.IconTextView
+                android:id="@+id/comment_btn"
                 android:layout_width="0dp"
-                android:layout_height="96dp"
-                android:layout_gravity="center"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:tint="@color/colorPrimaryDark"
-                app:srcCompat="@drawable/ic_insert_comment_black_24dp" />
+                app:src="@drawable/ic_insert_comment_black_24dp"
+                app:text="comment" />
+
+
+            <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/share_fab"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="96dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:tint="@color/colorPrimaryDark"-->
+            <!--app:srcCompat="@drawable/ic_share_black_24dp" />-->
+
+            <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/comment_fab"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="96dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:tint="@color/colorPrimaryDark"-->
+            <!--app:srcCompat="@drawable/ic_insert_comment_black_24dp" />-->
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>

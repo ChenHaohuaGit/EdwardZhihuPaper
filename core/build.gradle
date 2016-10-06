@@ -46,7 +46,7 @@ dependencies {
     compile 'com.android.support:percent:'+androidSupportVersion
 
     //RecyclerView animator
-    compile 'jp.wasabeef:recyclerview-animators:2.2.3'
+    compile 'jp.wasabeef:recyclerview-animators:2.2.4'
 
     //retrofit
     compile 'com.squareup.retrofit2:retrofit:2.0.2'

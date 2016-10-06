@@ -124,12 +124,12 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
         return mBottomSheetBehavior.getState()==BottomSheetBehavior.STATE_EXPANDED;
     }
 
-    @OnClick(R.id.share_fab)
+    @OnClick(R.id.share_btn)
     public void shareStory() {
         storyPresenter.share();
     }
 
-    @OnClick(R.id.comment_fab)
+    @OnClick(R.id.comment_btn)
     public void toCommentActivity() {
         Intent intent = new Intent();
         intent.setClass(StoryActivity.this, CommentActivity.class);

@@ -77,7 +77,7 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.NewsView
 
                         Palette.from(bitmap)
                                 .generate(palette -> {
-                                    if (null != palette.getVibrantSwatch()) {
+                                    if (null != palette.getDarkMutedSwatch()) {
                                         holder.news_title_textview.setBackgroundColor(palette.getVibrantSwatch().getRgb());
                                         holder.news_title_textview.setTextColor(palette.getVibrantSwatch().getTitleTextColor());
                                     } else {
