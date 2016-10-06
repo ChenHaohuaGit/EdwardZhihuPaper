@@ -11,10 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b2086302-d8ba-4dba-a084-835d40be999d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/core.iml" afterPath="$PROJECT_DIR$/core/core.iml" />
     </list>
     <ignored path="EdwardZhihuPaper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -4595,7 +4591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475718989818</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="fixed not shown in launcher bug">
+      <created>1475745616633</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1475745616633</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -4690,7 +4693,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added sharing feature" />
     <MESSAGE value="added leakCanary" />
     <MESSAGE value="added dagger dependency in gradle" />
     <MESSAGE value="ADD produce flavor in gradle&#10;CREATE a new android library module" />
@@ -4715,7 +4717,8 @@
     <MESSAGE value="add bottomsheet reference" />
     <MESSAGE value="add recycler animator" />
     <MESSAGE value="prepare update to sdk 24" />
-    <option name="LAST_COMMIT_MESSAGE" value="prepare update to sdk 24" />
+    <MESSAGE value="fixed not shown in launcher bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed not shown in launcher bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
