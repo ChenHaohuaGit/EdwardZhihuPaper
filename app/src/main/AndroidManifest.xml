@@ -22,19 +22,19 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
                 <!--for deeplink -->
-                <action android:name="android.intent.action.VIEW" />
+                <!--<action android:name="android.intent.action.VIEW" />-->
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+                <!--<category android:name="android.intent.category.BROWSABLE" />-->
 
-                <data
-                    android:host="daily.zhihu.com"
-                    android:pathPattern="/story/"
-                    android:scheme="http" />
-                <data
-                    android:host="story"
-                    android:pathPattern="/.*"
-                    android:scheme="zhihudaily" />
+                <!--<data-->
+                    <!--android:host="daily.zhihu.com"-->
+                    <!--android:pathPattern="/story/"-->
+                    <!--android:scheme="http" />-->
+                <!--<data-->
+                    <!--android:host="story"-->
+                    <!--android:pathPattern="/.*"-->
+                    <!--android:scheme="zhihudaily" />-->
             </intent-filter>
         </activity>
 
