@@ -1,5 +1,6 @@
 package com.example.edwardlucci.edwardzhihupaper.ui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -61,7 +62,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ((MyApp)getApplication()).getDataComponent().inject(this);
+        ((MyApp) getApplication()).getDataComponent().inject(this);
 
         realm = Realm.getDefaultInstance();
 
@@ -96,7 +97,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setupToolbar() {
-        if (mToolbar!=null){
+        if (mToolbar != null) {
             setSupportActionBar(mToolbar);
             mToolbar.setTitleTextColor(Color.WHITE);
 
@@ -171,7 +172,7 @@ public class MainActivity extends BaseActivity {
                 .subscribe(dailyStories -> {
                     int positionStarted = stories.size();
                     stories.addAll(dailyStories.getStories());
-                    contentAdapter.notifyItemRangeInserted(positionStarted,dailyStories.getStories().size());
+                    contentAdapter.notifyItemRangeInserted(positionStarted, dailyStories.getStories().size());
                 });
     }
 
@@ -224,5 +225,11 @@ public class MainActivity extends BaseActivity {
     protected void onDestroy() {
         super.onDestroy();
         realm.close();
+    }
+
+    public static void start(Context context) {
+        Intent intent = new Intent();
+        intent.setClass(context, MainActivity.class);
+        context.startActivity(intent);
     }
 }

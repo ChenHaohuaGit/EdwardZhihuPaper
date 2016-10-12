@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:drawable="@color/colorPrimary"/>
+
+    <item android:drawable="@drawable/comment_icon" android:gravity="center"/>
+    <!--<item>-->
+        <!--<bitmap app:srcCompat="@drawable/ic_share_black_24dp" android:gravity="center"/>-->
+    <!--</item>-->
+</layer-list>

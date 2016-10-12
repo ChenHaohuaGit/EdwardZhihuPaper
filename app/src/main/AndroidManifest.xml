@@ -13,10 +13,9 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".ui.MainActivity"
-            android:launchMode="singleTask"
+            android:name=".ui.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,23 +27,28 @@
                 <!--<category android:name="android.intent.category.BROWSABLE" />-->
 
                 <!--<data-->
-                    <!--android:host="daily.zhihu.com"-->
-                    <!--android:pathPattern="/story/"-->
-                    <!--android:scheme="http" />-->
+                <!--android:host="daily.zhihu.com"-->
+                <!--android:pathPattern="/story/"-->
+                <!--android:scheme="http" />-->
                 <!--<data-->
-                    <!--android:host="story"-->
-                    <!--android:pathPattern="/.*"-->
-                    <!--android:scheme="zhihudaily" />-->
+                <!--android:host="story"-->
+                <!--android:pathPattern="/.*"-->
+                <!--android:scheme="zhihudaily" />-->
             </intent-filter>
+
         </activity>
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <activity
             android:name=".story.StoryActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <activity
             android:name=".comment.CommentActivity"
