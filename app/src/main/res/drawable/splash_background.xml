@@ -4,7 +4,7 @@
 
     <item android:drawable="@color/colorPrimary"/>
 
-    <item android:drawable="@drawable/comment_icon" android:gravity="center"/>
+    <item android:drawable="@drawable/ic_tag_faces_black_24dp" android:gravity="center"/>
     <!--<item>-->
         <!--<bitmap app:srcCompat="@drawable/ic_share_black_24dp" android:gravity="center"/>-->
     <!--</item>-->

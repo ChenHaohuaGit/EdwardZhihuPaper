@@ -20,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Observable.just(1).delay(4, TimeUnit.SECONDS).subscribe(new Subscriber<Integer>() {
+        Observable.just(1).delay(1, TimeUnit.SECONDS).subscribe(new Subscriber<Integer>() {
             @Override
             public void onCompleted() {
 
