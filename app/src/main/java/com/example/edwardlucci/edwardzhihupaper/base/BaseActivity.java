@@ -59,6 +59,4 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     }
 
     protected Activity getActivity(){return this;}
-
-
 }
