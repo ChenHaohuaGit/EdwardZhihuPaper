@@ -24,7 +24,7 @@ public class SplashActivity extends RxActivity {
         RxBus.getInstance().toObservable(String.class)
                 .filter(s -> s.equals("init done"))
                 .subscribe(s -> {
-
+                    redirect();
                 });
 
         Observable.just(1)
@@ -33,6 +33,7 @@ public class SplashActivity extends RxActivity {
                 .subscribe(integer -> {
                     redirect();
                 });
+
 
 //        Observable.just(1).delay(1, TimeUnit.SECONDS).subscribe(new Subscriber<Integer>() {
 //            @Override
@@ -52,5 +53,10 @@ public class SplashActivity extends RxActivity {
 //            }
 //        });
 
-}
+    }
+
+    public void redirect(){
+        MainActivity.start(this);
+        finish();
+    }
 }

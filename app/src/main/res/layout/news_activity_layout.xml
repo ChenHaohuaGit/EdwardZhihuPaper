@@ -75,6 +75,7 @@
 
             <com.example.edwardlucci.edwardzhihupaper.view.IconTextView
                 android:id="@+id/share_btn"
+                android:background="@drawable/ripple"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -84,6 +85,7 @@
             <com.example.edwardlucci.edwardzhihupaper.view.IconTextView
                 android:id="@+id/comment_btn"
                 android:layout_width="0dp"
+                android:background="@drawable/ripple"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:src="@drawable/ic_insert_comment_black_24dp"
