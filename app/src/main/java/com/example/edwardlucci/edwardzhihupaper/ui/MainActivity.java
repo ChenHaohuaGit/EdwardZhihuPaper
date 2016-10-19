@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
@@ -131,14 +132,42 @@ public class MainActivity extends BaseActivity {
 
     private void loadLatestData() {
         isLoading = true;
-        stories.clear();
+//        stories.clear();
         dataManager.getZhihuApi().getLatestStories()
                 .compose(RxUtil.fromIOtoMainThread())
                 .doOnTerminate(() -> isLoading = false)
                 .subscribe(dailyStories -> {
-                    stories.addAll(dailyStories.getStories());
+//                    stories.addAll(dailyStories.getStories());
                     latestDate = dailyStories.getDate();
-                    contentAdapter.notifyDataSetChanged();
+//                    contentAdapter.notifyDataSetChanged();
+
+                    DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new DiffUtil.Callback() {
+                        @Override
+                        public int getOldListSize() {
+                            return stories.size();
+                        }
+
+                        @Override
+                        public int getNewListSize() {
+                            return dailyStories.getStories().size();
+                        }
+
+                        @Override
+                        public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
+                            return stories.get(oldItemPosition).getId().equals(dailyStories.getStories().get(newItemPosition).getId());
+                        }
+
+                        @Override
+                        public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
+                            return stories.get(oldItemPosition).getTitle().equals(dailyStories.getStories().get(newItemPosition).getTitle());
+                        }
+                    },true);
+
+                    diffResult.dispatchUpdatesTo(contentAdapter);
+
+                    stories.clear();
+                    stories.addAll(dailyStories.getStories());
+
                     swipeRefreshLayout.setRefreshing(false);
                 });
     }

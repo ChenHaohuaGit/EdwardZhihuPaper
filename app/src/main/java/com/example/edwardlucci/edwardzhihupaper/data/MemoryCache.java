@@ -1,5 +1,6 @@
 package com.example.edwardlucci.edwardzhihupaper.data;
 
+import android.support.annotation.NonNull;
 import android.support.v4.util.LruCache;
 
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;

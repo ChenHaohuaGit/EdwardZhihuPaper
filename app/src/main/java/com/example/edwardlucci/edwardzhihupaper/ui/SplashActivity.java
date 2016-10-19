@@ -5,12 +5,17 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.edwardlucci.edwardzhihupaper.util.RxBus;
+import com.trello.rxlifecycle.components.RxActivity;
+
+import java.util.concurrent.TimeUnit;
+
+import rx.Observable;
 
 /**
  * Created by edward on 2016/10/11.
  */
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends RxActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -19,9 +24,14 @@ public class SplashActivity extends AppCompatActivity {
         RxBus.getInstance().toObservable(String.class)
                 .filter(s -> s.equals("init done"))
                 .subscribe(s -> {
-                    System.out.println("haha");
-                    MainActivity.start(SplashActivity.this);
-                    finish();
+
+                });
+
+        Observable.just(1)
+                .delay(1, TimeUnit.SECONDS)
+                .compose(bindToLifecycle())
+                .subscribe(integer -> {
+                    redirect();
                 });
 
 //        Observable.just(1).delay(1, TimeUnit.SECONDS).subscribe(new Subscriber<Integer>() {
@@ -42,5 +52,5 @@ public class SplashActivity extends AppCompatActivity {
 //            }
 //        });
 
-    }
+}
 }
