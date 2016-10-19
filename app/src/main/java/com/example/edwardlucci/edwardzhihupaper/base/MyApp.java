@@ -6,6 +6,7 @@ import android.os.Build;
 
 import com.example.edwardlucci.edwardzhihupaper.AppModule;
 import com.example.edwardlucci.edwardzhihupaper.BuildConfig;
+import com.example.edwardlucci.edwardzhihupaper.InitService;
 import com.example.edwardlucci.edwardzhihupaper.data.network.DaggerDataComponent;
 import com.example.edwardlucci.edwardzhihupaper.data.network.DataComponent;
 import com.example.edwardlucci.edwardzhihupaper.data.network.DataModule;
@@ -31,20 +32,6 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-        if (BuildConfig.DEBUG) {
-//            LeakCanary.install(this);
-
-            //stetho
-            Stetho.initialize(
-                    Stetho.newInitializerBuilder(this)
-                            .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
-                            .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
-                            .build());
-        }
-
-        //logger setup
-        Logger.init("Zhihu");
-
         dataComponent = DaggerDataComponent.builder()
                 .appModule(new AppModule(this))
                 .dataModule(new DataModule("http://news-at.zhihu.com/api/4/"))
@@ -52,8 +39,26 @@ public class MyApp extends Application {
 
         SDK_VERSION = Build.VERSION.SDK_INT;
 
-        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this).build();
-        Realm.setDefaultConfiguration(realmConfiguration);
+        InitService.start(this);
+
+//        if (BuildConfig.DEBUG) {
+////            LeakCanary.install(this);
+//
+//            //stetho
+//            Stetho.initialize(
+//                    Stetho.newInitializerBuilder(this)
+//                            .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+//                            .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
+//                            .build());
+//        }
+//
+//        //logger setup
+//        Logger.init("Zhihu");
+//
+//
+//
+//        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this).build();
+//        Realm.setDefaultConfiguration(realmConfiguration);
     }
 
     public static int getSdkVersion() {
