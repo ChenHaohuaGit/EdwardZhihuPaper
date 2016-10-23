@@ -15,9 +15,7 @@ import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
-import android.view.View;
 
-import com.example.edwardlucci.edwardzhihupaper.AppModule;
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener;
@@ -26,7 +24,6 @@ import com.example.edwardlucci.edwardzhihupaper.base.MyApp;
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.data.DataManager;
-import com.example.edwardlucci.edwardzhihupaper.data.network.DaggerDataComponent;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
@@ -77,7 +74,7 @@ public class MainActivity extends BaseActivity {
 
         realm = Realm.getDefaultInstance();
 
-        checkDeeplinkLaunch();
+        checkDeepLinkLaunch();
 
         setupToolbar();
         contentAdapter = new ContentAdapter(getActivity(), stories);
@@ -91,7 +88,7 @@ public class MainActivity extends BaseActivity {
         setupDrawer();
     }
 
-    private void checkDeeplinkLaunch() {
+    private void checkDeepLinkLaunch() {
         Intent intent = getIntent();
         if (intent != null) {
             Uri uri = intent.getData();

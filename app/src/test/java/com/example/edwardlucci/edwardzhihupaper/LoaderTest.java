@@ -21,7 +21,6 @@ public class LoaderTest {
 
     @BeforeClass
     static public void setup() {
-//        MyApp app = new MyApp();
         Logger.init();
     }
 

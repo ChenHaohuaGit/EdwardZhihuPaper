@@ -6,6 +6,7 @@ import android.os.Build;
 
 import com.example.edwardlucci.edwardzhihupaper.AppModule;
 import com.example.edwardlucci.edwardzhihupaper.BuildConfig;
+import com.example.edwardlucci.edwardzhihupaper.ComponentHolder;
 import com.example.edwardlucci.edwardzhihupaper.InitService;
 import com.example.edwardlucci.edwardzhihupaper.data.network.DaggerDataComponent;
 import com.example.edwardlucci.edwardzhihupaper.data.network.DataComponent;
@@ -36,6 +37,8 @@ public class MyApp extends Application {
         dataComponent = DaggerDataComponent.builder()
                 .appModule(new AppModule(this))
                 .build();
+
+        ComponentHolder.setDataComponent(dataComponent);
 
         SDK_VERSION = Build.VERSION.SDK_INT;
 
