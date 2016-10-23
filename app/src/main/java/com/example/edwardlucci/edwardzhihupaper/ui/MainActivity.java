@@ -3,14 +3,19 @@ package com.example.edwardlucci.edwardzhihupaper.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
+import android.view.View;
 
 import com.example.edwardlucci.edwardzhihupaper.AppModule;
 import com.example.edwardlucci.edwardzhihupaper.R;
@@ -45,6 +50,9 @@ public class MainActivity extends BaseActivity {
 
     private boolean isLoading = false;
     private String latestDate;//used to record the latest date
+
+    @Bind(R.id.drawer_layout)
+    DrawerLayout drawerLayout;
 
     @Bind(R.id.swipeRefreshLayout)
     SwipeRefreshLayout swipeRefreshLayout;
@@ -103,6 +111,13 @@ public class MainActivity extends BaseActivity {
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);
             mToolbar.setTitleTextColor(Color.WHITE);
+            mToolbar.setNavigationIcon(R.drawable.ic_menu_black_24dp);
+
+            if (mToolbar.getNavigationIcon() != null){
+                mToolbar.getNavigationIcon().setColorFilter(ContextCompat.getColor(getActivity(), R.color.md_white_1000), PorterDuff.Mode.SRC_IN);
+            }
+
+            mToolbar.setNavigationOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
 
             if (getActionBar() != null) {
                 getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -163,7 +178,7 @@ public class MainActivity extends BaseActivity {
                         public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
                             return stories.get(oldItemPosition).getTitle().equals(dailyStories.getStories().get(newItemPosition).getTitle());
                         }
-                    },true);
+                    }, true);
 
                     diffResult.dispatchUpdatesTo(contentAdapter);
 
