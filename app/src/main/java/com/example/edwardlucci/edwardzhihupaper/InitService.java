@@ -7,6 +7,7 @@ import android.content.Intent;
 import com.example.edwardlucci.edwardzhihupaper.util.RxBus;
 import com.facebook.stetho.Stetho;
 import com.orhanobut.logger.Logger;
+import com.squareup.leakcanary.LeakCanary;
 import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
 
 import io.realm.Realm;
@@ -29,7 +30,6 @@ public class InitService extends IntentService {
 
     private void initComponent() {
         if (BuildConfig.DEBUG) {
-//            LeakCanary.install(this);
 
             //stetho
             Stetho.initialize(
@@ -41,9 +41,6 @@ public class InitService extends IntentService {
 
         //logger setup
         Logger.init("Zhihu");
-
-        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this).build();
-        Realm.setDefaultConfiguration(realmConfiguration);
 
         RxBus.getInstance().post("init done");
     }

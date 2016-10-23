@@ -33,6 +33,8 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
 
     int storyId;
 
+    BottomSheetBehavior mBottomSheetBehavior;
+
     StoryPresenter storyPresenter;
 
     @Bind(R.id.web_container)
@@ -44,7 +46,6 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
     @Bind(R.id.toolbar_layout)
     CollapsingToolbarLayout collapsingToolbar;
 
-    BottomSheetBehavior mBottomSheetBehavior;
     @Bind(R.id.bottom_sheet)
     View bottomSheetView;
 

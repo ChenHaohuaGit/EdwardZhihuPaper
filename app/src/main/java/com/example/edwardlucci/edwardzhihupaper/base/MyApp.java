@@ -13,6 +13,7 @@ import com.example.edwardlucci.edwardzhihupaper.data.network.DataModule;
 import com.example.edwardlucci.edwardzhihupaper.data.network.OkClient;
 import com.facebook.stetho.Stetho;
 import com.orhanobut.logger.Logger;
+import com.squareup.leakcanary.LeakCanary;
 import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
 
 import io.realm.Realm;
@@ -34,31 +35,16 @@ public class MyApp extends Application {
 
         dataComponent = DaggerDataComponent.builder()
                 .appModule(new AppModule(this))
-                .dataModule(new DataModule("http://news-at.zhihu.com/api/4/"))
                 .build();
 
         SDK_VERSION = Build.VERSION.SDK_INT;
 
-        InitService.start(this);
+        LeakCanary.install(this);
 
-//        if (BuildConfig.DEBUG) {
-////            LeakCanary.install(this);
-//
-//            //stetho
-//            Stetho.initialize(
-//                    Stetho.newInitializerBuilder(this)
-//                            .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
-//                            .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
-//                            .build());
-//        }
-//
-//        //logger setup
-//        Logger.init("Zhihu");
-//
-//
-//
-//        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this).build();
-//        Realm.setDefaultConfiguration(realmConfiguration);
+        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this).build();
+        Realm.setDefaultConfiguration(realmConfiguration);
+
+        InitService.start(this);
     }
 
     public static int getSdkVersion() {

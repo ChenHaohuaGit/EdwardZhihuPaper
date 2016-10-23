@@ -15,6 +15,8 @@ import java.util.ArrayList;
  */
 public class CommentPresenter implements CommentContract.Presenter, LoaderManager.LoaderCallbacks<ArrayList<Comment>> {
 
+    public static final int COMMENT_LOADER_ID = 0;
+
     int id;
 
     CommentContract.View mView;
@@ -38,12 +40,12 @@ public class CommentPresenter implements CommentContract.Presenter, LoaderManage
 
     @Override
     public void destroy() {
-
+        mLoaderManager.destroyLoader(COMMENT_LOADER_ID);
     }
 
     @Override
     public void loadData() {
-        mLoaderManager.initLoader(0, null, this);
+        mLoaderManager.initLoader(COMMENT_LOADER_ID, null, this);
     }
 
     @Override

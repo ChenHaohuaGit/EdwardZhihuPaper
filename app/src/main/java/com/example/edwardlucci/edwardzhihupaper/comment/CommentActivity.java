@@ -72,6 +72,12 @@ public class CommentActivity extends BaseActivity implements CommentContract.Vie
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        presenter.destroy();
+    }
+
+    @Override
     public int getLayout() {
         return R.layout.recyclerview_layout;
     }

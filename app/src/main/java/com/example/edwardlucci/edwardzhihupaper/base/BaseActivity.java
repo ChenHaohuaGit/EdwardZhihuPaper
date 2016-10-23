@@ -51,8 +51,8 @@ public abstract class BaseActivity extends RxAppCompatActivity {
             getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
             Fade fade = new Fade();
             fade.setDuration(500);
-            getWindow().setEnterTransition(fade);
-            getWindow().setReenterTransition(fade);
+//            getWindow().setEnterTransition(fade);
+//            getWindow().setReenterTransition(fade);
             getWindow().setReturnTransition(fade);
             getWindow().setExitTransition(fade);
         }

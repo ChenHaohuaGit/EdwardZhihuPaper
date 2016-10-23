@@ -31,11 +31,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class DataModule {
 
-    String mBaseUrl;
+    public static final String BASE_URL = "http://news-at.zhihu.com/api/4/";
 
     // Constructor needs one parameter to instantiate.
-    public DataModule(String baseUrl) {
-        this.mBaseUrl = baseUrl;
+    public DataModule() {
     }
 
     @Provides
@@ -85,7 +84,7 @@ public class DataModule {
     @Provides
     @Singleton
     String provideBaseUrl() {
-        return mBaseUrl;
+        return BASE_URL;
     }
 
     @Provides
