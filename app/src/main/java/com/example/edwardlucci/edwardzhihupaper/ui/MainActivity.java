@@ -74,7 +74,7 @@ public class MainActivity extends BaseActivity {
 
         realm = Realm.getDefaultInstance();
 
-        checkDeepLinkLaunch();
+//        checkDeepLinkLaunch();
 
         setupToolbar();
         contentAdapter = new ContentAdapter(getActivity(), stories);

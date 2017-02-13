@@ -7,7 +7,7 @@
     <application
         android:name=".base.MyApp"
         android:allowBackup="true"
-        android:icon="@drawable/ic_tag_faces_black_24dp"
+        android:icon="@drawable/unknown"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -20,35 +20,35 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-                <!--for deeplink -->
-                <!--<action android:name="android.intent.action.VIEW" />-->
 
-                <!--<category android:name="android.intent.category.DEFAULT" />-->
-                <!--<category android:name="android.intent.category.BROWSABLE" />-->
-
-                <!--<data-->
-                <!--android:host="daily.zhihu.com"-->
-                <!--android:pathPattern="/story/"-->
-                <!--android:scheme="http" />-->
-                <!--<data-->
-                <!--android:host="story"-->
-                <!--android:pathPattern="/.*"-->
-                <!--android:scheme="zhihudaily" />-->
             </intent-filter>
 
         </activity>
+        <!--for deeplink -->
+        <!--<action android:name="android.intent.action.VIEW" />-->
 
+        <!--<category android:name="android.intent.category.DEFAULT" />-->
+        <!--<category android:name="android.intent.category.BROWSABLE" />-->
+
+        <!--<data-->
+        <!--android:host="daily.zhihu.com"-->
+        <!--android:pathPattern="/story/"-->
+        <!--android:scheme="http" />-->
+        <!--<data-->
+        <!--android:host="story"-->
+        <!--android:pathPattern="/.*"-->
+        <!--android:scheme="zhihudaily" />-->
         <activity
             android:name=".ui.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name=".story.StoryActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name=".comment.CommentActivity"

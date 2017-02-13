@@ -1,9 +1,12 @@
 package com.example.edwardlucci.edwardzhihupaper.ui;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.edwardlucci.edwardzhihupaper.InitService;
 import com.example.edwardlucci.edwardzhihupaper.util.RxBus;
 import com.trello.rxlifecycle.components.RxActivity;
 
@@ -27,31 +30,7 @@ public class SplashActivity extends RxActivity {
                     redirect();
                 });
 
-        Observable.just(1)
-                .delay(1, TimeUnit.SECONDS)
-                .compose(bindToLifecycle())
-                .subscribe(integer -> {
-                    redirect();
-                });
-
-
-//        Observable.just(1).delay(1, TimeUnit.SECONDS).subscribe(new Subscriber<Integer>() {
-//            @Override
-//            public void onCompleted() {
-//
-//            }
-//
-//            @Override
-//            public void onError(Throwable e) {
-//
-//            }
-//
-//            @Override
-//            public void onNext(Integer integer) {
-//                MainActivity.start(SplashActivity.this);
-//                finish();
-//            }
-//        });
+        InitService.start(this);
 
     }
 

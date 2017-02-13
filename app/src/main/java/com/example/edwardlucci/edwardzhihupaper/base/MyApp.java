@@ -47,7 +47,7 @@ public class MyApp extends Application {
         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this).build();
         Realm.setDefaultConfiguration(realmConfiguration);
 
-        InitService.start(this);
+        //some init actions postponed to splashActivity
     }
 
     public static int getSdkVersion() {
