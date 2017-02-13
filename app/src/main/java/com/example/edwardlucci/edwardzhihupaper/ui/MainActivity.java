@@ -110,7 +110,7 @@ public class MainActivity extends BaseActivity {
             mToolbar.setTitleTextColor(Color.WHITE);
             mToolbar.setNavigationIcon(R.drawable.ic_menu_black_24dp);
 
-            if (mToolbar.getNavigationIcon() != null){
+            if (mToolbar.getNavigationIcon() != null) {
                 mToolbar.getNavigationIcon().setColorFilter(ContextCompat.getColor(getActivity(), R.color.md_white_1000), PorterDuff.Mode.SRC_IN);
             }
 
@@ -151,31 +151,10 @@ public class MainActivity extends BaseActivity {
                 .compose(RxUtil.fromIOtoMainThread())
                 .doOnTerminate(() -> isLoading = false)
                 .subscribe(dailyStories -> {
-//                    stories.addAll(dailyStories.getStories());
                     latestDate = dailyStories.getDate();
-//                    contentAdapter.notifyDataSetChanged();
 
-                    DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new DiffUtil.Callback() {
-                        @Override
-                        public int getOldListSize() {
-                            return stories.size();
-                        }
-
-                        @Override
-                        public int getNewListSize() {
-                            return dailyStories.getStories().size();
-                        }
-
-                        @Override
-                        public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
-                            return stories.get(oldItemPosition).getId().equals(dailyStories.getStories().get(newItemPosition).getId());
-                        }
-
-                        @Override
-                        public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
-                            return stories.get(oldItemPosition).getTitle().equals(dailyStories.getStories().get(newItemPosition).getTitle());
-                        }
-                    }, true);
+                    DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(
+                            new DiffUtilClass(dailyStories), true);
 
                     diffResult.dispatchUpdatesTo(contentAdapter);
 
@@ -274,5 +253,34 @@ public class MainActivity extends BaseActivity {
         Intent intent = new Intent();
         intent.setClass(context, MainActivity.class);
         context.startActivity(intent);
+    }
+
+    private class DiffUtilClass extends DiffUtil.Callback {
+
+        DailyStories dailyStories;
+
+        private DiffUtilClass(DailyStories dailyStories) {
+            this.dailyStories = dailyStories;
+        }
+
+        @Override
+        public int getOldListSize() {
+            return stories.size();
+        }
+
+        @Override
+        public int getNewListSize() {
+            return dailyStories.getStories().size();
+        }
+
+        @Override
+        public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
+            return stories.get(oldItemPosition).getId().equals(dailyStories.getStories().get(newItemPosition).getId());
+        }
+
+        @Override
+        public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
+            return stories.get(oldItemPosition).getTitle().equals(dailyStories.getStories().get(newItemPosition).getTitle());
+        }
     }
 }
