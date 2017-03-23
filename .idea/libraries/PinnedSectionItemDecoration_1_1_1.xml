@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="PinnedSectionItemDecoration-1.1.1">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/core/build/intermediates/exploded-aar/com.oushangfeng/PinnedSectionItemDecoration/1.1.1/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/core/build/intermediates/exploded-aar/com.oushangfeng/PinnedSectionItemDecoration/1.1.1/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/7b5ebb3464e6189f5a3f88a9fd1c677ca72eaebf/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/7b5ebb3464e6189f5a3f88a9fd1c677ca72eaebf/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

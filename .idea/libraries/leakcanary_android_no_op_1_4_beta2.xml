@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="leakcanary-android-no-op-1.4-beta2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/core/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android-no-op/1.4-beta2/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/core/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android-no-op/1.4-beta2/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/88fabb20ab469628df04577ffaf52805d5e010de/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/88fabb20ab469628df04577ffaf52805d5e010de/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
