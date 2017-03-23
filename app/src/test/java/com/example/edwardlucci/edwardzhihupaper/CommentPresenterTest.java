@@ -3,7 +3,7 @@ package com.example.edwardlucci.edwardzhihupaper;
 import android.app.LoaderManager;
 import android.os.Bundle;
 
-import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
+import com.example.core.bean.Comment;
 import com.example.edwardlucci.edwardzhihupaper.comment.CommentContract;
 import com.example.edwardlucci.edwardzhihupaper.comment.CommentPresenter;
 import com.example.edwardlucci.edwardzhihupaper.data.network.CommentLoader;

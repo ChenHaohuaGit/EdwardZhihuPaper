@@ -1,7 +1,7 @@
 package com.example.edwardlucci.edwardzhihupaper;
 
-import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
-import com.example.edwardlucci.edwardzhihupaper.bean.Story;
+import com.example.core.bean.DailyStories;
+import com.example.core.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuService;
 

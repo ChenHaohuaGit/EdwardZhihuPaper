@@ -1,7 +1,6 @@
 package com.example.edwardlucci.edwardzhihupaper;
 
-import com.example.edwardlucci.edwardzhihupaper.base.MyApp;
-import com.example.edwardlucci.edwardzhihupaper.bean.CommentResponse;
+import com.example.core.bean.CommentResponse;
 import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 import com.orhanobut.logger.Logger;

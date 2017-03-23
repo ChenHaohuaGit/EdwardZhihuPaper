@@ -1,4 +1,4 @@
-package com.example.edwardlucci.edwardzhihupaper.util;
+package com.example.core;
 
 import rx.Observable;
 import rx.Subscription;

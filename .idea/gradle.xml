@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/favourite" />
+            <option value="$PROJECT_DIR$/theme" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

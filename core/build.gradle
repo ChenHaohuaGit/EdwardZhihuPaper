@@ -26,11 +26,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
-repositories {
-    maven {
-        url 'https://github.com/uPhyca/stetho-realm/raw/master/maven-repo'
-    }
-}
+//repositories {
+//    maven {
+//        url 'https://github.com/uPhyca/stetho-realm/raw/master/maven-repo'
+//    }
+//}
 
 dependencies {
 
@@ -58,7 +58,6 @@ dependencies {
 
     compile 'com.facebook.stetho:stetho:1.3.1'
     compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
-    compile 'com.uphyca:stetho_realm:0.9.0'
 
     compile 'com.squareup.okhttp3:okhttp:3.3.0'
     compile group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: '3.4.1'

@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseFragment extends RxFragment{
 
-    View layoutView;
+    protected View layoutView;
 
     @Nullable
     @Override
