@@ -18,8 +18,8 @@ import android.webkit.WebView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.example.core.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.R;
-import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.base.MyApp;
 import com.example.edwardlucci.edwardzhihupaper.comment.CommentActivity;
 import com.squareup.picasso.Picasso;
@@ -49,6 +49,9 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
     @Bind(R.id.bottom_sheet)
     View bottomSheetView;
 
+    @Bind(R.id.toolbar)
+    Toolbar mToolbar;
+
     WebView storyWebView;
 
     @Override
@@ -58,7 +61,7 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
 
         DaggerStoryComponent.builder()
                 .storyPresenterModule(new StoryPresenterModule(this))
-                .dataComponent(((MyApp)getApplication()).getDataComponent())
+                .dataComponent(((MyApp) getApplication()).getDataComponent())
                 .build().inject(this);
 
         storyId = getIntent().getIntExtra(STORY_ID, 0);
@@ -118,11 +121,11 @@ public class StoryActivity extends BaseActivity implements StoryContract.View {
 
     @OnClick(R.id.fab)
     public void openBottomSheet() {
-        mBottomSheetBehavior.setState((isBottomSheetExpanded())?BottomSheetBehavior.STATE_HIDDEN:BottomSheetBehavior.STATE_EXPANDED);
+        mBottomSheetBehavior.setState((isBottomSheetExpanded()) ? BottomSheetBehavior.STATE_HIDDEN : BottomSheetBehavior.STATE_EXPANDED);
     }
 
     private boolean isBottomSheetExpanded() {
-        return mBottomSheetBehavior.getState()==BottomSheetBehavior.STATE_EXPANDED;
+        return mBottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED;
     }
 
     @OnClick(R.id.share_btn)

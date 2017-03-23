@@ -14,12 +14,13 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
+import com.example.core.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener;
-import com.example.edwardlucci.edwardzhihupaper.base.BaseActivity;
 import com.example.edwardlucci.edwardzhihupaper.base.MyApp;
 import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.bean.Story;
@@ -56,6 +57,9 @@ public class MainActivity extends BaseActivity {
 
     @Bind(R.id.recyclerView)
     RecyclerView recyclerView;
+
+    @Bind(R.id.toolbar)
+    Toolbar mToolbar;
 
     ArrayList<Story> stories = new ArrayList<>();
 

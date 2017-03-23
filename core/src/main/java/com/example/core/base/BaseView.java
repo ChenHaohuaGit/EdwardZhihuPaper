@@ -1,4 +1,4 @@
-package com.example.edwardlucci.edwardzhihupaper.base;
+package com.example.core.base;
 
 /**
  * Created by edward on 16/6/15.

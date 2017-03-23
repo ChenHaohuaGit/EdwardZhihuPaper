@@ -1,6 +1,4 @@
-package com.example.edwardlucci.edwardzhihupaper.base;
-
-import com.example.edwardlucci.edwardzhihupaper.data.DataManager;
+package com.example.core.base;
 
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
@@ -11,13 +9,9 @@ import rx.subscriptions.CompositeSubscription;
 
 public abstract class BaseCommonPresenter<T extends BaseView>{
     /**
-     * Api类的包装 对象
-     */
-    protected DataManager mDataManager;
-    /**
      * 使用CompositeSubscription来持有所有的Subscriptions
      */
-    protected CompositeSubscription mCompositeSubscription;
+    private CompositeSubscription mCompositeSubscription;
 
     public T mView;
 

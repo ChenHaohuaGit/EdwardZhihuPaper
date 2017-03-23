@@ -1,6 +1,6 @@
 package com.example.edwardlucci.edwardzhihupaper.story;
 
-import com.example.edwardlucci.edwardzhihupaper.base.BaseCommonPresenter;
+import com.example.core.base.BaseCommonPresenter;
 import com.example.edwardlucci.edwardzhihupaper.bean.StoryDetail;
 import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuService;
@@ -23,7 +23,7 @@ public class StoryPresenter extends BaseCommonPresenter<StoryContract.View> impl
     ZhihuApi zhihuApi;
 
     @Inject
-    public StoryPresenter(int storyId, StoryContract.View mView) {
+    StoryPresenter(int storyId, StoryContract.View mView) {
         super(mView);
         this.storyId = storyId;
         this.mView = mView;

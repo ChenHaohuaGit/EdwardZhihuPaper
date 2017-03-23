@@ -1,4 +1,4 @@
-package com.example.edwardlucci.edwardzhihupaper.base;
+package com.example.core.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
