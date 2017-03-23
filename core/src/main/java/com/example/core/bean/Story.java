@@ -1,8 +1,8 @@
-package com.example.edwardlucci.edwardzhihupaper.bean;
+package com.example.core.bean;
 
-import android.content.ContentValues;
-
-import com.example.edwardlucci.edwardzhihupaper.data.database.StoryDatabaseContract;
+//import android.content.ContentValues;
+//
+//import com.example.edwardlucci.edwardzhihupaper.data.database.StoryDatabaseContract;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -60,12 +60,12 @@ public class Story extends RealmObject implements Serializable{
         this.title = title;
     }
 
-    public ContentValues story2contentvalues(String date){
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE,date);
-        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_ID,this.id);
-        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_IMAGES, this.image);
-        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_TITLE,this.title);
-        return contentValues;
-    }
+//    public ContentValues story2contentvalues(String date){
+//        ContentValues contentValues = new ContentValues();
+//        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_DATE,date);
+//        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_ID,this.id);
+//        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_IMAGES, this.image);
+//        contentValues.put(StoryDatabaseContract.StoryTable.COLUMN_NAME_TITLE,this.title);
+//        return contentValues;
+//    }
 }

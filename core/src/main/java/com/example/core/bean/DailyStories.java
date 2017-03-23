@@ -1,8 +1,5 @@
-package com.example.edwardlucci.edwardzhihupaper.bean;
+package com.example.core.bean;
 
-import android.content.ContentValues;
-
-import com.example.edwardlucci.edwardzhihupaper.data.database.DateDatabaseContract;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -71,12 +68,12 @@ public class DailyStories extends RealmObject {
         this.realDate = realDate;
     }
 
-    public ContentValues dailyStoriesDate2ContentValues(String currentDate) {
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(DateDatabaseContract.DateTable.COLUMN_NAME_DATE, currentDate);
-        contentValues.put(DateDatabaseContract.DateTable.COLUMN_NAME_PREVIOUS_DATE, this.date);
-        return contentValues;
-    }
+//    public ContentValues dailyStoriesDate2ContentValues(String currentDate) {
+//        ContentValues contentValues = new ContentValues();
+//        contentValues.put(DateDatabaseContract.DateTable.COLUMN_NAME_DATE, currentDate);
+//        contentValues.put(DateDatabaseContract.DateTable.COLUMN_NAME_PREVIOUS_DATE, this.date);
+//        return contentValues;
+//    }
 
     public int getSource() {
         return source;

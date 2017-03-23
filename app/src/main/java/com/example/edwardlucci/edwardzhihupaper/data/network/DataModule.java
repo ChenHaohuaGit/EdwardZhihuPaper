@@ -4,10 +4,10 @@ import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import com.example.core.bean.DailyStories;
+import com.example.core.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.base.DailyStoriesDeserializer;
 import com.example.edwardlucci.edwardzhihupaper.base.StoryDeserializer;
-import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
-import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.data.DataManager;
 import com.example.edwardlucci.edwardzhihupaper.data.MemoryCache;
 import com.facebook.stetho.okhttp3.StethoInterceptor;

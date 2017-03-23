@@ -1,4 +1,4 @@
-package com.example.edwardlucci.edwardzhihupaper.base;
+package com.example.core.api;
 
 import com.example.core.bean.Story;
 import com.google.gson.Gson;

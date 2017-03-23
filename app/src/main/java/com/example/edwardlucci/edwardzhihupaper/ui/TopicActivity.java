@@ -9,10 +9,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.core.bean.Other;
+import com.example.core.bean.Themes;
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.TopicPagerAdapter;
-import com.example.edwardlucci.edwardzhihupaper.bean.Other;
-import com.example.edwardlucci.edwardzhihupaper.bean.Themes;
 import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuService;
 

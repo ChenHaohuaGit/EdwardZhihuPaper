@@ -2,13 +2,13 @@ package com.example.edwardlucci.edwardzhihupaper.data.network;
 
 import android.content.Context;
 
+import com.example.core.bean.DailyStories;
 import com.example.edwardlucci.edwardzhihupaper.base.AsyncLoader;
-import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
 
 /**
  * Created by edward on 16/6/14.
  */
-public class PastStoriesLoader extends AsyncLoader<DailyStories>{
+public class PastStoriesLoader extends AsyncLoader<DailyStories> {
 
     String date;
 

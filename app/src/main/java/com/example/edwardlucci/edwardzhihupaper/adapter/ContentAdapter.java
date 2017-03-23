@@ -14,12 +14,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.core.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.R;
-import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.story.StoryActivity;
 import com.example.edwardlucci.edwardzhihupaper.view.FadedBorderImageView;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
+
 
 import java.util.ArrayList;
 

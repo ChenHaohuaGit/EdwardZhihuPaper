@@ -2,8 +2,8 @@ package com.example.edwardlucci.edwardzhihupaper.data.network;
 
 import android.content.Context;
 
+import com.example.core.bean.Themes;
 import com.example.edwardlucci.edwardzhihupaper.base.AsyncLoader;
-import com.example.edwardlucci.edwardzhihupaper.bean.Themes;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 
 /**

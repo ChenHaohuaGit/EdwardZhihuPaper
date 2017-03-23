@@ -1,7 +1,7 @@
 package com.example.edwardlucci.edwardzhihupaper.story;
 
 import com.example.core.base.BaseCommonPresenter;
-import com.example.edwardlucci.edwardzhihupaper.bean.StoryDetail;
+import com.example.core.bean.StoryDetail;
 import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuApi;
 import com.example.edwardlucci.edwardzhihupaper.data.network.ZhihuService;
 import com.example.edwardlucci.edwardzhihupaper.util.HtmlUtil;

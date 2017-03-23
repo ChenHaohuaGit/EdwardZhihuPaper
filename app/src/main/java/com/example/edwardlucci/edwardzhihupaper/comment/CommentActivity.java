@@ -10,9 +10,9 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.example.core.base.BaseActivity;
+import com.example.core.bean.Comment;
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.CommentAdapter;
-import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
 import com.example.edwardlucci.edwardzhihupaper.data.network.CommentLoader;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;

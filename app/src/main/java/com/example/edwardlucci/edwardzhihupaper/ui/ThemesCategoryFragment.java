@@ -7,10 +7,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.core.base.BaseFragment;
+import com.example.core.bean.Other;
+import com.example.core.bean.Themes;
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ThemesRecyclerViewAdapter;
-import com.example.edwardlucci.edwardzhihupaper.bean.Other;
-import com.example.edwardlucci.edwardzhihupaper.bean.Themes;
 import com.example.edwardlucci.edwardzhihupaper.data.network.ThemesLoader;
 
 import java.util.ArrayList;

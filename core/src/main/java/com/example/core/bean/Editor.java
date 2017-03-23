@@ -1,4 +1,4 @@
-package com.example.edwardlucci.edwardzhihupaper.bean;
+package com.example.core.bean;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

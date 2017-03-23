@@ -1,11 +1,12 @@
 package com.example.edwardlucci.edwardzhihupaper.data.network;
 
-import com.example.edwardlucci.edwardzhihupaper.bean.CommentResponse;
-import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
-import com.example.edwardlucci.edwardzhihupaper.bean.SplashResponse;
-import com.example.edwardlucci.edwardzhihupaper.bean.StoryDetail;
-import com.example.edwardlucci.edwardzhihupaper.bean.Theme;
-import com.example.edwardlucci.edwardzhihupaper.bean.Themes;
+
+import com.example.core.bean.CommentResponse;
+import com.example.core.bean.DailyStories;
+import com.example.core.bean.SplashResponse;
+import com.example.core.bean.StoryDetail;
+import com.example.core.bean.Theme;
+import com.example.core.bean.Themes;
 
 import retrofit2.http.GET;
 import retrofit2.http.Path;

@@ -2,8 +2,8 @@ package com.example.edwardlucci.edwardzhihupaper.data.network;
 
 import android.content.Context;
 
+import com.example.core.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.base.AsyncLoader;
-import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 
 import java.util.List;
 

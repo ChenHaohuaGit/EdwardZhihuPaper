@@ -9,9 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.core.bean.Other;
 import com.example.edwardlucci.edwardzhihupaper.R;
-import com.example.edwardlucci.edwardzhihupaper.bean.ChangeContentEvent;
-import com.example.edwardlucci.edwardzhihupaper.bean.Other;
 import com.example.edwardlucci.edwardzhihupaper.util.RxBus;
 import com.squareup.picasso.Picasso;
 

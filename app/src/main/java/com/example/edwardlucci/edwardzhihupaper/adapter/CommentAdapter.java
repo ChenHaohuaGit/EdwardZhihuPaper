@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.example.core.bean.Comment;
 import com.example.edwardlucci.edwardzhihupaper.R;
-import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
 import com.example.edwardlucci.edwardzhihupaper.transformation.CircleTransform;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;

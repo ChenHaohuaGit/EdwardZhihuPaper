@@ -18,12 +18,12 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
 import com.example.core.base.BaseActivity;
+import com.example.core.bean.DailyStories;
+import com.example.core.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.R;
 import com.example.edwardlucci.edwardzhihupaper.adapter.ContentAdapter;
 import com.example.edwardlucci.edwardzhihupaper.adapter.OnVerticalScrollListener;
 import com.example.edwardlucci.edwardzhihupaper.base.MyApp;
-import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
-import com.example.edwardlucci.edwardzhihupaper.bean.Story;
 import com.example.edwardlucci.edwardzhihupaper.data.DataManager;
 import com.example.edwardlucci.edwardzhihupaper.util.DensityUtil;
 import com.example.edwardlucci.edwardzhihupaper.util.ItemOffsetDecoration;

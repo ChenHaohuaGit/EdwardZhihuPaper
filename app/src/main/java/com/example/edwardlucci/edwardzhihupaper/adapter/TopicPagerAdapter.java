@@ -4,9 +4,8 @@ import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import com.example.edwardlucci.edwardzhihupaper.bean.Other;
+import com.example.core.bean.Other;
 
 import java.util.ArrayList;
 

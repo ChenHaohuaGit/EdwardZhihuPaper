@@ -2,8 +2,7 @@ package com.example.edwardlucci.edwardzhihupaper.comment;
 
 import com.example.core.base.BasePresenter;
 import com.example.core.base.BaseView;
-import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
-
+import com.example.core.bean.Comment;
 import java.util.ArrayList;
 
 /**

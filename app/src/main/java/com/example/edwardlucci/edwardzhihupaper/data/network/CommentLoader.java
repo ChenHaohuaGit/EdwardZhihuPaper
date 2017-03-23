@@ -2,9 +2,9 @@ package com.example.edwardlucci.edwardzhihupaper.data.network;
 
 import android.content.Context;
 
+import com.example.core.bean.Comment;
+import com.example.core.bean.CommentResponse;
 import com.example.edwardlucci.edwardzhihupaper.base.AsyncLoader;
-import com.example.edwardlucci.edwardzhihupaper.bean.Comment;
-import com.example.edwardlucci.edwardzhihupaper.bean.CommentResponse;
 import com.example.edwardlucci.edwardzhihupaper.util.RxUtil;
 
 import java.util.ArrayList;

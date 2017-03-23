@@ -1,10 +1,8 @@
 package com.example.edwardlucci.edwardzhihupaper.data;
-
-import android.support.annotation.NonNull;
 import android.support.v4.util.LruCache;
 
-import com.example.edwardlucci.edwardzhihupaper.bean.DailyStories;
-import com.example.edwardlucci.edwardzhihupaper.bean.Story;
+import com.example.core.bean.DailyStories;
+import com.example.core.bean.Story;
 
 /**
  * Created by edward on 16/6/18.
